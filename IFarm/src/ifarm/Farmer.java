@@ -9,6 +9,11 @@ package ifarm;
  *
  * @author User
  */
-public class Farmer {
+public class Farmer implements Runnable {
+
+    @Override
+    public void run() {
+        
+    }
     
 }
