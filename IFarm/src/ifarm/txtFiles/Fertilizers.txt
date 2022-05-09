@@ -1,0 +1,100 @@
+Activit 4-3-2
+Ammonium Chloride
+Ammonium Metaphosphate
+Ammonium Molybdate
+Ammonium Nitrate phosphate (23-23-0)
+Ammonium Phosphate (14-28-0)
+Ammonium Phosphate Sulphate (16-20-0)
+Ammonium Phosphate Sulphate (18-9-0)
+Ammonium Poly Phosphate (10-34-0) Liquid
+Ammonium Sulphate
+Anhydrous Ammonia
+BG Soil
+Bone meal, Raw
+Bone meal, Steamed
+Borax
+Boric Acid
+Boronated DAP (18:46:0:0.3)
+Boronated NPK (10:26:26:0.3)
+Boronated NPK (12:32:16:0.3)
+Boronated Single Superphosphate
+Calcitic Lime (75% Neutral)
+Calcium Ammonium Nitrate
+Calcium Chelate
+Calcium Hydroxide
+Calcium Nitrate
+Calcium Nitrate with Boron
+Calcium Oxide
+Castor Pomace
+Chelated Iron as Fe-EDTA
+Chelated Zinc as Zn-EDTA
+Cocoa Shell Meal
+Cocoa Tankage
+Compost
+Copper Sulphate
+DAP:0.5 Zn
+Di-sodium Octaborate Tetrahydrate
+Di-sodium Tetraborate Pentahydrate
+Diammonium Phosphate
+Diammonium Phosphate (16-44-0)
+Diammonium Phosphate (18-46-0)
+Dolomitic Lime
+Dolomitic Lime (75% Neutral)
+Ferrous Sulphate
+Fertiplus 4-2-10
+Greenferti 4-3-3-1
+Grobel NPK 4-3-3 +1 MgO
+GROBEL NPK 4-3-3+1MgO
+Lime-Potash Mixtures
+Linseed Meal
+Liquid Amm Polyphosphate
+Magnesium Sulphate
+Manganese Sulphate
+Manure Salts
+MixO’Plus
+Mono Ammonium Phosphate (11-52-0)
+Mono Ammonium Phosphate (12-61-0)
+Mono Potassium Phosphate (0-52-34)
+Monoammonium Phosphate
+N.P.K. (12:11:18  with MgO)
+N.P.K. (14-28-14)
+N.P.K. (15:15:15:9 S)
+N.P.K. (16:16:16)
+N.P.K. (17-17-17)
+N.P.K. 15::9:20
+N.P.K.(12-32-16)
+Neem Coated Urea
+Nitric Phosphate
+Nitro Phosphate (20-20-0)
+Nitrophosphate (23-23-0)
+Nitrophosphate (24-24-0)
+Nitrophosphate with Potash (15-15-15)
+Phosphate Rock
+Potassium Chloride
+Potassium Magnesium Sulphate
+Potassium Nitrate (13-0-45)
+Potassium Schoenite
+Potassium Sulfate
+Potassium Sulphate
+Precipitated Phosphate
+Rockphosphate
+Single Superphosphate (16% P2O 5  Granulated)
+Single Superphosphate (16% P2O 5  Powdered
+Sodium Molybdonate
+Soybean Meal
+SSP:0.5Zn
+Standard Dolomite
+Sulphur 90% Powder
+Superphosphoric Acid (70% P2O 5  ) (Liquid)
+Triple Super Phosphate
+Urea
+Urea Ammonium Nitrate
+Urea Ammonium phosphate (28-28-0)
+Urea Super Granulated
+Zinc Oxide Suspension Concentrate
+Zinc Sulphate Heptahydrate (ZnSO4.7H2O)
+Zinc Sulphate Mono Hydrate Granular
+Zinc Sulphate Mono-hydrate (ZnSO4.H2O)
+Zincated NPK (10:26:26:0.5)
+Zincated NPK (12:32:16:0.5)
+Zincated Urea

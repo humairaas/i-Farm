@@ -10,5 +10,4 @@ package ifarm;
  * @author User
  */
 public class Fertilizer {
-    
 }

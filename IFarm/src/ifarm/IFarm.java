@@ -5,17 +5,19 @@
  */
 package ifarm;
 
+
 /**
  *
  * @author User
  */
 public class IFarm {
-
-    /**
-     * @param args the command line arguments
-     */
+        
     public static void main(String[] args) {
-        System.out.println("Hello GitHubbbb");
+        DBConnector conn = new DBConnector();
+        conn.start();
+        
+        
     }
+    
     
 }
