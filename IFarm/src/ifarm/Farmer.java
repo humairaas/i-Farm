@@ -18,17 +18,15 @@ public class Farmer implements Runnable {
     DBConnector db = new DBConnector();
     Random r = new Random();
     String[] activities = {"sowing\t", "fertilizers", "pesticides", "harvest\t", "sales\t"};
-    int count;
-    int rand = 1 + r.nextInt(getRowNum());
+    
+    int count, userID, farmID;
+    int random = 1 + r.nextInt(getRowNum());
 
     @Override
     public void run() {
         int step = 0;
         for (int i=0; i<10; i++) {
-            System.out.print(activities[step] + "\t");
-            getFarmUserID();
-            getType(step);
-            System.out.println("");
+            System.out.println(activities[step] + "\t" + getFarmID() + "\t" + getUserID());
             step++;
             if (step==5) {
                 step = 0;
@@ -43,40 +41,55 @@ public class Farmer implements Runnable {
             db.stmt = db.conn.prepareStatement(sql);
             ResultSet rs = db.stmt.executeQuery(sql);
             rs.next();
-            this.count = rs.getInt("row");
+            count = rs.getInt("row");
         } catch (SQLException ex) {
             Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return this.count;
+        return count;
     }
-    
-    public void getFarmUserID() {
+        
+    public int getUserID() {
         try {
             db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
-            String sql = "SELECT * FROM `users_farms` WHERE id=" + rand;            
+            String sql = "SELECT user_id_fk AS userID FROM `users_farms` WHERE id=" + random;            
             db.stmt = db.conn.prepareStatement(sql);
-            
             ResultSet rs = db.stmt.executeQuery(sql);
             rs.next();
-            System.out.print(rs.getString("farm_id_fk") + "\t" + rs.getString("user_id_fk"));
+            userID = rs.getInt("userID");
         } catch (SQLException ex) {
             Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
         }
+        return userID;
     }
     
-    public void getType(int step) {
+    public int getFarmID() {
+        try {
+            db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
+            String sql = "SELECT farm_id_fk AS farmID FROM `users_farms` WHERE id=" + random;            
+            db.stmt = db.conn.prepareStatement(sql);
+            ResultSet rs = db.stmt.executeQuery(sql);
+            rs.next();
+            farmID = rs.getInt("farmID");
+        } catch (SQLException ex) {
+            Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return farmID;
+    }
+    
+//    public int getTypeID(int step) {
 //        if (step == 1) {
 //            try {
 //                db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
-//                String sql = "SELECT * FROM `farms_fertilizers`";            
+//                String sql = "SELECT COUNT(*) AS ferCount FROM `farms_fertilizers` WHERE farm_id_fk=" + farmID;
 //                db.stmt = db.conn.prepareStatement(sql);
-//
 //                ResultSet rs = db.stmt.executeQuery(sql);
-//                rs.next();
-//                System.out.print(rs.getString("farm_id_fk") + "\t" + rs.getString("user_id_fk"));
+//
+//                String sql = "SELECT fertilizer_id_fk AS ferID FROM `farms_fertilizers` WHERE farm_id_fk=" + farmID;            
+//                db.stmt = db.conn.prepareStatement(sql);
+//                ResultSet rs = db.stmt.executeQuery(sql);
 //            } catch (SQLException ex) {
 //                Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
 //            }
 //        }
-    }
+//    }
 }
