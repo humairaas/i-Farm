@@ -6,56 +6,77 @@
 package ifarm;
 
 import java.util.Random;
+import java.sql.*;
+import java.util.logging.*;
 
 /**
  *
  * @author User
  */
 public class Farmer implements Runnable {
-        
+    
+    DBConnector db = new DBConnector();
     Random r = new Random();
+    String[] activities = {"sowing\t", "fertilizers", "pesticides", "harvest\t", "sales\t"};
+    int count;
+    int rand = 1 + r.nextInt(getRowNum());
 
-    String[] action = {"sowing", "fertilizer", "pesticide", "harvest", "sales"};
-    
-    String[] plant = {"plant a", "plant b", "plant c", "plant d", "plant e"};
-    String[] fertilizer = {"fertilizer a", "fertilizer b", "fertilizer c", "fertilizer d", "fertilizer e"};
-    String[] pesticide = {"pesticide a", "pesticide b", "pesticide c", "pesticide d", "pesticide e"};
-    
-    int day = 0;
-    
     @Override
     public void run() {
-        for (int i=0; i<1000; i++) {
-            int actrand = r.nextInt(action.length);
+        int step = 0;
+        for (int i=0; i<10; i++) {
+            System.out.print(activities[step] + "\t");
+            getFarmUserID();
+            getType(step);
+            System.out.println("");
+            step++;
+            if (step==5) {
+                step = 0;
+            }
+        }
+    }
+    
+    public int getRowNum() {
+        try {
+            db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
+            String sql = "SELECT COUNT(*) AS row FROM `users_farms`";
+            db.stmt = db.conn.prepareStatement(sql);
+            ResultSet rs = db.stmt.executeQuery(sql);
+            rs.next();
+            this.count = rs.getInt("row");
+        } catch (SQLException ex) {
+            Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return this.count;
+    }
+    
+    public void getFarmUserID() {
+        try {
+            db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
+            String sql = "SELECT * FROM `users_farms` WHERE id=" + rand;            
+            db.stmt = db.conn.prepareStatement(sql);
             
-            System.out.print(Thread.currentThread().getName() + " | ");
-            getDate();
-            System.out.print(action[actrand] + " | ");
-            getType(actrand);
+            ResultSet rs = db.stmt.executeQuery(sql);
+            rs.next();
+            System.out.print(rs.getString("farm_id_fk") + "\t" + rs.getString("user_id_fk"));
+        } catch (SQLException ex) {
+            Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
-    public void getDate() {
-        int dayrand = r.nextInt(10) + 1;
-        day += dayrand;
-        System.out.print(java.time.LocalDate.now().plusDays(day) + " | ");    
-    }
-    
-    public void getType(int actrand) {
-        int ferrand = r.nextInt(fertilizer.length);
-        int pesrand = r.nextInt(pesticide.length);
-        int plarand = r.nextInt(plant.length);
-        
-        switch (actrand) {
-            case 1:
-                System.out.println(fertilizer[ferrand]);
-                break;
-            case 2:
-                System.out.println(pesticide[pesrand]);
-                break;
-            default:
-                System.out.println(plant[plarand]);
-                break;
-        }
+    public void getType(int step) {
+//        if (step == 1) {
+//            try {
+//                db.conn = DriverManager.getConnection(db.DB_URL, db.USERNAME, db.PASSWORD);
+//                String sql = "SELECT * FROM `farms_fertilizers`";            
+//                db.stmt = db.conn.prepareStatement(sql);
+//
+//                ResultSet rs = db.stmt.executeQuery(sql);
+//                rs.next();
+//                System.out.print(rs.getString("farm_id_fk") + "\t" + rs.getString("user_id_fk"));
+//            } catch (SQLException ex) {
+//                Logger.getLogger(Farmer.class.getName()).log(Level.SEVERE, null, ex);
+//            }
+//        }
     }
 }
