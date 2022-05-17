@@ -13,9 +13,9 @@ import java.sql.*;
 //import java.util.Scanner;
 
 public final class DBConnector {
-    private final String DB_URL = "jdbc:mysql://localhost:3306/i_farm?zeroDateTimeBehavior=convertToNull";
-    private final String USERNAME = "i_farm_user";
-    private final String PASSWORD = "ifarm123";
+    public static final String DB_URL = "jdbc:mysql://localhost:3306/i_farm?zeroDateTimeBehavior=convertToNull";
+    public static final String USERNAME = "i_farm_user";
+    public static final String PASSWORD = "ifarm123";
     
     java.sql.Connection conn = null;
     java.sql.Statement stmt = null;

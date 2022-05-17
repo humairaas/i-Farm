@@ -13,7 +13,10 @@ package ifarm;
 public class IFarm {
         
     public static void main(String[] args) {
-        DBConnector db = new DBConnector();
+        Runnable farmer = new Farmer();
+        
+        Thread t1 = new Thread(farmer);
+        t1.start();
         
     }
     
