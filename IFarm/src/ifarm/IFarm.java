@@ -13,9 +13,7 @@ package ifarm;
 public class IFarm {
         
     public static void main(String[] args) {
-        DBConnector conn = new DBConnector();
-        conn.start();
-        
+        DBConnector db = new DBConnector();
         
     }
     

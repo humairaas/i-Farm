@@ -10,5 +10,18 @@ package ifarm;
  * @author User
  */
 public class Activity {
+    String[] action = {"Sowing", "Fertilizers", "Pesticides","Harvest","Sales"};
+
+    public Activity() {
+    }
+
+    public String[] getAction() {
+        return action;
+    }
+    
+    
+
+    
+    
     
 }

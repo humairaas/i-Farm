@@ -5,14 +5,14 @@
  */
 package ifarm;
 
-import java.io.File;
-import java.io.FileNotFoundException;
+//import java.io.File;
+//import java.io.FileNotFoundException;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+//import java.util.ArrayList;
+//import java.util.Random;
+//import java.util.Scanner;
 
-public class DBConnector {
+public final class DBConnector {
     private final String DB_URL = "jdbc:mysql://localhost:3306/i_farm?zeroDateTimeBehavior=convertToNull";
     private final String USERNAME = "i_farm_user";
     private final String PASSWORD = "ifarm123";
@@ -20,7 +20,11 @@ public class DBConnector {
     java.sql.Connection conn = null;
     java.sql.Statement stmt = null;
 
-    public void start() {
+    public DBConnector() {
+        connect();
+    }
+
+    public void connect() {
         try{
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             System.out.println("Connected to database.");
@@ -31,11 +35,47 @@ public class DBConnector {
         }
     }
     
-    public void insert() {
+    public void INSERT(String query){
         try{
-            conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            System.out.println("Connected to database.");
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            System.out.println("INSERT Successful.");
+            stmt.close();
             
+        }catch(SQLException e){
+            System.out.println("Error inserting to database.");
+            System.err.println(e);
+        }
+    }
+    
+    public String SELECT(String query){
+        String data = "";
+        
+        try{
+            stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            System.out.println("SELECT Successful.");
+            
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+
+            while (rs.next()) {
+                for(int i = 1; i < columnsNumber; i++)
+                    data += rs.getString(i) + " ";
+                data += '\n';
+            }
+            stmt.close();
+            
+        }catch(SQLException e){
+            System.out.println("Error selecting from database.");
+            System.err.println(e);
+        }
+        return data;
+    }
+    
+    /*
+    public void insertDataToDatabase() {
+        try{
             stmt = conn.createStatement();
             try {
                 File myObj = new File("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Fertilizers.txt");
@@ -56,27 +96,42 @@ public class DBConnector {
             System.err.println(e);
         }
     }
-    
-    public void randomize() {
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+    */
+    /*
+    public void randomizeUserData() {
+        Random rand = new Random();
+        int numbers[] = new int[100];
+        
+        for(int i=0; i<100; i++){
+            numbers[i] = i+1;
+        }
         
         try{
-            conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            System.out.println("Connected to database.");
-            
             stmt = conn.createStatement();
-            Random rand = new Random();
-            int rand_int1 = rand.nextInt(100)+1;
-
-            String sql = "";
-            stmt.executeUpdate(sql);
-            System.out.println("Inserted records into the table");
+            
+            for(int j=1; j<11; j++){
+                int num = rand.nextInt(40)+10;
+                
+                for(int k=0; k<num; k++){
+                    int index = rand.nextInt(100);
+                    if(numbers[index]!=0){
+                        int id = numbers[index];
+                        String sql = "INSERT INTO `farms_fertilizers`(`id`, `farm_id_fk`, `fertilizer_id_fk`) VALUES (NULL,"+j+","+id+")";
+                        stmt.executeUpdate(sql);
+                        System.out.println("Inserted "+id+" into the table");
+                        numbers[index] = 0;
+                    }
+                }
+                for(int i=0; i<100; i++){
+                    numbers[i] = i+1;
+                }
+            }
             
         }catch(SQLException e){
-            System.out.println("Not connected to database.");
             System.err.println(e);
         }
     }
+    */
     
   
 }
