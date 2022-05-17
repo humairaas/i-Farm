@@ -9,6 +9,13 @@ package ifarm;
  *
  * @author User
  */
-public class FarmerSimulator {
+public class FarmerSimulator implements FarmerSimulatorInterface {
+
+    @Override
+    public Farmer[] generateFarmers(int numberOfFarmers) {
+        
+        return null;
+        
+    }
     
 }
