@@ -54,15 +54,15 @@ public final class DBConnector {
         try{
             stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            System.out.println("SELECT Successful.");
+            //System.out.println("SELECT Successful.");
             
             ResultSetMetaData rsmd = rs.getMetaData();
             int columnsNumber = rsmd.getColumnCount();
 
             while (rs.next()) {
-                for(int i = 1; i < columnsNumber; i++)
+                for(int i = 1; i <= columnsNumber; i++)
                     data += rs.getString(i) + " ";
-                data += '\n';
+                //data += '\n';
             }
             stmt.close();
             
