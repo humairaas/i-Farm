@@ -31,14 +31,15 @@ public class Activity {
        db.INSERT("INSERT INTO `activities` (`action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"');");
     }
     
-    public void toTxt(String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
+    public void toTxt(String text){
         try {
-            FileWriter myWriter = new FileWriter("filename.txt");
-            myWriter.write("");
+            //Change this according to your own directory path
+            FileWriter myWriter = new FileWriter("C:\\Users\\USER\\Desktop\\NetBeans\\WIF3003\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Activities.txt", true);
+            myWriter.write(text + "\n");
             myWriter.close();
-            System.out.println("Successfully wrote to the file.");
+//            System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Error writing to the file.");
             e.printStackTrace();
         }
     }

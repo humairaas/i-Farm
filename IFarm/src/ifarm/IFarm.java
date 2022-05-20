@@ -15,13 +15,13 @@ import java.util.concurrent.*;
  */
 public class IFarm {
     
-    static final int THREAD = 1;
+    static final int THREAD = 3;
     
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
         ExecutorService pool = Executors.newFixedThreadPool(THREAD);
         
-        for (int i=0; i<1; i++) {
+        for (int i=0; i<3; i++) {
             Farmer farmer = new Farmer(db);
             pool.execute(farmer);   
         }

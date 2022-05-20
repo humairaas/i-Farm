@@ -7,6 +7,8 @@ package ifarm;
 
 import java.util.Random;
 import java.sql.*;
+import java.time.*;
+import java.time.format.*;
 import java.util.Arrays;
 import java.util.logging.*;
 
@@ -27,6 +29,8 @@ public class Farmer implements Runnable {
     private int randCol;
     private String[] userFarmID;
     private String[] data;
+    private DateTimeFormatter dtf;  
+    private LocalDateTime now; 
     
     public Farmer(DBConnector db) {
         this.db = db;
@@ -34,6 +38,8 @@ public class Farmer implements Runnable {
         r = new Random();
         userFarmID = getUserFarm();
         activity = new Activity(db);
+        now = LocalDateTime.now(); 
+        dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
     }
     
     @Override
@@ -76,9 +82,10 @@ public class Farmer implements Runnable {
                     quantity = getQuantity("g");
                     farm.setField(randRow, randCol, null);
                 }
-            } 
-            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
+            }             
+            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
             activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randCol, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
+            activity.toTxt(finalLog);
             System.out.println(Thread.currentThread().getName() + ": " + finalLog);
         }
     }
