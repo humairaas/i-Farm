@@ -5,6 +5,8 @@
  */
 package ifarm;
 
+import java.util.Random;
+
 /**
  *
  * @author User
@@ -16,10 +18,13 @@ public class User {
         this.db = db;
     }
 
-    public String getFarmId(int id) {
-        String farmId = db.SELECT("SELECT `user_id_fk`,`farm_id_fk` FROM `users_farms` WHERE id="+id);
+    public String[] getUserFarmID() {
+        Random r = new Random();
+        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
+        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
+        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
         
-        return farmId;
+        return arr;
     }
 
 }

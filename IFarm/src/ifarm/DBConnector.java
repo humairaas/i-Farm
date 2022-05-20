@@ -27,7 +27,7 @@ public final class DBConnector {
     public void connect() {
         try{
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
-            System.out.println("Connected to database.");
+            //System.out.println("Connected to database.");
             
         }catch(SQLException e){
             System.out.println("Not connected to database.");
@@ -39,8 +39,8 @@ public final class DBConnector {
         try{
             stmt = conn.createStatement();
             stmt.executeUpdate(query);
-            System.out.println("INSERT Successful.");
-            stmt.close();
+            //System.out.println("INSERT Successful.");
+            //stmt.close();
             
         }catch(SQLException e){
             System.out.println("Error inserting to database.");
@@ -61,10 +61,10 @@ public final class DBConnector {
 
             while (rs.next()) {
                 for(int i = 1; i <= columnsNumber; i++)
-                    data += rs.getString(i) + " ";
+                    data += rs.getString(i) + "#";
                 //data += '\n';
             }
-            stmt.close();
+//            stmt.close();
             
         }catch(SQLException e){
             System.out.println("Error selecting from database.");
