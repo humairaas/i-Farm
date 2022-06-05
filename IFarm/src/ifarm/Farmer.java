@@ -29,6 +29,7 @@ public class Farmer implements Runnable {
     private int randCol;
     private String[] userFarmID;
     private String[] data;
+    private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
     
@@ -40,6 +41,7 @@ public class Farmer implements Runnable {
         activity = new Activity(db);
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
+        plant = new String[farm.getRow()][farm.getCol()][];
     }
     
     @Override
@@ -50,7 +52,7 @@ public class Farmer implements Runnable {
             
             if (farm.getField(randRow, randCol) == null) {
                 action = "sowing";
-                data = getData("plant",userFarmID[0],userFarmID[1]);
+                data = getPlantData();
                 quantity = getQuantity("g");
                 farm.setField(randRow, randCol, "0|" + data[2]);
 
@@ -72,21 +74,28 @@ public class Farmer implements Runnable {
                     
                 } else if (status.equals("2")) {
                     action = "harvest";
-                    data = getData("plant",userFarmID[0],userFarmID[1]);
+                    data = getPlantData();
                     quantity = getQuantity("g");
                     farm.setField(randRow, randCol, "3|"+ data[2]);
                     
                 } else if (status.equals("3")) {
                     action = "sales";
-                    data  = getData("plant",userFarmID[0],userFarmID[1]);
+                    data  = getPlantData();
                     quantity = getQuantity("g");
                     farm.setField(randRow, randCol, null);
                 }
-            }             
-            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
-            activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randCol, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
-            activity.toTxt(finalLog);
-            System.out.println(Thread.currentThread().getName() + ": " + finalLog);
+            }   
+            
+            // try to resume if fail
+            try {
+                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
+                activity.toTxt(finalLog);
+                activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randCol, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
+                System.out.println(Thread.currentThread().getName() + ": " + finalLog);
+            } catch (NumberFormatException e) {
+               
+            }
+            
         }
     }
     
@@ -123,5 +132,14 @@ public class Farmer implements Runnable {
         arr[0] = Integer.toString(rand);
         arr[1] = unit;
         return arr;
+    }
+    
+    public String[] getPlantData () {
+        
+        if (farm.getField(randRow, randCol) == null){
+            plant[randRow][randCol] = getData("plant",userFarmID[0],userFarmID[1]);
+        } 
+        
+        return plant[randRow][randCol];
     }
 }
