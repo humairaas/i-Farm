@@ -82,8 +82,9 @@ public class Farmer implements Runnable {
                     quantity = getQuantity("g");
                     farm.setField(randRow, randCol, null);
                 }
-            }             
-            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
+            }
+            String date = dtf.format(now);
+            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+date+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
             activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randCol, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
             activity.toTxt(finalLog);
             System.out.println(Thread.currentThread().getName() + ": " + finalLog);
@@ -119,7 +120,7 @@ public class Farmer implements Runnable {
         Random r = new Random();
         String[] arr = new String[2];
         
-        int rand = r.nextInt(5000)+500;
+        int rand = (5 + r.nextInt(50)) * 100;
         arr[0] = Integer.toString(rand);
         arr[1] = unit;
         return arr;
