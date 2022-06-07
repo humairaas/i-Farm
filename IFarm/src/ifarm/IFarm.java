@@ -19,15 +19,16 @@ public class IFarm {
     
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
+                
+        FarmerSimulator simulator = new FarmerSimulator(db);
+        Farmer[] farmerObj = simulator.generateFarmers(10);
         
         //sequentially
         Timer times = new Timer();
         
-        
             times.start();
-            for (int i=0; i<5; i++) {
-                Farmer farmer = new Farmer(db);
-                farmer.run();
+            for (Farmer farmers : farmerObj) {
+                farmers.run();
             }
             
             times.end();
@@ -40,9 +41,8 @@ public class IFarm {
         
         try {
             timer.start();
-            for (int i=0; i<5; i++) {
-                Farmer farmer = new Farmer(db);
-                pool.execute(farmer);   
+            for (Farmer farmers : farmerObj) {
+                pool.execute(farmers);
             }
             pool.shutdown();
             pool.awaitTermination(1, TimeUnit.DAYS);

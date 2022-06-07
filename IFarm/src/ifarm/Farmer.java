@@ -27,22 +27,28 @@ public class Farmer implements Runnable {
     private String[] quantity;
     private int randRow;
     private int randField;
-    private String[] userFarmID;
+//    private String[] userFarmID;
     private String[] data;
     private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
+    private String[] UserFarmID;
     
-    public Farmer(DBConnector db) {
+    public Farmer(DBConnector db, String[] UserFarmID) {
         this.db = db;
         farm = new Farm();
         r = new Random();
-        userFarmID = getUserFarm();
+//        userFarmID = getUserFarm();
         activity = new Activity(db);
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
+        this.UserFarmID = UserFarmID;
     }
+
+//    public Farmer(String userID) {
+//        this.userID = userID;
+//    }
     
     @Override
     public void run() {
@@ -62,13 +68,13 @@ public class Farmer implements Runnable {
                 String plantID = temp[1];
                 if (status.equals("0")) {
                     action = "fertilizer";
-                    data = getData("fertilizer",userFarmID[0],userFarmID[1]);
+                    data = getData("fertilizer",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("g");
                     farm.setArea(randRow, randField, "1|"+ data[2]);
                     
                 } else if (status.equals("1")) {
                     action = "pesticide";
-                    data = getData("pesticide",userFarmID[0],userFarmID[1]);
+                    data = getData("pesticide",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("ml");
                     farm.setArea(randRow, randField, "2|"+ data[2]);
                     
@@ -97,15 +103,16 @@ public class Farmer implements Runnable {
             }
             
         }
+        
     }
     
-    public String[] getUserFarm() {
-        Random r = new Random();
-        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
-        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
-        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
-        return arr;
-    }
+//    public String[] getUserFarm() {
+//        Random r = new Random();
+//        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
+//        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
+//        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
+//        return arr;
+//    }
     
     public String[] getData(String type, String userID, String farmID) {
         Random r = new Random();
@@ -137,9 +144,15 @@ public class Farmer implements Runnable {
     public String[] getPlantData () {
         
         if (farm.getArea(randRow, randField) == null){
-            plant[randRow][randField] = getData("plant", userFarmID[0], userFarmID[1]);
+            plant[randRow][randField] = getData("plant", UserFarmID[0], UserFarmID[1]);
         } 
         
         return plant[randRow][randField];
     }
+
+//    @Override
+//    public String toString() {
+//        return UserFarmID;
+//    }
+    
 }
