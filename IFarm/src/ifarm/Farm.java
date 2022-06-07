@@ -14,17 +14,17 @@ import java.util.Random;
  */
 public class Farm {
     
-    private String[][] fields;
+    private String[][] area;
     private int row;
-    private int col;
+    private int field;
 //    private int randStatus;
     private Random r;
 
     public Farm() {
         row = 2;
-        col = 2;
+        field = 2;
         r = new Random();
-        fields = new String[row][col];
+        area = new String[row][field];
         
 //        for (int i=0; i<this.row; i++) {
 //            for (int j=0; j<this.col; j++) {
@@ -35,20 +35,20 @@ public class Farm {
 //        }
     }
 
-    public String getField(int row, int col) {
-        return fields[row][col];
+    public String getArea(int row, int field) {
+        return area[row][field];
     }
     
-    public void setField(int row, int col, String status) {
-        this.fields[row][col] = status;
+    public void setArea(int row, int field, String status) {
+        this.area[row][field] = status;
     }
 
     public int getRow() {
         return row;
     }
 
-    public int getCol() {
-        return col;
+    public int getField() {
+        return field;
     }
 
   

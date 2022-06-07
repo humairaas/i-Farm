@@ -26,9 +26,10 @@ public class Farmer implements Runnable {
     private String action;
     private String[] quantity;
     private int randRow;
-    private int randCol;
+    private int randField;
     private String[] userFarmID;
     private String[] data;
+    private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
     
@@ -40,54 +41,61 @@ public class Farmer implements Runnable {
         activity = new Activity(db);
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
+        plant = new String[farm.getRow()][farm.getField()][];
     }
     
     @Override
     public void run() {
         for (int i=0; i<10; i++) {
             randRow = r.nextInt(farm.getRow());
-            randCol = r.nextInt(farm.getCol());
+            randField = r.nextInt(farm.getField());
             
-            if (farm.getField(randRow, randCol) == null) {
+            if (farm.getArea(randRow, randField) == null) {
                 action = "sowing";
-                data = getData("plant",userFarmID[0],userFarmID[1]);
+                data = getPlantData();
                 quantity = getQuantity("g");
-                farm.setField(randRow, randCol, "0|" + data[2]);
+                farm.setArea(randRow, randField, "0|" + data[2]);
 
             } else {
-                String[] temp = farm.getField(randRow, randCol).split("|");
+                String[] temp = farm.getArea(randRow, randField).split("|");
                 String status = temp[0];
                 String plantID = temp[1];
                 if (status.equals("0")) {
                     action = "fertilizer";
                     data = getData("fertilizer",userFarmID[0],userFarmID[1]);
                     quantity = getQuantity("g");
-                    farm.setField(randRow, randCol, "1|"+ data[2]);
+                    farm.setArea(randRow, randField, "1|"+ data[2]);
                     
                 } else if (status.equals("1")) {
                     action = "pesticide";
                     data = getData("pesticide",userFarmID[0],userFarmID[1]);
                     quantity = getQuantity("ml");
-                    farm.setField(randRow, randCol, "2|"+ data[2]);
+                    farm.setArea(randRow, randField, "2|"+ data[2]);
                     
                 } else if (status.equals("2")) {
                     action = "harvest";
-                    data = getData("plant",userFarmID[0],userFarmID[1]);
+                    data = getPlantData();
                     quantity = getQuantity("g");
-                    farm.setField(randRow, randCol, "3|"+ data[2]);
+                    farm.setArea(randRow, randField, "3|"+ data[2]);
                     
                 } else if (status.equals("3")) {
                     action = "sales";
-                    data  = getData("plant",userFarmID[0],userFarmID[1]);
+                    data  = getPlantData();
                     quantity = getQuantity("g");
-                    farm.setField(randRow, randCol, null);
+                    farm.setArea(randRow, randField, null);
                 }
+            }   
+            
+            // try to resume if fail
+            try {
+                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
+                activity.toTxt(finalLog);
+                activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
+                System.out.println(Thread.currentThread().getName() + ": " + finalLog);
+            } catch (NumberFormatException e) {
+               
             }
-            String date = dtf.format(now);
-            String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+date+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randCol;
-            activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randCol, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
-            activity.toTxt(finalLog);
-            System.out.println(Thread.currentThread().getName() + ": " + finalLog);
+            
         }
     }
     
@@ -124,5 +132,14 @@ public class Farmer implements Runnable {
         arr[0] = Integer.toString(rand);
         arr[1] = unit;
         return arr;
+    }
+    
+    public String[] getPlantData () {
+        
+        if (farm.getArea(randRow, randField) == null){
+            plant[randRow][randField] = getData("plant", userFarmID[0], userFarmID[1]);
+        } 
+        
+        return plant[randRow][randField];
     }
 }

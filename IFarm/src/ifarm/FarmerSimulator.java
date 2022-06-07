@@ -15,7 +15,7 @@ public class FarmerSimulator implements FarmerSimulatorInterface {
     public Farmer[] generateFarmers(int numberOfFarmers) {
         
         return null;
-        //buat thread kat sini
+        //buat thread pool kat sini
     }
     
 }
