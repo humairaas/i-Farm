@@ -9,14 +9,17 @@ import java.util.Random;
 import java.sql.*;
 import java.time.*;
 import java.time.format.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.logging.*;
 
 /**
  *
  * @author User
  */
-public class Farmer implements Runnable {
+public class Farmer implements Callable {
     
     private DBConnector db;
     private Farm farm;
@@ -33,6 +36,8 @@ public class Farmer implements Runnable {
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
     
+    private List<String[]> activity_logs = new ArrayList<String[]>();
+        
     public Farmer(DBConnector db) {
         this.db = db;
         farm = new Farm();
@@ -45,7 +50,7 @@ public class Farmer implements Runnable {
     }
     
     @Override
-    public void run() {
+    public List<String[]> call() throws Exception {  
         for (int i=0; i<10; i++) {
             randRow = r.nextInt(farm.getRow());
             randField = r.nextInt(farm.getField());
@@ -88,15 +93,14 @@ public class Farmer implements Runnable {
             
             // try to resume if fail
             try {
-                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
-                activity.toTxt(finalLog);
-                activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
-                System.out.println(Thread.currentThread().getName() + ": " + finalLog);
+                String[] finalLog = { "User-" , data[0] , " Farm-" , data[1] , " " , dtf.format(now) , " " , action , " " , data[3] , " " , quantity[0] , quantity[1] , " " , Integer.toString(randRow) , " " , Integer.toString(randField) };
+                activity_logs.add(finalLog);
             } catch (NumberFormatException e) {
                
             }
             
         }
+        return activity_logs;
     }
     
     public String[] getUserFarm() {
@@ -142,4 +146,5 @@ public class Farmer implements Runnable {
         
         return plant[randRow][randField];
     }
+
 }
