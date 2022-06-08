@@ -25,15 +25,14 @@ public class IFarm {
     
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
+                
+        //SEQUENTIALLY
         /*
-        //sequentially
         Timer times = new Timer();
         
-        
             times.start();
-            for (int i=0; i<5; i++) {
-                Farmer farmer = new Farmer(db);
-                farmer.run();
+            for (Farmer farmers : farmerObj) {
+                farmers.run();
             }
             
             times.end();
@@ -41,15 +40,19 @@ public class IFarm {
         System.out.println();
         */
         
-        //concurrently
+        //CONCURRENTLY
         //Thread pool for generating activities
         ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
         List<Future<Boolean>> list = new ArrayList<Future<Boolean>>();
-        for (int i = 0; i < 5; i++) {
-            Callable<Boolean> worker = new Farmer(db);
+        
+        FarmerSimulator simulator = new FarmerSimulator(db);
+        Farmer[] farmerObj = simulator.generateFarmers(10);
+        
+        for (Farmer farmers : farmerObj) {
+            Callable<Boolean> worker = farmers;
             Future<Boolean> submit = p1.submit(worker);
             list.add(submit);
-        }
+         }
         p1.shutdown();
         
         //Thread pool for handling data entry
@@ -72,29 +75,28 @@ public class IFarm {
             }
         }
         p2.shutdown();
-        /*
-        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
-        Timer timer = new Timer();
         
-        try {
-            timer.start();
-            for (int i=0; i<5; i++) {
-                Farmer farmer = new Farmer(db);
-                pool.execute(farmer);   
-            }
-            pool.shutdown();
-            pool.awaitTermination(1, TimeUnit.DAYS);
-            timer.end();
-        } catch (InterruptedException e){
-            
-        }
+//        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
+//        Timer timer = new Timer();
+//        
+//        try {
+//            timer.start();
+//            for (Farmer farmers : farmerObj) {
+//                pool.execute(farmers);
+//            }
+//            pool.shutdown();
+//            pool.awaitTermination(1, TimeUnit.DAYS);
+//            timer.end();
+//        } catch (InterruptedException e){
+//            
+//        }
         
         // compare time
-        if (pool.isTerminated()){
-            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
-            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
-        }
-*/
+//        if (pool.isTerminated()){
+//            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
+//            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
+//        }
+
 
         
     }

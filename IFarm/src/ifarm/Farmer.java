@@ -6,13 +6,9 @@
 package ifarm;
 
 import java.util.Random;
-import java.sql.*;
 import java.time.*;
 import java.time.format.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.concurrent.Callable;
-import java.util.logging.*;
 
 /**
  *
@@ -29,22 +25,27 @@ public class Farmer implements Callable<Boolean> {
     private String[] quantity;
     private int randRow;
     private int randField;
-    private String[] userFarmID;
     private String[] data;
     private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
+    private String[] UserFarmID;
     
-    public Farmer(DBConnector db) {
+    public Farmer(DBConnector db, String[] UserFarmID) {
         this.db = db;
         farm = new Farm();
         r = new Random();
-        userFarmID = getUserFarm();
+        activity = new Activity();
         activity = new Activity();
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
+        this.UserFarmID = UserFarmID;
     }
+
+//    public Farmer(String userID) {
+//        this.userID = userID;
+//    }
     
     @Override
     public Boolean call() {
@@ -65,13 +66,13 @@ public class Farmer implements Callable<Boolean> {
                 String plantID = temp[1];
                 if (status.equals("0")) {
                     action = "fertilizer";
-                    data = getData("fertilizer",userFarmID[0],userFarmID[1]);
+                    data = getData("fertilizer",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("g");
                     farm.setArea(randRow, randField, "1|"+ data[2]);
                     
                 } else if (status.equals("1")) {
                     action = "pesticide";
-                    data = getData("pesticide",userFarmID[0],userFarmID[1]);
+                    data = getData("pesticide",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("ml");
                     farm.setArea(randRow, randField, "2|"+ data[2]);
                     
@@ -91,7 +92,7 @@ public class Farmer implements Callable<Boolean> {
             
             // try to resume if fail
             try {
-                String finalLog = "User-"+data[0]+", Farm-"+data[1]+", "+dtf.format(now)+", "+action+", "+data[3]+", "+quantity[0]+quantity[1]+", "+randRow+", "+randField;
+                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
                 activity.toTxt(finalLog, data[0]);
                 //activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
                 System.out.println(Thread.currentThread().getName() + ": " + finalLog);
@@ -101,14 +102,6 @@ public class Farmer implements Callable<Boolean> {
         }
         //If false, handle disaster
         return true;
-    }
-    
-    public String[] getUserFarm() {
-        Random r = new Random();
-        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
-        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
-        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
-        return arr;
     }
     
     public String[] getData(String type, String userID, String farmID) {
@@ -141,7 +134,7 @@ public class Farmer implements Callable<Boolean> {
     public String[] getPlantData () {
         
         if (farm.getArea(randRow, randField) == null){
-            plant[randRow][randField] = getData("plant", userFarmID[0], userFarmID[1]);
+            plant[randRow][randField] = getData("plant", UserFarmID[0], UserFarmID[1]);
         } 
         
         return plant[randRow][randField];
