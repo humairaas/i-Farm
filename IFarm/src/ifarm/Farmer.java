@@ -9,14 +9,16 @@ import java.util.Random;
 import java.sql.*;
 import java.time.*;
 import java.time.format.*;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.concurrent.Callable;
 import java.util.logging.*;
 
 /**
  *
  * @author User
  */
-public class Farmer implements Runnable {
+public class Farmer implements Callable<Boolean> {
     
     private DBConnector db;
     private Farm farm;
@@ -38,14 +40,15 @@ public class Farmer implements Runnable {
         farm = new Farm();
         r = new Random();
         userFarmID = getUserFarm();
-        activity = new Activity(db);
+        activity = new Activity();
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
     }
     
     @Override
-    public void run() {
+    public Boolean call() {
+        
         for (int i=0; i<10; i++) {
             randRow = r.nextInt(farm.getRow());
             randField = r.nextInt(farm.getField());
@@ -88,15 +91,16 @@ public class Farmer implements Runnable {
             
             // try to resume if fail
             try {
-                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
-                activity.toTxt(finalLog);
-                activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
+                String finalLog = "User-"+data[0]+", Farm-"+data[1]+", "+dtf.format(now)+", "+action+", "+data[3]+", "+quantity[0]+quantity[1]+", "+randRow+", "+randField;
+                activity.toTxt(finalLog, data[0]);
+                //activity.toDB(action, data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
                 System.out.println(Thread.currentThread().getName() + ": " + finalLog);
             } catch (NumberFormatException e) {
                
             }
-            
         }
+        //If false, handle disaster
+        return true;
     }
     
     public String[] getUserFarm() {
