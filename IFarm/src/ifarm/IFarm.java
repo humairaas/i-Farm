@@ -96,10 +96,5 @@ public class IFarm {
 //            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
 //            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
 //        }
-
-
-        
     }
-    
-    
 }

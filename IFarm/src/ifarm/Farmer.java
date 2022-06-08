@@ -36,17 +36,12 @@ public class Farmer implements Callable<Boolean> {
         farm = new Farm();
         r = new Random();
         activity = new Activity();
-        activity = new Activity();
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
         this.UserFarmID = UserFarmID;
     }
 
-//    public Farmer(String userID) {
-//        this.userID = userID;
-//    }
-    
     @Override
     public Boolean call() {
         
@@ -102,8 +97,8 @@ public class Farmer implements Callable<Boolean> {
         }
         //If false, handle disaster
         return true;
-    }
-    
+    }  
+
     public String[] getData(String type, String userID, String farmID) {
         Random r = new Random();
         String size = db.SELECT("SELECT COUNT(*) FROM users_farms LEFT JOIN farms_"+type+"s ON users_farms.farm_id_fk=farms_"+type+"s.farm_id_fk LEFT JOIN "+type+"s ON farms_"+type+"s."+type+"_id_fk="+type+"s."+type+"_id WHERE users_farms.user_id_fk = "+userID+" AND users_farms.farm_id_fk = "+farmID);
