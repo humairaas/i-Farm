@@ -73,6 +73,22 @@ public class IFarm {
         } catch (ExecutionException ex) {
             Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
         }
+        p2.shutdown();
+        
+//        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
+//        Timer timer = new Timer();
+//        
+//        try {
+//            timer.start();
+//            for (Farmer farmers : farmerObj) {
+//                pool.execute(farmers);
+//            }
+//            pool.shutdown();
+//            pool.awaitTermination(1, TimeUnit.DAYS);
+//            timer.end();
+//        } catch (InterruptedException e){
+//            
+//        }
         
         // compare time
         if (pool.isTerminated()){
@@ -110,6 +126,4 @@ public class IFarm {
             
         System.out.println();
     }
-    
-    
 }
