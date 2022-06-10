@@ -19,7 +19,7 @@ import java.util.Scanner;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class DataEntryHandler  {
-    
+
     private List<String[]> activities;
     private Activity activity_class;
     ReentrantLock lock;
@@ -27,7 +27,7 @@ public class DataEntryHandler  {
     public DataEntryHandler(ReentrantLock lock) {
         this.lock = lock;
     }
-    
+
     
 //        int y =  atomicInteger.get();
         
@@ -59,6 +59,6 @@ public class DataEntryHandler  {
         System.out.println(Thread.currentThread().getName()+" has released the lock.");
 //        lock.unlock();
         
-    }
+    }   
 
 }

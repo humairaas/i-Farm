@@ -21,7 +21,7 @@ import java.util.logging.*;
  * @author User
  */
 
-public class Farmer implements Callable {
+public class Farmer implements Callable {    
     
     private DBConnector db;
     private Farm farm;
@@ -57,7 +57,7 @@ public class Farmer implements Callable {
 //    public Farmer(String userID) {
 //        this.userID = userID;
 //    }
-    
+
     @Override
     public List<String[]> call() throws Exception {  
         for (int i=0; i<10; i++) {
