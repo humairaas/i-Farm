@@ -25,13 +25,17 @@ public class IFarm {
     
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
+                
+        FarmerSimulator simulator = new FarmerSimulator(db);
+        Farmer[] farmerObj = simulator.generateFarmers(10);
         
-//        sequential(db);
-        concurrent(db);
-//          
+//        sequential(farmerObj);
+        concurrent(farmerObj);
+        
     }
     
-    public static void concurrent (DBConnector db) {
+    public static void concurrent (Farmer[] farmerObj) {
+
         ExecutorService pool = Executors.newFixedThreadPool(THREAD);
         Timer timer = new Timer();
         int farmerCounter = 0;
@@ -43,24 +47,23 @@ public class IFarm {
                   
         try {
             timer.start();
-             
+            
             while (farmerCounter<10 || handlerCounter<10) {
                 
                 if (farmerCounter<10){
-                    Farmer f = new Farmer(db);
-                    farmer.add(f); 
-                    activities.add(pool.submit(f));
+                    farmer.add(farmerObj[farmerCounter]); 
+                    activities.add(pool.submit(farmerObj[farmerCounter]));
                     farmerCounter++;
-                    System.out.println(farmerCounter);
+//                    System.out.println(farmerCounter);
                 }
                 
                 if (activities.get(handlerCounter).isDone()) {
                     Runnable handle = new DataEntryHandler(activities.get(handlerCounter).get());
                     pool.execute(handle); 
                     handlerCounter++;
-                    System.out.println(handlerCounter);
+//                    System.out.println(handlerCounter);
                 }
-                
+               
             }
             pool.shutdown();
             pool.awaitTermination(1, TimeUnit.DAYS);
@@ -79,21 +82,22 @@ public class IFarm {
     
         
     
-    public static void sequential (DBConnector db) {
+    public static void sequential (Farmer[] farmerObj) {
         Timer times = new Timer();
+        int i = 0;
+        
         System.out.println("Sequential");
         
         
             times.start();
-            for (int i=0; i<10; i++) {
+            for (Farmer farmer : farmerObj) {
                 
                 try {
-                    Farmer farmer = new Farmer(db);
                     DataEntryHandler handle;
-                    System.out.println("farmer" + i);
+//                    System.out.println("farmer" + i);
                     handle = new DataEntryHandler(farmer.call());
                     handle.run();
-                    System.out.println("handler" + i);
+//                    System.out.println("handler" + i);
                 } catch (Exception ex) {
                     Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -103,6 +107,7 @@ public class IFarm {
             times.end();
         
             System.out.println("Sequentially " + times.elapsed() + " miliseconds");
+            
         System.out.println();
     }
     

@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
@@ -22,24 +23,25 @@ public class DataEntryHandler implements Runnable {
     public DataEntryHandler(List<String[]> activities) {
         this.activities = activities;
     }
+         
     
     @Override
     public void run() {
         
+//        int y =  atomicInteger.get();
         for (String[] s : activities){
             
-            String joined = String.join("", s);
-            
-            
-//            activity_class.toTxt(joined);
+            String joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + " " + s[7] + " " + s[8] + " " + s[9] + " " + s[10] ;
             System.out.println(Thread.currentThread().getName() + ": " + joined );
-//            activity_class.toDB(s[8], data[2], quantity[1], Integer.parseInt(quantity[0]), randRow, randField, Integer.parseInt(data[1]), Integer.parseInt(data[0]));
+//            activity_class.toTxt(joined);    
+//            activity_class.toDB( id ,s[5], s[2], s[7], Integer.parseInt(s[6]), Integer.parseInt(s[8]), Integer.parseInt(s[9]), Integer.parseInt(s[1]), Integer.parseInt(s[0]));
             
+//         "User-" , data[0] , " Farm-" , data[1] , " " , dtf.format(now) , " " , action , " " , data[3] , " " , quantity[0] , quantity[1] , " " , Integer.toString(randRow) , " " , Integer.toString(randField)  
+//                   String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(now) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
         }
-
         
 
-        System.out.println(Thread.currentThread().getName()+"Next entry");
+//        System.out.println(Thread.currentThread().getName()+"Next entry");
     }
     
 }
