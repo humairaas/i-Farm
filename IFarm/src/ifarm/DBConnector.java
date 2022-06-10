@@ -5,12 +5,12 @@
  */
 package ifarm;
 
-//import java.io.File;
-//import java.io.FileNotFoundException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.*;
-//import java.util.ArrayList;
-//import java.util.Random;
-//import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public final class DBConnector {
     public static final String DB_URL = "jdbc:mysql://localhost:3306/i_farm?zeroDateTimeBehavior=convertToNull";
@@ -73,7 +73,7 @@ public final class DBConnector {
         return data;
     }
     
-    /*
+    
     public void insertDataToDatabase() {
         try{
             stmt = conn.createStatement();
@@ -96,8 +96,8 @@ public final class DBConnector {
             System.err.println(e);
         }
     }
-    */
-    /*
+    
+    
     public void randomizeUserData() {
         Random rand = new Random();
         int numbers[] = new int[100];
@@ -131,7 +131,7 @@ public final class DBConnector {
             System.err.println(e);
         }
     }
-    */
+    
     
   
 }

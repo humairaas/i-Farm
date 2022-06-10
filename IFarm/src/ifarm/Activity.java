@@ -6,6 +6,8 @@
 package ifarm;
 
 import java.io.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -21,20 +23,24 @@ public class Activity {
     private int row;
     private int farmID;
     private int userID;
-
-    public Activity(DBConnector db) {
-        this.db = db;
-    }
     
+    private int counter = 0;
+    
+    public Activity() {
+    }
   
     public void toDB(int activity_id, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
        db.INSERT("INSERT INTO `activities` (`activity_id` , `action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"');");
     }
     
-    public void toTxt(String text){
+    public synchronized void increment(){
+        this.counter += 1;
+    }
+    
+    public void toTxt(String text, String user){
         try {
             //Change this according to your own directory path
-            FileWriter myWriter = new FileWriter("C:\\Users\\USER\\Desktop\\NetBeans\\WIF3003\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Activities.txt", true);
+            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
             myWriter.write(text + "\n");
             myWriter.close();
 //            System.out.println("Successfully wrote to the file.");

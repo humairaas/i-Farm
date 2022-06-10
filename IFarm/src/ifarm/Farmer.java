@@ -20,6 +20,7 @@ import java.util.logging.*;
  *
  * @author User
  */
+
 public class Farmer implements Callable {
     
     private DBConnector db;
@@ -38,7 +39,7 @@ public class Farmer implements Callable {
     private LocalDateTime now; 
     private String[] UserFarmID;
     private AtomicInteger atomicInteger = new AtomicInteger();
-
+    
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
     public Farmer(DBConnector db, String[] UserFarmID) {
@@ -46,7 +47,7 @@ public class Farmer implements Callable {
         farm = new Farm();
         r = new Random();
 //        userFarmID = getUserFarm();
-        activity = new Activity(db);
+        activity = new Activity();
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
@@ -126,7 +127,7 @@ public class Farmer implements Callable {
 //        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
 //        return arr;
 //    }
-    
+
     public String[] getData(String type, String userID, String farmID) {
         Random r = new Random();
         String size = db.SELECT("SELECT COUNT(*) FROM users_farms LEFT JOIN farms_"+type+"s ON users_farms.farm_id_fk=farms_"+type+"s.farm_id_fk LEFT JOIN "+type+"s ON farms_"+type+"s."+type+"_id_fk="+type+"s."+type+"_id WHERE users_farms.user_id_fk = "+userID+" AND users_farms.farm_id_fk = "+farmID);

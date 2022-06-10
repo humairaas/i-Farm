@@ -18,7 +18,6 @@ public class FarmerSimulator implements FarmerSimulatorInterface {
     private DBConnector db;
     private Farmer[] farmer;
     private Random r;
-    private AtomicInteger counter;
 
     public FarmerSimulator(DBConnector db) {
         this.db = db;

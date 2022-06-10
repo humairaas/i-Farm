@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,52 +27,58 @@ public class IFarm {
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
                 
+        //SEQUENTIALLY
+        /*
+        Timer times = new Timer();
+        
+            times.start();
+            for (Farmer farmers : farmerObj) {
+                farmers.run();
+            }
+            
+            times.end();
+        
+        System.out.println();
+        */
+        
+        //CONCURRENTLY
+        //Thread pool for generating activities
+        ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
+        List<Future<List<String[]>>> list = new ArrayList<Future<List<String[]>>>();
+        
         FarmerSimulator simulator = new FarmerSimulator(db);
         Farmer[] farmerObj = simulator.generateFarmers(10);
         
-//        sequential(farmerObj);
-        concurrent(farmerObj);
+        for (Farmer farmers : farmerObj) {
+            Callable<List<String[]>> worker = farmers;
+            Future<List<String[]>> submit = p1.submit(worker);
+            list.add(submit);
+         }
+        p1.shutdown();
         
-    }
-    
-    public static void concurrent (Farmer[] farmerObj) {
-
-        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
-        Timer timer = new Timer();
-        int farmerCounter = 0;
-        int handlerCounter = 0;
-        List<Future<List<String[]>>> activities = new ArrayList<Future<List<String[]>>>() ;
-        List<Callable<List<String>>> farmer = new ArrayList<Callable<List<String>>>(100);
+        //Thread pool for handling data entry
+        ExecutorService p2 = Executors.newFixedThreadPool(THREAD);
         
-        System.out.println("Concurrent");
-                  
-        try {
-            timer.start();
-            
-            while (farmerCounter<10 || handlerCounter<10) {
-                
-                if (farmerCounter<10){
-                    farmer.add(farmerObj[farmerCounter]); 
-                    activities.add(pool.submit(farmerObj[farmerCounter]));
-                    farmerCounter++;
-//                    System.out.println(farmerCounter);
+        ReentrantLock lock = new ReentrantLock();
+        DataEntryHandler handler = new DataEntryHandler(lock);
+        
+        
+        for (Future<List<String[]>> future : list) {
+            System.out.println("each farmer");
+            while (!future.isDone()){
+                try {
+                    if(future.isDone()){
+                        //Feed to data entry handler
+                        DataEntry entry = new DataEntry(future.get(), handler, lock);
+                        p2.execute(entry);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
                 }
-                
-                if (activities.get(handlerCounter).isDone()) {
-                    Runnable handle = new DataEntryHandler(activities.get(handlerCounter).get());
-                    pool.execute(handle); 
-                    handlerCounter++;
-//                    System.out.println(handlerCounter);
-                }
-               
             }
-            pool.shutdown();
-            pool.awaitTermination(1, TimeUnit.DAYS);
-            timer.end();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ExecutionException ex) {
-            Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
+
         }
         p2.shutdown();
         
@@ -91,39 +98,9 @@ public class IFarm {
 //        }
         
         // compare time
-        if (pool.isTerminated()){
-            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
-        }
-    }
-    
-        
-    
-    public static void sequential (Farmer[] farmerObj) {
-        Timer times = new Timer();
-        int i = 0;
-        
-        System.out.println("Sequential");
-        
-        
-            times.start();
-            for (Farmer farmer : farmerObj) {
-                
-                try {
-                    DataEntryHandler handle;
-//                    System.out.println("farmer" + i);
-                    handle = new DataEntryHandler(farmer.call());
-                    handle.run();
-//                    System.out.println("handler" + i);
-                } catch (Exception ex) {
-                    Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
-            }
-            
-            times.end();
-        
-            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
-            
-        System.out.println();
+//        if (pool.isTerminated()){
+//            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
+//            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
+//        }
     }
 }
