@@ -60,7 +60,7 @@ public class Farmer implements Callable {
 
     @Override
     public List<String[]> call() throws Exception {  
-        for (int i=0; i<10; i++) {
+        for (int i=0; i<500; i++) {
             randRow = r.nextInt(farm.getRow());
             randField = r.nextInt(farm.getField());
             
@@ -104,6 +104,8 @@ public class Farmer implements Callable {
             try {
                 String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(now) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField), Integer.toString(atomicInteger.incrementAndGet()) };
                 activity_logs.add(activity_data);
+                //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
+                //System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
             } catch (NumberFormatException e) {
                
             }

@@ -5,12 +5,8 @@
  */
 package ifarm;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
-import java.util.Scanner;
-import java.util.concurrent.Future;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,20 +18,16 @@ import java.util.logging.Logger;
 public class DataEntry implements Runnable{
     private ReentrantLock lock;
     private DataEntryHandler handler;
-    private List<String[]> str;
+    private List<String[]> activities;
 
-    public DataEntry(List<String[]> str, DataEntryHandler handler, ReentrantLock lock) {
+    public DataEntry(List<String[]> activities, DataEntryHandler handler, ReentrantLock lock) {
         this.handler = handler;
         this.lock = lock;
-        this.str = str;
+        this.activities = activities;
     }
     
     @Override
     public void run() {
-        try {
-            handler.insertToDatabase(str);
-        } catch (IOException ex) {
-            Logger.getLogger(DataEntry.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        handler.insertToDatabase(activities);
     }
 }

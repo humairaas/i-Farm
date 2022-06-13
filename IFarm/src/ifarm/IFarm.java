@@ -5,16 +5,8 @@
  */
 package ifarm;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -30,7 +22,7 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class IFarm {
     
-    static final int THREAD = 3;
+    static final int THREAD = 10;
     
     public static void main(String[] args) {
         DBConnector db = new DBConnector();
@@ -52,10 +44,10 @@ public class IFarm {
         //CONCURRENTLY
         //Thread pool for generating activities
         ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
-        List<Future<List<String[]>>> list = new ArrayList<Future<List<String[]>>>();
         
         FarmerSimulator simulator = new FarmerSimulator(db);
-        Farmer[] farmerObj = simulator.generateFarmers(10);
+        Farmer[] farmerObj = simulator.generateFarmers(50);
+        List<Future<List<String[]>>> list = new ArrayList<Future<List<String[]>>>();
         
         for (Farmer farmers : farmerObj) {
             Callable<List<String[]>> worker = farmers;
@@ -64,31 +56,36 @@ public class IFarm {
          }
         p1.shutdown();
         
+        Timer timer = new Timer();
         //Thread pool for handling data entry
         ExecutorService p2 = Executors.newFixedThreadPool(THREAD);
         
         ReentrantLock lock = new ReentrantLock();
         DataEntryHandler handler = new DataEntryHandler(lock);
         
-        
-        for (Future<List<String[]>> future : list) {
-            System.out.println("each farmer");
-            while (!future.isDone()){
-                try {
-                    if(future.isDone()){
-                        //Feed to data entry handler
-                        DataEntry entry = new DataEntry(future.get(), handler, lock);
+        //int count =0;
+        timer.start();
+        while(!list.isEmpty()){
+            for(int i=0 ; i<list.size(); i++){
+                //System.out.println(count++);
+                Future<List<String[]>> future = list.get(i);
+                if(future.isDone()){
+                    try{
+                        //Feed to Data Entry Handler
+                        Runnable entry = new DataEntry(future.get(), handler, lock);
                         p2.execute(entry);
+                        list.remove(i);
+                    }catch(InterruptedException e){
+                        e.printStackTrace();
+                    }catch(ExecutionException e){
+                        e.printStackTrace();
                     }
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
                 }
             }
-
         }
         p2.shutdown();
+        timer.end();
+        System.out.println("Data Entry " + timer.elapsed() + " miliseconds");
         
 //        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
 //        Timer timer = new Timer();
