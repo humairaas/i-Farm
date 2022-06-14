@@ -91,10 +91,10 @@ public class IFarm {
         
         // initializing timer for concurrent process
         Timer timerCon = new Timer();
-        
+
         // start recording time for concurrent process
         timerCon.start();
-        
+
         
         // for each farmer
         for (Farmer farmers : farmerObjCon) {
@@ -104,14 +104,14 @@ public class IFarm {
          }
         p1.shutdown();
 
-        
+        // to constansly check when future is done
         while(!list.isEmpty()){
             for(int i=0 ; i<list.size(); i++){
-                //System.out.println(count++);
+                
                 Future<List<String[]>> future = list.get(i);
                 if(future.isDone()){
                     try{
-                        //Feed to Data Entry Handler
+                        // Feed to Data Entry Handler
                         Runnable entry = new DataEntry(future.get(), handler);
                         p2.execute(entry);
                         list.remove(i);
@@ -126,6 +126,7 @@ public class IFarm {
        
          
         p2.shutdown();
+        
         try {
             p2.awaitTermination(1, TimeUnit.DAYS);
         } catch (InterruptedException ex) {
@@ -133,28 +134,10 @@ public class IFarm {
         }
         timerCon.end();
        
-//        System.out.println(timer.elapsed());
-//        System.out.println("Data Entry " + timer.elapsed() + " miliseconds");
+        // Start data visualization
+        DataVisualization visualize = new DataVisualization(db);
+        visualize.start();   
         
-//        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
-//        Timer timer = new Timer();
-//        
-//        try {
-//            timer.start();
-//            for (Farmer farmers : farmerObj) {
-//                pool.execute(farmers);
-//            }
-//            pool.shutdown();
-//            pool.awaitTermination(1, TimeUnit.DAYS);
-//            timer.end();
-//        } catch (InterruptedException e){
-//            
-//        }
-        
-//         compare time
-//        if (p2){
-            System.out.println("Sequentially " + timerSeq.elapsed() + " miliseconds");
-            System.out.println("Concurrently " + timerCon.elapsed() + " miliseconds");
-//        }
+        db.disconnect();
     }
 }

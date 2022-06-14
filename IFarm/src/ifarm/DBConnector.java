@@ -18,6 +18,7 @@ public final class DBConnector {
     
     java.sql.Connection conn = null;
     java.sql.Statement stmt = null;
+    ResultSet rs = null;
 
     public DBConnector() {
         connect();
@@ -26,8 +27,7 @@ public final class DBConnector {
     public void connect() {
         try{
             
-            Class.forName("com.mysql.jdbc.Driver");
-            
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             //System.out.println("Connected to database.");
             
@@ -37,6 +37,14 @@ public final class DBConnector {
         }
     }
     
+    public void disconnect(){
+        try{
+            rs.close();
+            stmt.close();
+            conn.close();
+        }catch(SQLException e){
+        }
+    }
     
     public void INSERT(String query){
         try{
@@ -51,12 +59,25 @@ public final class DBConnector {
         }
     }
     
+    public void UPDATE(String query){
+        try{
+            stmt = conn.createStatement();
+            stmt.executeUpdate(query);
+            //System.out.println("INSERT Successful.");
+            //stmt.close();
+            
+        }catch(SQLException e){
+            System.out.println("Error updating to database.");
+            System.err.println(e);
+        }
+    }
+    
     public String SELECT(String query){
         String data = "";
         
         try{
             stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
+            rs = stmt.executeQuery(query);
             //System.out.println("SELECT Successful.");
             
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -67,7 +88,7 @@ public final class DBConnector {
                     data += rs.getString(i) + "#";
                 //data += '\n';
             }
-//            stmt.close();
+            rs.close();
             
         }catch(SQLException e){
             System.out.println("Error selecting from database.");
@@ -76,6 +97,44 @@ public final class DBConnector {
         return data;
     }
     
+    public ResultSet SELECTrs(String query){
+        rs = null;
+        
+        try{
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(query);
+            //System.out.println("SELECT Successful.");
+          
+            //stmt.close();
+        }catch(SQLException e){
+            System.out.println("Error selecting from database.");
+            System.err.println(e);
+        }
+        return rs;
+    }
+    
+    public void isEmpty(String tableName){
+        try{
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery("SELECT COUNT(*) AS count FROM Activities");
+            rs.next();
+            int count = rs.getInt("count");
+            rs.close();
+            
+            if(count != 0){
+                System.out.println("Activities table is not empty");
+                System.out.println("Truncating Activities table...");
+                stmt.executeUpdate("TRUNCATE " + tableName);
+                System.out.println("Truncate successful");
+            }
+            else{
+                System.out.println("Activities table is empty.");
+            }
+        }catch(SQLException e){
+            System.out.println("Error selecting count from database.");
+            System.err.println(e);
+        }
+    }
     
     public void insertDataToDatabase() {
         try{
@@ -99,7 +158,6 @@ public final class DBConnector {
             System.err.println(e);
         }
     }
-    
     
     public void randomizeUserData() {
         Random rand = new Random();

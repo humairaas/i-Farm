@@ -60,7 +60,7 @@ public class Farmer implements Callable {
 
     @Override
     public List<String[]> call() throws Exception {  
-        for (int i=0; i<500; i++) {
+        for (int i=0; i<100; i++) {
             randRow = r.nextInt(farm.getRow());
             randField = r.nextInt(farm.getField());
             

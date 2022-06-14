@@ -6,7 +6,6 @@
 package ifarm;
 
 import java.util.Random;
-
 /**
  *
  * @author User

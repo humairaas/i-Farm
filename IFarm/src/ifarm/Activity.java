@@ -28,16 +28,14 @@ public class Activity {
   
     public void toDB(int activity_id, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
        db.INSERT("INSERT INTO `activities` (`activity_id` ,`action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')");
-//       db.INSERT("INSERT INTO 'activities' ('action') VALUES ('"+action+"');");
     }
-//     
+    
     public void toTxt(String text, String user){
         try {
             //Change this according to your own directory path
             FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
             myWriter.write(text + "\n");
             myWriter.close();
-//            System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
             System.out.println("Error writing to the file.");
             e.printStackTrace();
