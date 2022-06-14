@@ -12,8 +12,11 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -25,47 +28,83 @@ public class IFarm {
     static final int THREAD = 10;
     
     public static void main(String[] args) {
+        
+        // establish connection with databse
         DBConnector db = new DBConnector();
+        
+        // call class that implements farmer simulator interface to create many farmer at once
+        FarmerSimulator simulator = new FarmerSimulator(db);
+        
+        // number of farmer
+        int totalFarmer = 20;
+        
+        // generate farmers based on number of farmer for sequential and concurrent process
+        Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
+        Farmer[] farmerObjCon = simulator.generateFarmers(totalFarmer);
+        
+        // initializing atomic integer for activity id
+        AtomicInteger atomicInteger = new AtomicInteger();
+        
+        // initializing lock explicitly
+        ReentrantLock lock = new ReentrantLock();
+        
+        // initializing class for handling generated data
+        DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
                 
         //SEQUENTIALLY
-        /*
-        Timer times = new Timer();
         
-            times.start();
-            for (Farmer farmers : farmerObj) {
-                farmers.run();
+        // initializing timer for sequential process
+        Timer timerSeq = new Timer();
+        
+        // start recording time for sequential process
+        timerSeq.start(); 
+            
+            // for every farmer created
+            // execute call method in Farmer class
+            // results will be used for initializing data entry class
+            // execute run method in data entry class to start inserting data into database and tezt file(log)
+            // exception is thrown since runnable is used 
+        
+            for (Farmer farmers : farmerObjSeq) {
+                try {
+                    Runnable entry1 = new DataEntry(farmers.call(), handler); 
+                    entry1.run();
+                } catch (Exception ex) {
+                    Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
             
-            times.end();
-        
-        System.out.println();
-        */
+        // stop recording time for sequential process
+        timerSeq.end();
+                    
         
         //CONCURRENTLY
+        
         //Thread pool for generating activities
         ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
         
-        FarmerSimulator simulator = new FarmerSimulator(db);
-        Farmer[] farmerObj = simulator.generateFarmers(20);
+         //Thread pool for handling data entry
+        ExecutorService p2 = Executors.newFixedThreadPool(THREAD);
+        
+        // list of activities that
         List<Future<List<String[]>>> list = new ArrayList<Future<List<String[]>>>();
         
-        for (Farmer farmers : farmerObj) {
+        // initializing timer for concurrent process
+        Timer timerCon = new Timer();
+        
+        // start recording time for concurrent process
+        timerCon.start();
+        
+        
+        // for each farmer
+        for (Farmer farmers : farmerObjCon) {
             Callable<List<String[]>> worker = farmers;
             Future<List<String[]>> submit = p1.submit(worker);
             list.add(submit);
          }
         p1.shutdown();
+
         
-        Timer timer = new Timer();
-        //Thread pool for handling data entry
-        ExecutorService p2 = Executors.newFixedThreadPool(THREAD);
-        
-        ReentrantLock lock = new ReentrantLock();
-        AtomicInteger atomicInteger = new AtomicInteger();
-        DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
-        
-        //int count =0;
-        timer.start();
         while(!list.isEmpty()){
             for(int i=0 ; i<list.size(); i++){
                 //System.out.println(count++);
@@ -84,9 +123,18 @@ public class IFarm {
                 }
             }
         }
+       
+         
         p2.shutdown();
-        timer.end();
-        System.out.println("Data Entry " + timer.elapsed() + " miliseconds");
+        try {
+            p2.awaitTermination(1, TimeUnit.DAYS);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        timerCon.end();
+       
+//        System.out.println(timer.elapsed());
+//        System.out.println("Data Entry " + timer.elapsed() + " miliseconds");
         
 //        ExecutorService pool = Executors.newFixedThreadPool(THREAD);
 //        Timer timer = new Timer();
@@ -103,10 +151,10 @@ public class IFarm {
 //            
 //        }
         
-        // compare time
-//        if (pool.isTerminated()){
-//            System.out.println("Sequentially " + times.elapsed() + " miliseconds");
-//            System.out.println("Concurrently " + timer.elapsed() + " miliseconds");
+//         compare time
+//        if (p2){
+            System.out.println("Sequentially " + timerSeq.elapsed() + " miliseconds");
+            System.out.println("Concurrently " + timerCon.elapsed() + " miliseconds");
 //        }
     }
 }
