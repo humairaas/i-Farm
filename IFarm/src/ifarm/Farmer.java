@@ -6,15 +6,11 @@
 package ifarm;
 
 import java.util.Random;
-import java.sql.*;
 import java.time.*;
 import java.time.format.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.*;
 
 /**
  *
@@ -32,13 +28,11 @@ public class Farmer implements Callable {
     private String[] quantity;
     private int randRow;
     private int randField;
-//    private String[] userFarmID;
     private String[] data;
     private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
     private String[] UserFarmID;
-//    private AtomicInteger atomicInteger = new AtomicInteger();
     
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
@@ -46,17 +40,12 @@ public class Farmer implements Callable {
         this.db = db;
         farm = new Farm();
         r = new Random();
-//        userFarmID = getUserFarm();
         activity = new Activity();
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
         this.UserFarmID = UserFarmID;
     }
-
-//    public Farmer(String userID) {
-//        this.userID = userID;
-//    }
 
     @Override
     public List<String[]> call() throws Exception {  

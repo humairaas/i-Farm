@@ -32,11 +32,14 @@ public class IFarm {
         // establish connection with databse
         DBConnector db = new DBConnector();
         
+        // check if Activities table is empty
+        db.isEmpty("Activities");
+        
         // call class that implements farmer simulator interface to create many farmer at once
         FarmerSimulator simulator = new FarmerSimulator(db);
         
         // number of farmer
-        int totalFarmer = 20;
+        int totalFarmer = 10;
         
         // generate farmers based on number of farmer for sequential and concurrent process
         Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
@@ -95,7 +98,6 @@ public class IFarm {
         // start recording time for concurrent process
         timerCon.start();
 
-        
         // for each farmer
         for (Farmer farmers : farmerObjCon) {
             Callable<List<String[]>> worker = farmers;
@@ -104,7 +106,7 @@ public class IFarm {
          }
         p1.shutdown();
 
-        // to constansly check when future is done
+        // to constantly check when future is done
         while(!list.isEmpty()){
             for(int i=0 ; i<list.size(); i++){
                 
@@ -124,7 +126,6 @@ public class IFarm {
             }
         }
        
-         
         p2.shutdown();
         
         try {
@@ -138,6 +139,5 @@ public class IFarm {
         DataVisualization visualize = new DataVisualization(db);
         visualize.start();   
         
-        db.disconnect();
     }
 }

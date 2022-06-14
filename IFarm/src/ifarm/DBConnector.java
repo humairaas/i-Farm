@@ -18,7 +18,7 @@ public final class DBConnector {
     
     java.sql.Connection conn = null;
     java.sql.Statement stmt = null;
-    ResultSet rs = null;
+    //ResultSet rs = null;
 
     public DBConnector() {
         connect();
@@ -37,14 +37,14 @@ public final class DBConnector {
         }
     }
     
-    public void disconnect(){
-        try{
-            rs.close();
-            stmt.close();
-            conn.close();
-        }catch(SQLException e){
-        }
-    }
+//    public void disconnect(){
+//        try{
+//            rs.close();
+//            stmt.close();
+//            conn.close();
+//        }catch(SQLException e){
+//        }
+//    }
     
     public void INSERT(String query){
         try{
@@ -77,7 +77,7 @@ public final class DBConnector {
         
         try{
             stmt = conn.createStatement();
-            rs = stmt.executeQuery(query);
+            ResultSet rs = stmt.executeQuery(query);
             //System.out.println("SELECT Successful.");
             
             ResultSetMetaData rsmd = rs.getMetaData();
@@ -98,14 +98,13 @@ public final class DBConnector {
     }
     
     public ResultSet SELECTrs(String query){
-        rs = null;
+        ResultSet rs = null;
         
         try{
             stmt = conn.createStatement();
             rs = stmt.executeQuery(query);
             //System.out.println("SELECT Successful.");
           
-            //stmt.close();
         }catch(SQLException e){
             System.out.println("Error selecting from database.");
             System.err.println(e);
@@ -116,7 +115,7 @@ public final class DBConnector {
     public void isEmpty(String tableName){
         try{
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT COUNT(*) AS count FROM Activities");
+            ResultSet rs = stmt.executeQuery("SELECT COUNT(*) AS count FROM Activities");
             rs.next();
             int count = rs.getInt("count");
             rs.close();

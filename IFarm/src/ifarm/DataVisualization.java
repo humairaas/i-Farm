@@ -43,7 +43,7 @@ public class DataVisualization {
             
             // program end
             if(input == -1){
-                 System.out.println("Program ending");
+                 System.out.println("Program end");
                  break;
              }
             
