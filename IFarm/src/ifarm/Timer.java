@@ -9,7 +9,6 @@ package ifarm;
  *
  * @author ndhsn
  */
-import java.util.concurrent.TimeUnit;
 public class Timer {
     
     long startTime;

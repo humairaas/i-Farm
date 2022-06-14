@@ -6,13 +6,13 @@
 package ifarm;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 
@@ -46,7 +46,7 @@ public class IFarm {
         ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
         
         FarmerSimulator simulator = new FarmerSimulator(db);
-        Farmer[] farmerObj = simulator.generateFarmers(50);
+        Farmer[] farmerObj = simulator.generateFarmers(20);
         List<Future<List<String[]>>> list = new ArrayList<Future<List<String[]>>>();
         
         for (Farmer farmers : farmerObj) {
@@ -61,7 +61,8 @@ public class IFarm {
         ExecutorService p2 = Executors.newFixedThreadPool(THREAD);
         
         ReentrantLock lock = new ReentrantLock();
-        DataEntryHandler handler = new DataEntryHandler(lock);
+        AtomicInteger atomicInteger = new AtomicInteger();
+        DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
         
         //int count =0;
         timer.start();
@@ -72,7 +73,7 @@ public class IFarm {
                 if(future.isDone()){
                     try{
                         //Feed to Data Entry Handler
-                        Runnable entry = new DataEntry(future.get(), handler, lock);
+                        Runnable entry = new DataEntry(future.get(), handler);
                         p2.execute(entry);
                         list.remove(i);
                     }catch(InterruptedException e){

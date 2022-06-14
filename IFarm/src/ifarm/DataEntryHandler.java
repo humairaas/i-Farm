@@ -6,19 +6,17 @@
 package ifarm;
 
 
-import java.util.Arrays;
-import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.Future;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class DataEntryHandler  {
     ReentrantLock lock;
+    AtomicInteger atomicInteger;
 
-    public DataEntryHandler(ReentrantLock lock) {
+    public DataEntryHandler(AtomicInteger atomicInteger, ReentrantLock lock) {
         this.lock = lock;
+        this.atomicInteger = atomicInteger;
     }
     
     public synchronized void insertToDatabase(List<String[]> activities){

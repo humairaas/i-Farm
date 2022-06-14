@@ -6,8 +6,6 @@
 package ifarm;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -24,17 +22,11 @@ public class Activity {
     private int farmID;
     private int userID;
     
-    private int counter = 0;
-    
     public Activity() {
     }
   
     public void toDB(int activity_id, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
        db.INSERT("INSERT INTO `activities` (`activity_id` , `action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"');");
-    }
-    
-    public synchronized void increment(){
-        this.counter += 1;
     }
     
     public void toTxt(String text, String user){

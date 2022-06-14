@@ -5,24 +5,19 @@
  */
 package ifarm;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author User
  */
 public class DataEntry implements Runnable{
-    private ReentrantLock lock;
     private DataEntryHandler handler;
     private List<String[]> activities;
 
-    public DataEntry(List<String[]> activities, DataEntryHandler handler, ReentrantLock lock) {
+    public DataEntry(List<String[]> activities, DataEntryHandler handler) {
         this.handler = handler;
-        this.lock = lock;
         this.activities = activities;
     }
     
