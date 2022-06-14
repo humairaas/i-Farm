@@ -5,44 +5,35 @@
  */
 package ifarm;
 
-import java.sql.DatabaseMetaData;
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.InputMismatchException;
+import java.sql.*;
 import java.util.Scanner;
+import java.sql.ResultSet;
+import java.util.InputMismatchException;
 
-/**
- *
- * @author User
- */
-/*
+
+
 public class DataVisualization {
     // Initializing the mysql connection class
-    DBConnector db = new DBConnector();
-    Statement stmt = db.conn();
+      ifarm.DBConnector db = new ifarm.DBConnector();
 
-    public DataVisualization() {
+      Statement stmt = db.conn.createStatement();
+
+    public DataVisualization() throws SQLException {
     }
 
     public void Activities() {
         try {
             // To check if activities table exists
-            DatabaseMetaData meta = db.getMetaData();
+            DatabaseMetaData meta = db.conn.getMetaData();
             ResultSet resultSet = meta.getTables(null, null, "activity", new String[] { "TABLE" });
             if (!resultSet.next()) {
                 System.out.println("Activity table does not exist!");
-            } else {
-               
-
-                
+            } else {                               
                 String changeSQL = "UPDATE `activity` SET `quantity`='[value-6]'/1000 WHERE `unit` = 'g' AND `unit` = 'ml'"+
                                      "UPDATE `activity` SET `quantity`='[value-6]'/2 WHERE `unit` = 'pack (500g)'"+
                                      " UPDATE `activity` SET  `unit`= replace(unit,'g','kg')"+
                                      " UPDATE `activity` SET  `unit`= replace(unit,'ml','g')"+
                                      " UPDATE `activity` SET  `unit`= replace(unit,'pack (500g)','pack (1000g)')";
-
                 System.out.println("Change data in activity table...");
                 stmt.executeUpdate(changeSQL);
             }
@@ -164,7 +155,7 @@ public class DataVisualization {
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
-        return output;
+            return output;
     }
 
     public String printSummarizedActivityLog(ResultSet rs) {
@@ -324,6 +315,12 @@ public class DataVisualization {
              }
          }
          s.close();
+            
+     
+     
     }
+    
+    
+
+
 }
-*/
