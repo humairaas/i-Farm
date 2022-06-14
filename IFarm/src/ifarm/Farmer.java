@@ -38,7 +38,7 @@ public class Farmer implements Callable {
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
     private String[] UserFarmID;
-    private AtomicInteger atomicInteger = new AtomicInteger();
+//    private AtomicInteger atomicInteger = new AtomicInteger();
     
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
@@ -102,7 +102,7 @@ public class Farmer implements Callable {
             
             // try to resume if fail
             try {
-                String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(now) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField), Integer.toString(atomicInteger.incrementAndGet()) };
+                String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(now) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
                 activity_logs.add(activity_data);
                 //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
                 //System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);

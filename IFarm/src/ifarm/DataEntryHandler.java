@@ -13,25 +13,21 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DataEntryHandler  {
     ReentrantLock lock;
     AtomicInteger atomicInteger;
+    Activity activityClass = new Activity();
 
     public DataEntryHandler(AtomicInteger atomicInteger, ReentrantLock lock) {
         this.lock = lock;
         this.atomicInteger = atomicInteger;
     }
     
-    public synchronized void insertToDatabase(List<String[]> activities){
-        //System.out.println(Thread.currentThread().getName()+" is waiting to get the lock.");
-        //lock.lock();
-        //System.out.println(Thread.currentThread().getName()+" has got the lock.");
+    public void insertToDatabase(List<String[]> activities){
+        lock.lock();
         for (String[] s : activities){
-            String joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + s[10] ;
+            String joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + atomicInteger.getAndIncrement() ;
             System.out.println("DATA ENTRY: "+Thread.currentThread().getName() + ": " + joined);
+            activityClass.toTxt(joined, s[0]); 
+            activityClass.toDB(atomicInteger.get(), s[5], s[2], s[7], Integer.parseInt(s[6]), Integer.parseInt(s[8]), Integer.parseInt(s[9]), Integer.parseInt(s[1]), Integer.parseInt(s[0]));
         }
-//            activity_class.toTxt(joined);    
-//            activity_class.toDB( id ,s[5], s[2], s[7], Integer.parseInt(s[6]), Integer.parseInt(s[8]), Integer.parseInt(s[9]), Integer.parseInt(s[1]), Integer.parseInt(s[0]));
-
-        //System.out.println(" has queued Threads = "+lock.hasQueuedThreads());
-        //System.out.println(Thread.currentThread().getName()+" has released the lock.");
-        //lock.unlock();
+        lock.unlock();
     }   
 }
