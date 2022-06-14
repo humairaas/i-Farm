@@ -25,14 +25,18 @@ public final class DBConnector {
 
     public void connect() {
         try{
+            
+            Class.forName("com.mysql.jdbc.Driver");
+            
             conn = DriverManager.getConnection(DB_URL, USERNAME, PASSWORD);
             //System.out.println("Connected to database.");
             
-        }catch(SQLException e){
+        }catch(SQLException | ClassNotFoundException e){
             System.out.println("Not connected to database.");
             System.err.println(e);
         }
     }
+    
     
     public void INSERT(String query){
         try{
