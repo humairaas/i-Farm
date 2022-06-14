@@ -28,6 +28,7 @@ public class Farmer implements Callable {
     private String[] quantity;
     private int randRow;
     private int randField;
+    private int counter;
     private String[] data;
     private String[][][] plant ;
     private DateTimeFormatter dtf;  
@@ -89,11 +90,16 @@ public class Farmer implements Callable {
                 }
             }   
             
+            // Randomly generated days to be incremented for each activity
+            int days = 1 + r.nextInt(30);
+            counter += days;
+            LocalDateTime date = now.plusDays(counter);
+            
             // try to resume if fail
             try {
-                String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(now) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
+                String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(date) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
                 activity_logs.add(activity_data);
-                //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(now)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
+                //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(date)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
                 //System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
             } catch (NumberFormatException e) {
                

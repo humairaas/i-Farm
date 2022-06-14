@@ -6,6 +6,7 @@
 package ifarm;
 
 import java.io.*;
+import java.util.Date;
 
 /**
  *
@@ -26,14 +27,14 @@ public class Activity {
         db = new DBConnector();
     }
   
-    public void toDB(int activity_id, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
-       db.INSERT("INSERT INTO `activities` (`activity_id` ,`action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')");
+    public void toDB(int activity_id, Date date, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
+       db.INSERT("INSERT INTO `activities` (`activity_id` , `date`, `action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+date+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')");
     }
     
     public void toTxt(String text, String user){
         try {
             //Change this according to your own directory path
-            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
+            FileWriter myWriter = new FileWriter("C:\\Users\\USER\\Desktop\\NetBeans\\WIF3003\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
             myWriter.write(text + "\n");
             myWriter.close();
         } catch (IOException e) {
