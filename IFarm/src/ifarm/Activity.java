@@ -55,16 +55,15 @@ public class Activity {
         }
     }
     
-//    public String SQLCommand(int activity_id, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
-//       String sql_command = "INSERT INTO `activities` (`activity_id` ,`action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')";
-//        return sql_command;
-//    }
-    
     public String SQLCommand(int activity_id, Date date, String action, String type, String unit, int quantity, int field, int row, int farmID, int userID){
-       //db.INSERT("INSERT INTO `activities` (`activity_id` , `date`, `action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+date+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')");
        String sql_command = "INSERT INTO `activities` (`activity_id` , `date`, `action`, `type`, `unit`, `quantity`, `field`, `row`, `farm_id_fk`, `user_id_fk`) VALUES ('"+activity_id+"','"+date+"','"+action+"','"+type+"','"+unit+"','"+quantity+"','"+field+"','"+row+"','"+farmID+"','"+userID+"')";
        return sql_command;
     }
+    
+    //to check each insert activity
+//    public void saveDisaster(String Command){
+//       db.INSERT(Command);
+//    }
 
     @Override
     public String toString() {

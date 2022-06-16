@@ -1,0 +1,657 @@
+User-1 Farm-9 2022-09-11 pesticide Amoxone 900ml 0 0 306
+User-1 Farm-9 2022-09-16 fertilizer Calcium Ammonium Nitrate 1000g 1 0 307
+User-1 Farm-9 2022-09-29 pesticide Unipon 3300ml 1 1 308
+User-1 Farm-9 2022-10-24 harvest Cumin 2400g 1 1 309
+User-1 Farm-9 2022-11-06 harvest Horehound 3900g 0 0 310
+User-1 Farm-9 2022-11-26 fertilizer Calcium Nitrate 4000g 0 1 311
+User-1 Farm-9 2022-12-17 pesticide Toxon 63 5200ml 1 0 312
+User-1 Farm-9 2023-01-13 sales Cumin 4500g 1 1 313
+User-1 Farm-9 2023-01-31 sales Horehound 4200g 0 0 314
+User-1 Farm-9 2023-02-13 sowing Horehound 4400g 0 0 315
+User-1 Farm-9 2023-02-27 fertilizer Calcium Ammonium Nitrate 3300g 0 0 316
+User-1 Farm-9 2023-03-15 pesticide Nemase 3400ml 0 1 317
+User-1 Farm-9 2023-03-31 sowing Chamomile 4400g 1 1 318
+User-1 Farm-9 2023-04-15 harvest Mint 3900g 0 1 319
+User-1 Farm-9 2023-05-03 pesticide Soilbrom 500ml 0 0 320
+User-1 Farm-9 2023-05-22 fertilizer Urea Ammonium phosphate (28-28-0) 4400g 1 1 321
+User-1 Farm-9 2023-06-04 harvest Horehound 4500g 1 0 322
+User-1 Farm-9 2023-07-04 sales Horehound 2300g 1 0 323
+User-1 Farm-9 2023-07-28 pesticide Phenochlor 2400ml 1 1 324
+User-1 Farm-9 2023-08-11 harvest Chamomile 1000g 1 1 325
+User-1 Farm-9 2023-08-26 sales Chamomile 3400g 1 1 326
+User-1 Farm-9 2023-09-20 sowing Pepper 1600g 1 1 327
+User-1 Farm-9 2023-10-20 sales Mint 2000g 0 1 328
+User-1 Farm-9 2023-11-05 sowing Celosia 2200g 0 1 329
+User-1 Farm-9 2022-07-07 sowing Mint 4800g 1 0 150
+User-1 Farm-9 2022-07-26 sowing Brussels Sprouts 1400g 0 1 151
+User-1 Farm-9 2022-08-11 fertilizer N.P.K. (14-28-14) 1300g 1 0 152
+User-1 Farm-9 2022-08-28 sowing Celery 900g 1 1 153
+User-1 Farm-9 2022-09-03 fertilizer Soybean Meal 2800g 0 1 154
+User-1 Farm-9 2022-09-19 sowing Mint 1600g 0 0 155
+User-1 Farm-9 2022-10-07 fertilizer Calcium Nitrate with Boron 3800g 0 0 156
+User-1 Farm-9 2022-10-20 pesticide Phenochlor 2700ml 1 0 157
+User-1 Farm-9 2022-10-28 harvest Mint 3000g 1 0 158
+User-1 Farm-9 2022-11-13 pesticide Brush‐B‐Gone 3700ml 0 0 159
+User-1 Farm-9 2022-12-05 pesticide Dowfume 3900ml 0 1 160
+User-1 Farm-9 2022-12-20 harvest Mint 1500g 0 0 161
+User-1 Farm-9 2022-12-30 harvest Brussels Sprouts 4300g 0 1 162
+User-1 Farm-9 2023-01-23 sales Brussels Sprouts 2000g 0 1 163
+User-1 Farm-9 2023-02-02 sales Mint 2200g 0 0 164
+User-1 Farm-9 2023-02-16 sowing Pak Choi 3800g 0 0 165
+User-1 Farm-9 2023-03-11 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 500g 0 0 166
+User-1 Farm-9 2023-03-20 sowing Cumin 2500g 0 1 167
+User-1 Farm-9 2023-03-24 fertilizer Sodium Molybdonate 4900g 0 1 168
+User-1 Farm-9 2023-04-14 sales Mint 2800g 1 0 169
+User-1 Farm-9 2023-04-15 sowing Radish 5000g 1 0 170
+User-1 Farm-9 2023-05-15 fertilizer Potassium Chloride 700g 1 1 171
+User-1 Farm-9 2023-05-29 pesticide Phenochlor 3800ml 0 0 172
+User-1 Farm-9 2023-06-01 pesticide Unipon 500ml 0 1 173
+User-1 Farm-9 2023-06-23 harvest Cumin 5200g 0 1 174
+User-1 Farm-9 2023-07-09 fertilizer Potassium Chloride 3100g 1 0 175
+User-1 Farm-9 2023-07-25 pesticide Weedar 4700ml 1 0 176
+User-1 Farm-9 2023-08-14 harvest Radish 3400g 1 0 177
+User-1 Farm-9 2023-08-19 sales Radish 4800g 1 0 178
+User-1 Farm-9 2023-08-24 pesticide Unipon 2800ml 1 1 179
+User-1 Farm-9 2022-10-11 pesticide Oxy 2100ml 1 0 334
+User-1 Farm-9 2022-10-29 fertilizer Sodium Molybdonate 500g 0 0 335
+User-1 Farm-9 2022-11-01 fertilizer Linseed Meal 2800g 0 1 336
+User-1 Farm-9 2022-11-16 harvest Brussels Sprouts 3400g 1 0 337
+User-1 Farm-9 2022-11-21 sales Brussels Sprouts 2500g 1 0 338
+User-1 Farm-9 2022-12-06 sowing Radish 4100g 1 0 339
+User-1 Farm-9 2022-12-24 pesticide Oxy 1500ml 0 0 340
+User-1 Farm-9 2023-01-05 pesticide Amoxone 2200ml 1 1 341
+User-1 Farm-9 2023-02-02 pesticide Weedar 2700ml 0 1 342
+User-1 Farm-9 2023-02-10 harvest Begonia 2600g 0 0 343
+User-1 Farm-9 2023-03-12 harvest Bee Balm 2300g 1 1 344
+User-1 Farm-9 2023-03-19 sales Bee Balm 2800g 1 1 345
+User-1 Farm-9 2023-04-15 harvest Pepper 1600g 0 1 346
+User-1 Farm-9 2023-04-23 sales Pepper 1100g 0 1 347
+User-1 Farm-9 2023-05-15 sowing Beet 4700g 0 1 348
+User-1 Farm-9 2023-05-22 fertilizer Calcium Nitrate with Boron 4300g 1 0 349
+User-1 Farm-9 2023-05-31 sowing Radish 3800g 1 1 350
+User-1 Farm-9 2023-06-30 fertilizer Linseed Meal 2000g 1 1 351
+User-1 Farm-9 2023-07-15 pesticide Phenochlor 1400ml 1 1 352
+User-1 Farm-9 2023-08-13 harvest Radish 2800g 1 1 353
+User-1 Farm-9 2023-08-25 sales Begonia 4200g 0 0 354
+User-1 Farm-9 2023-08-26 pesticide Brush‐B‐Gone 2500ml 1 0 355
+User-1 Farm-9 2023-08-30 sowing Bellflower 4100g 0 0 356
+User-1 Farm-9 2023-09-26 fertilizer Magnesium Sulphate 4800g 0 1 357
+User-1 Farm-9 2022-07-03 sowing Bee Balm 5400g 0 1 240
+User-1 Farm-9 2022-07-14 sowing Celery 1600g 0 0 241
+User-1 Farm-9 2022-08-01 sowing Chamomile 800g 1 0 242
+User-1 Farm-9 2022-08-21 fertilizer Phosphate Rock 2600g 1 0 243
+User-1 Farm-9 2022-09-02 fertilizer Dolomitic Lime (75% Neutral) 2700g 0 0 244
+User-1 Farm-9 2022-09-10 pesticide Amoxone 2900ml 1 0 245
+User-1 Farm-9 2022-09-27 pesticide Phenochlor 3300ml 0 0 246
+User-1 Farm-9 2022-10-26 harvest Chamomile 3400g 1 0 247
+User-1 Farm-9 2022-11-04 fertilizer Calcium Oxide 2200g 0 1 248
+User-1 Farm-9 2022-11-15 sowing Eggplant 4000g 1 1 249
+User-1 Farm-9 2022-11-29 sales Chamomile 1300g 1 0 250
+User-1 Farm-9 2022-12-26 pesticide Unipon 5000ml 0 1 251
+User-1 Farm-9 2023-01-02 harvest Celery 600g 0 0 252
+User-1 Farm-9 2023-01-24 fertilizer Diammonium Phosphate 700g 1 1 253
+User-1 Farm-9 2023-02-08 harvest Bee Balm 2000g 0 1 254
+User-1 Farm-9 2023-02-28 sales Celery 4100g 0 0 255
+User-1 Farm-9 2023-03-15 sales Bee Balm 3300g 0 1 256
+User-1 Farm-9 2023-04-14 pesticide Extrazine 3500ml 1 1 257
+User-1 Farm-9 2023-05-10 sowing Bellflower 2000g 0 1 258
+User-1 Farm-9 2023-05-20 sowing Rockcress 1200g 1 0 259
+User-1 Farm-9 2023-06-14 harvest Eggplant 3600g 1 1 260
+User-1 Farm-9 2023-07-04 sowing Pepper 700g 0 0 261
+User-1 Farm-9 2023-07-28 sales Eggplant 4400g 1 1 262
+User-1 Farm-9 2023-08-10 fertilizer Grobel NPK 4-3-3 +1 MgO 4900g 0 1 263
+User-1 Farm-9 2023-08-28 fertilizer N.P.K. 15::9:20 2900g 0 0 264
+User-1 Farm-9 2023-09-10 pesticide Toxon 63 4200ml 0 1 265
+User-1 Farm-9 2023-09-19 pesticide Soilbrom 2100ml 0 0 266
+User-1 Farm-9 2023-10-07 sowing Wallflower 2300g 1 1 267
+User-1 Farm-9 2023-10-19 harvest Bellflower 1200g 0 1 268
+User-1 Farm-9 2023-11-14 fertilizer Linseed Meal 2500g 1 1 269
+User-1 Farm-9 2023-03-16 harvest Bee Balm 5400g 0 0 77
+User-1 Farm-9 2023-04-09 sowing Sweet Peas 3500g 1 1 78
+User-1 Farm-9 2023-04-14 sowing Pepper 4100g 1 0 79
+User-1 Farm-9 2023-05-03 sales Bee Balm 4400g 0 0 80
+User-1 Farm-9 2023-05-21 sales Begonia 2000g 0 1 81
+User-1 Farm-9 2023-05-28 sowing Sweet Peas 1000g 0 1 82
+User-1 Farm-9 2023-06-16 fertilizer Ferrous Sulphate 700g 1 1 83
+User-1 Farm-9 2023-07-05 fertilizer Potassium Chloride 800g 1 0 84
+User-1 Farm-9 2023-07-22 sowing Celosia 3700g 0 0 85
+User-1 Farm-9 2023-08-09 pesticide Dowfume 4200ml 1 1 86
+User-1 Farm-9 2023-09-06 pesticide Toxon 63 4300ml 1 0 87
+User-1 Farm-9 2023-10-06 harvest Pepper 3900g 1 0 88
+User-1 Farm-9 2023-11-02 fertilizer Sodium Molybdonate 3500g 0 1 89
+User-1 Farm-9 2022-06-20 sowing Celosia 4300g 1 0 269
+User-1 Farm-9 2022-07-16 sowing Balm Lemon 500g 1 1 270
+User-1 Farm-9 2022-08-02 fertilizer Cocoa Shell Meal 2200g 1 1 271
+User-1 Farm-9 2022-08-20 sowing Celery 4000g 0 0 272
+User-1 Farm-9 2022-09-07 fertilizer Magnesium Sulphate 3000g 1 0 273
+User-1 Farm-9 2022-09-08 pesticide Nemase 800ml 1 0 274
+User-1 Farm-9 2022-10-03 fertilizer N.P.K. (14-28-14) 3800g 0 0 275
+User-1 Farm-9 2022-10-07 pesticide Dowfume 2200ml 0 0 276
+User-1 Farm-9 2022-11-03 pesticide Brush‐B‐Gone 4500ml 1 1 277
+User-1 Farm-9 2022-11-12 harvest Balm Lemon 700g 1 1 278
+User-1 Farm-9 2022-12-06 sales Balm Lemon 2600g 1 1 279
+User-1 Farm-9 2022-12-18 sowing Celosia 3200g 0 1 280
+User-1 Farm-9 2023-01-03 harvest Celery 2000g 0 0 281
+User-1 Farm-9 2023-01-22 harvest Celosia 1900g 1 0 282
+User-1 Farm-9 2023-02-10 sowing Bee Balm 500g 1 1 283
+User-1 Farm-9 2023-03-04 sales Celery 4000g 0 0 284
+User-1 Farm-9 2023-03-10 sales Celosia 3600g 1 0 285
+User-1 Farm-9 2023-04-07 fertilizer Nitrophosphate (24-24-0) 2900g 1 1 286
+User-1 Farm-9 2023-05-05 sowing Celosia 900g 0 0 287
+User-1 Farm-9 2023-05-17 sowing Bellflower 2800g 1 0 288
+User-1 Farm-9 2023-05-26 fertilizer Cocoa Shell Meal 4000g 1 0 289
+User-1 Farm-9 2023-05-27 fertilizer Zincated NPK (10:26:26:0.5) 5300g 0 0 290
+User-1 Farm-9 2023-06-03 pesticide Extrazine 3200ml 1 0 291
+User-1 Farm-9 2023-06-09 pesticide Phenochlor 800ml 1 1 292
+User-1 Farm-9 2023-06-11 harvest Bee Balm 5200g 1 1 293
+User-1 Farm-9 2023-06-24 sales Bee Balm 4700g 1 1 294
+User-1 Farm-9 2023-07-14 sowing Cilantro 5200g 1 1 295
+User-1 Farm-9 2023-07-15 harvest Bellflower 1000g 1 0 296
+User-1 Farm-9 2023-08-05 fertilizer Nitrophosphate (24-24-0) 3500g 1 1 297
+User-1 Farm-9 2023-08-29 pesticide Phenochlor 4100ml 1 1 298
+User-1 Farm-9 2022-12-13 fertilizer N.P.K. 15::9:20 3300g 0 0 305
+User-1 Farm-9 2022-12-31 sowing Pak Choi 1400g 1 1 306
+User-1 Farm-9 2023-01-25 fertilizer Nitrophosphate (24-24-0) 2900g 1 1 307
+User-1 Farm-9 2023-02-16 sales Pak Choi 1900g 0 1 308
+User-1 Farm-9 2023-02-27 pesticide Phenacide 900ml 1 1 309
+User-1 Farm-9 2023-03-08 harvest Pak Choi 1700g 1 1 310
+User-1 Farm-9 2023-04-05 pesticide Unipon 3200ml 1 0 311
+User-1 Farm-9 2023-04-26 harvest Kale 4400g 1 0 312
+User-1 Farm-9 2023-05-20 sales Kale 3400g 1 0 313
+User-1 Farm-9 2023-05-28 sowing Pak Choi 4000g 1 0 314
+User-1 Farm-9 2023-06-12 fertilizer Potassium Chloride 700g 1 0 315
+User-1 Farm-9 2023-07-12 pesticide Amoxone 4200ml 1 0 316
+User-1 Farm-9 2023-08-08 sowing Eggplant 1400g 0 1 317
+User-1 Farm-9 2023-08-11 harvest Pak Choi 3400g 1 0 318
+User-1 Farm-9 2023-08-17 sales Pak Choi 1300g 1 1 319
+User-1 Farm-9 2023-09-14 fertilizer Cocoa Shell Meal 4100g 0 1 320
+User-1 Farm-9 2023-10-13 sowing Mint 3500g 1 1 321
+User-1 Farm-9 2023-10-24 pesticide Phenochlor 5200ml 0 1 322
+User-1 Farm-9 2023-10-29 harvest Eggplant 500g 0 1 323
+User-1 Farm-9 2023-11-23 sales Eggplant 5300g 0 1 324
+User-1 Farm-9 2023-11-25 pesticide Amoxone 3900ml 0 0 325
+User-1 Farm-9 2023-12-01 harvest Radish 5200g 0 0 326
+User-1 Farm-9 2023-12-15 sales Pak Choi 1300g 1 0 327
+User-1 Farm-9 2022-07-04 sowing Eggplant 5200g 1 1 269
+User-1 Farm-9 2022-07-27 fertilizer Calcium Ammonium Nitrate 1500g 1 1 270
+User-1 Farm-9 2022-08-22 pesticide Soilbrom 5100ml 1 1 271
+User-1 Farm-9 2022-09-13 sowing Kale 4200g 1 0 272
+User-1 Farm-9 2022-10-11 sowing Rosemary 1200g 0 1 273
+User-1 Farm-9 2022-10-29 fertilizer Calcium Oxide 1500g 1 0 274
+User-1 Farm-9 2022-12-02 sowing Chamomile 3300g 0 0 275
+User-1 Farm-9 2022-12-29 pesticide Gamma BHL 3000ml 1 0 276
+User-1 Farm-9 2023-01-09 pesticide Endrin‐Methy 3500ml 0 1 277
+User-1 Farm-9 2023-01-17 harvest Eggplant 2900g 1 1 278
+User-1 Farm-9 2023-02-09 sales Eggplant 900g 1 1 279
+User-1 Farm-9 2023-02-15 harvest Rosemary 5100g 0 1 280
+User-1 Farm-9 2023-02-16 sales Rosemary 900g 0 1 281
+User-1 Farm-9 2023-02-22 fertilizer Magnesium Sulphate 5300g 0 0 282
+User-1 Farm-9 2023-03-08 sowing Wallflower 1600g 0 1 283
+User-1 Farm-9 2023-03-29 pesticide Phenochlor 1500ml 0 0 284
+User-1 Farm-9 2023-04-24 fertilizer Nitrophosphate (24-24-0) 5400g 0 1 285
+User-1 Farm-9 2023-05-16 harvest Chamomile 3600g 0 0 286
+User-1 Farm-9 2023-05-24 sowing Beet 2600g 1 1 287
+User-1 Farm-9 2023-06-23 fertilizer Calcium Nitrate with Boron 3400g 1 1 288
+User-1 Farm-9 2023-06-24 sales Chamomile 3700g 0 0 289
+User-1 Farm-9 2023-07-03 sowing Wallflower 600g 0 0 290
+User-1 Farm-9 2023-07-07 harvest Kale 1100g 1 0 291
+User-1 Farm-9 2023-07-18 fertilizer Lime-Potash Mixtures 4700g 0 0 292
+User-1 Farm-9 2023-08-07 pesticide Weedar 3300ml 0 1 293
+User-1 Farm-9 2023-08-25 harvest Wallflower 4300g 0 1 294
+User-1 Farm-9 2023-09-09 sales Wallflower 3000g 0 1 295
+User-1 Farm-9 2023-09-23 sowing Pepper 3800g 0 1 296
+User-1 Farm-9 2023-10-04 fertilizer Calcium Oxide 2500g 0 1 297
+User-1 Farm-9 2022-08-13 sowing Wallflower 800g 1 1 310
+User-1 Farm-9 2022-09-05 fertilizer Urea 1400g 0 0 314
+User-1 Farm-9 2022-09-25 fertilizer N.P.K. (17-17-17) 4100g 0 1 332
+User-1 Farm-9 2022-10-09 pesticide Phenochlor 4900ml 0 0 348
+User-1 Farm-9 2022-11-03 fertilizer Sodium Molybdonate 1400g 1 1 363
+User-1 Farm-9 2022-11-21 fertilizer Calcium Ammonium Nitrate 1900g 1 0 379
+User-1 Farm-9 2022-12-03 pesticide Toxon 63 4100ml 0 1 389
+User-1 Farm-9 2022-12-08 pesticide Weedar 5400ml 1 0 401
+User-1 Farm-9 2022-12-29 harvest Rosemary 2400g 0 0 421
+User-1 Farm-9 2023-01-02 harvest Pepper 4700g 0 1 434
+User-1 Farm-9 2023-01-03 sales Pepper 3500g 0 1 446
+User-1 Farm-9 2023-01-04 pesticide Nemase 5100ml 1 1 456
+User-1 Farm-9 2023-01-10 sowing Roquette 800g 0 1 466
+User-1 Farm-9 2023-01-27 sales Rosemary 1700g 0 0 482
+User-1 Farm-9 2023-02-14 fertilizer Sodium Molybdonate 2900g 0 1 494
+User-1 Farm-9 2023-03-15 harvest Celery 1900g 1 0 506
+User-1 Farm-9 2023-04-09 pesticide Phenacide 1200ml 0 1 519
+User-1 Farm-9 2023-04-12 sales Celery 2600g 1 0 528
+User-1 Farm-9 2023-04-24 sowing Pepper 4200g 1 0 548
+User-1 Farm-9 2022-06-23 sowing Mint 2200g 1 1 90
+User-1 Farm-9 2022-07-17 sowing Sweet Peas 2600g 0 0 91
+User-1 Farm-9 2022-07-31 fertilizer Calcium Ammonium Nitrate 2700g 0 0 92
+User-1 Farm-9 2022-08-27 sowing Eggplant 4500g 0 1 93
+User-1 Farm-9 2022-09-11 fertilizer N.P.K. (14-28-14) 2600g 1 1 94
+User-1 Farm-9 2022-10-08 fertilizer N.P.K. 15::9:20 800g 0 1 95
+User-1 Farm-9 2022-10-25 pesticide Gamma BHL 4100ml 0 1 96
+User-1 Farm-9 2022-11-02 harvest Eggplant 1400g 0 1 97
+User-1 Farm-9 2022-11-08 pesticide Nemase 1800ml 1 1 98
+User-1 Farm-9 2022-11-10 pesticide Brush‐B‐Gone 1500ml 0 0 99
+User-1 Farm-9 2022-12-02 sales Eggplant 1700g 0 1 100
+User-1 Farm-9 2022-12-26 harvest Sweet Peas 4900g 0 0 101
+User-1 Farm-9 2023-01-23 sales Sweet Peas 3100g 0 0 102
+User-1 Farm-9 2023-02-11 sowing Rockcress 2900g 0 0 103
+User-1 Farm-9 2023-03-13 sowing Begonia 3000g 0 1 104
+User-1 Farm-9 2023-03-25 harvest Mint 4300g 1 1 105
+User-1 Farm-9 2023-04-06 fertilizer Cocoa Shell Meal 1300g 0 0 106
+User-1 Farm-9 2023-04-25 sowing Balm Lemon 4100g 1 0 107
+User-1 Farm-9 2023-05-16 fertilizer Lime-Potash Mixtures 5300g 0 1 108
+User-1 Farm-9 2023-06-03 sales Mint 3000g 1 1 109
+User-1 Farm-9 2023-06-04 sowing Horehound 2200g 1 1 110
+User-1 Farm-9 2023-06-25 fertilizer Calcium Ammonium Nitrate 2900g 1 1 111
+User-1 Farm-9 2023-07-23 pesticide Amoxone 3900ml 0 1 112
+User-1 Farm-9 2023-08-06 pesticide Weedar 1600ml 1 1 113
+User-1 Farm-9 2023-09-02 fertilizer Urea Ammonium phosphate (28-28-0) 2700g 1 0 114
+User-1 Farm-9 2023-09-15 pesticide Premerge 4300ml 0 0 115
+User-1 Farm-9 2023-09-25 harvest Begonia 4700g 0 1 116
+User-1 Farm-9 2023-10-05 pesticide Phenacide 2600ml 1 0 117
+User-1 Farm-9 2023-10-21 harvest Rockcress 2000g 0 0 118
+User-1 Farm-9 2023-11-17 harvest Balm Lemon 2300g 1 0 119
+User-1 Farm-9 2022-06-27 sowing Bee Balm 4000g 0 0 89
+User-1 Farm-9 2022-07-07 sowing Cilantro 1800g 1 0 90
+User-1 Farm-9 2022-07-21 sowing Rockcress 3200g 1 1 91
+User-1 Farm-9 2022-08-18 fertilizer Diammonium Phosphate 2200g 0 0 92
+User-1 Farm-9 2022-08-24 fertilizer Dolomitic Lime (75% Neutral) 1700g 1 1 93
+User-1 Farm-9 2022-09-01 sowing Brussels Sprouts 600g 0 1 94
+User-1 Farm-9 2022-09-30 pesticide Toxon 63 4500ml 1 1 95
+User-1 Farm-9 2022-10-24 fertilizer N.P.K. 15::9:20 4500g 0 1 96
+User-1 Farm-9 2022-11-08 fertilizer Calcium Nitrate 4600g 1 0 97
+User-1 Farm-9 2022-11-27 pesticide Dowfume 5100ml 0 1 98
+User-1 Farm-9 2022-12-19 pesticide Extrazine 2900ml 0 0 99
+User-1 Farm-9 2023-01-17 harvest Bee Balm 1900g 0 0 100
+User-1 Farm-9 2023-02-07 harvest Brussels Sprouts 1300g 0 1 101
+User-1 Farm-9 2023-02-28 harvest Rockcress 5300g 1 1 102
+User-1 Farm-9 2023-03-08 pesticide Extrazine 1800ml 1 0 103
+User-1 Farm-9 2023-03-17 sales Bee Balm 4500g 0 0 104
+User-1 Farm-9 2023-04-13 sales Rockcress 2800g 1 1 105
+User-1 Farm-9 2023-04-29 sales Brussels Sprouts 1300g 0 1 106
+User-1 Farm-9 2023-05-04 sowing Roquette 3300g 0 1 107
+User-1 Farm-9 2023-05-07 harvest Cilantro 3600g 1 0 108
+User-1 Farm-9 2023-05-13 sowing Radish 2200g 1 1 109
+User-1 Farm-9 2023-05-15 fertilizer N.P.K. 15::9:20 2500g 1 1 110
+User-1 Farm-9 2023-05-20 sales Cilantro 4200g 1 0 111
+User-1 Farm-9 2023-06-04 pesticide Gamma BHL 4700ml 1 1 112
+User-1 Farm-9 2023-06-30 harvest Radish 4400g 1 1 113
+User-1 Farm-9 2023-07-26 sales Radish 5200g 1 1 114
+User-1 Farm-9 2023-07-27 sowing Pak Choi 1400g 1 1 115
+User-1 Farm-9 2023-08-22 fertilizer Dolomitic Lime (75% Neutral) 900g 1 1 116
+User-1 Farm-9 2023-09-01 sowing Celery 3400g 1 0 117
+User-1 Farm-9 2023-09-12 pesticide Nemase 5300ml 1 1 118
+User-1 Farm-9 2023-06-02 sales Mint 4400g 1 1 465
+User-1 Farm-9 2023-06-27 sowing Bee Balm 3100g 1 0 466
+User-1 Farm-9 2023-07-22 fertilizer Calcium Nitrate with Boron 3000g 1 0 467
+User-1 Farm-9 2023-07-24 fertilizer N.P.K. (17-17-17) 3600g 0 1 468
+User-1 Farm-9 2023-08-04 fertilizer Zincated Urea 5300g 0 0 469
+User-1 Farm-9 2023-09-03 pesticide Endrin‐Methy 1500ml 1 0 470
+User-1 Farm-9 2023-09-04 pesticide Phenacide 2100ml 0 1 471
+User-1 Farm-9 2023-09-21 harvest Bee Balm 4800g 1 0 472
+User-1 Farm-9 2023-09-29 harvest Bee Balm 4000g 0 1 473
+User-1 Farm-9 2023-07-12 harvest Celery 4800g 0 1 112
+User-1 Farm-9 2023-07-15 sales Celery 1600g 0 1 113
+User-1 Farm-9 2023-08-05 fertilizer Grobel NPK 4-3-3 +1 MgO 5000g 1 1 114
+User-1 Farm-9 2023-08-14 pesticide Nemase 5000ml 1 0 115
+User-1 Farm-9 2023-09-04 sowing Rosemary 600g 0 1 116
+User-1 Farm-9 2023-09-17 fertilizer Zincated Urea 4900g 0 0 117
+User-1 Farm-9 2023-09-19 fertilizer Zincated Urea 600g 0 1 118
+User-1 Farm-9 2023-10-06 harvest Bellflower 2500g 1 0 119
+User-1 Farm-9 2022-06-18 sowing Radish 700g 0 1 120
+User-1 Farm-9 2022-06-23 sowing Pepper 5000g 0 0 121
+User-1 Farm-9 2022-06-28 fertilizer Phosphate Rock 5300g 0 0 122
+User-1 Farm-9 2022-07-05 sowing Pepper 2100g 1 0 123
+User-1 Farm-9 2022-08-04 sowing Celery 600g 1 1 124
+User-1 Farm-9 2022-08-20 fertilizer Linseed Meal 4500g 0 1 125
+User-1 Farm-9 2022-08-22 fertilizer Nitrophosphate (24-24-0) 900g 1 0 126
+User-1 Farm-9 2022-08-29 pesticide Brush‐B‐Gone 2900ml 0 0 127
+User-1 Farm-9 2022-09-10 fertilizer Ferrous Sulphate 5400g 1 1 128
+User-1 Farm-9 2022-10-01 pesticide Endrin‐Methy 4100ml 1 0 129
+User-1 Farm-9 2022-10-30 pesticide Gamma BHL 1500ml 0 1 130
+User-1 Farm-9 2022-11-14 harvest Pepper 1000g 1 0 131
+User-1 Farm-9 2022-12-14 harvest Pepper 3100g 0 0 132
+User-1 Farm-9 2022-12-28 harvest Radish 4800g 0 1 133
+User-1 Farm-9 2023-01-01 pesticide Premerge 3400ml 1 1 134
+User-1 Farm-9 2023-01-11 sales Pepper 2300g 1 0 135
+User-1 Farm-9 2023-02-01 harvest Celery 4200g 1 1 136
+User-1 Farm-9 2023-02-24 sowing Rockcress 5200g 1 0 137
+User-1 Farm-9 2023-03-19 sales Radish 2600g 0 1 138
+User-1 Farm-9 2023-04-09 fertilizer Boronated Single Superphosphate 900g 1 0 139
+User-1 Farm-9 2023-04-21 sowing Brussels Sprouts 4600g 0 1 140
+User-1 Farm-9 2023-05-07 sales Pepper 4300g 0 0 141
+User-1 Farm-9 2023-05-30 sowing Cilantro 4100g 0 0 142
+User-1 Farm-9 2023-06-27 sales Celery 3800g 1 1 143
+User-1 Farm-9 2023-07-21 fertilizer Lime-Potash Mixtures 1800g 0 0 144
+User-1 Farm-9 2023-08-10 fertilizer Calcium Nitrate with Boron 1600g 0 1 145
+User-1 Farm-9 2023-08-22 pesticide Unipon 1200ml 0 0 146
+User-1 Farm-9 2023-09-05 pesticide Nemase 3300ml 1 0 147
+User-1 Farm-9 2023-09-15 pesticide Phenochlor 5000ml 0 1 148
+User-1 Farm-9 2023-09-23 harvest Rockcress 1600g 1 0 149
+User-1 Farm-9 2022-06-27 sowing Wallflower 4900g 0 0 210
+User-1 Farm-9 2022-07-27 sowing Eggplant 4600g 1 0 211
+User-1 Farm-9 2022-08-18 sowing Eggplant 2500g 0 1 212
+User-1 Farm-9 2022-08-21 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 5400g 0 1 213
+User-1 Farm-9 2022-09-13 pesticide Soilbrom 600ml 0 1 214
+User-1 Farm-9 2022-10-02 harvest Eggplant 2400g 0 1 215
+User-1 Farm-9 2022-10-27 sales Eggplant 4400g 0 1 216
+User-1 Farm-9 2022-10-28 sowing Brussels Sprouts 2700g 0 1 217
+User-1 Farm-9 2022-11-21 fertilizer N.P.K. 15::9:20 3900g 0 1 218
+User-1 Farm-9 2022-12-20 sowing Bee Balm 3000g 1 1 219
+User-1 Farm-9 2023-01-02 fertilizer Lime-Potash Mixtures 2200g 1 1 220
+User-1 Farm-9 2023-01-08 fertilizer N.P.K. (17-17-17) 1400g 1 0 221
+User-1 Farm-9 2023-02-04 pesticide Dowfume 4800ml 1 1 222
+User-1 Farm-9 2023-02-12 pesticide Oxy 5300ml 1 0 223
+User-1 Farm-9 2023-02-27 pesticide Premerge 5100ml 0 1 224
+User-1 Farm-9 2023-03-24 fertilizer Calcium Nitrate 3300g 0 0 225
+User-1 Farm-9 2023-04-02 harvest Eggplant 3700g 1 0 226
+User-1 Farm-9 2023-04-24 harvest Bee Balm 3600g 1 1 227
+User-1 Farm-9 2023-05-19 pesticide Gamma BHL 2000ml 0 0 228
+User-1 Farm-9 2023-06-12 harvest Wallflower 3400g 0 0 229
+User-1 Farm-9 2023-06-17 sales Eggplant 2300g 1 0 230
+User-1 Farm-9 2023-06-22 sales Wallflower 1300g 0 0 231
+User-1 Farm-9 2023-07-19 sowing Radish 5400g 0 0 232
+User-1 Farm-9 2023-07-20 sowing Kale 2300g 1 0 233
+User-1 Farm-9 2023-08-05 fertilizer Boronated Single Superphosphate 900g 1 0 234
+User-1 Farm-9 2023-08-07 pesticide Premerge 2400ml 1 0 235
+User-1 Farm-9 2023-08-21 fertilizer Cocoa Shell Meal 3800g 0 0 236
+User-1 Farm-9 2023-09-06 harvest Kale 2300g 1 0 237
+User-1 Farm-9 2023-10-05 sales Kale 700g 1 0 238
+User-1 Farm-9 2023-10-14 pesticide Extrazine 1500ml 0 0 239
+User-1 Farm-9 2023-02-03 sowing Balm Lemon 3900g 1 0 308
+User-1 Farm-9 2023-02-17 sowing Pak Choi 5100g 1 1 309
+User-1 Farm-9 2023-03-19 fertilizer Cocoa Shell Meal 2700g 1 1 310
+User-1 Farm-9 2023-03-28 fertilizer Zinc Oxide Suspension Concentrate 1400g 1 0 311
+User-1 Farm-9 2023-04-14 fertilizer Calcitic Lime (75% Neutral) 1700g 0 0 312
+User-1 Farm-9 2023-04-20 pesticide Weedar 1800ml 1 0 313
+User-1 Farm-9 2023-04-24 pesticide Toxon 63 4200ml 0 0 314
+User-1 Farm-9 2023-05-04 pesticide Dowfume 5100ml 1 1 315
+User-1 Farm-9 2023-05-12 harvest Rockcress 1400g 0 0 316
+User-1 Farm-9 2023-06-10 sales Roquette 500g 0 1 317
+User-1 Farm-9 2023-06-22 sowing Kale 500g 0 1 318
+User-1 Farm-9 2023-07-02 fertilizer Potassium Chloride 1500g 0 1 319
+User-1 Farm-9 2023-07-29 pesticide Extrazine 5200ml 0 1 320
+User-1 Farm-9 2023-08-27 harvest Pak Choi 800g 1 1 321
+User-1 Farm-9 2023-08-29 harvest Kale 1100g 0 1 322
+User-1 Farm-9 2023-09-13 harvest Balm Lemon 4200g 1 0 323
+User-1 Farm-9 2023-10-12 sales Rockcress 2600g 0 0 324
+User-1 Farm-9 2023-10-22 sales Kale 2900g 0 1 325
+User-1 Farm-9 2023-10-31 sowing Eggplant 5100g 0 1 326
+User-1 Farm-9 2023-11-10 sowing Bellflower 3300g 0 0 327
+User-1 Farm-9 2022-06-28 sowing Wallflower 1300g 1 0 209
+User-1 Farm-9 2022-07-07 sowing Celosia 3200g 0 0 210
+User-1 Farm-9 2022-08-06 fertilizer N.P.K. (17-17-17) 1000g 0 0 211
+User-1 Farm-9 2022-08-13 sowing Chamomile 2200g 1 1 212
+User-1 Farm-9 2022-09-08 fertilizer Diammonium Phosphate 4100g 1 1 213
+User-1 Farm-9 2022-09-15 pesticide Unipon 2900ml 1 1 214
+User-1 Farm-9 2022-09-20 pesticide Phenochlor 3300ml 0 0 215
+User-1 Farm-9 2022-10-12 harvest Chamomile 1400g 1 1 216
+User-1 Farm-9 2022-11-06 sales Chamomile 5400g 1 1 217
+User-1 Farm-9 2022-11-28 sowing Eggplant 3700g 0 1 218
+User-1 Farm-9 2022-12-06 harvest Celosia 4400g 0 0 219
+User-1 Farm-9 2022-12-20 sales Celosia 2300g 0 0 220
+User-1 Farm-9 2023-01-19 fertilizer Zincated NPK (10:26:26:0.5) 500g 0 1 221
+User-1 Farm-9 2023-01-25 pesticide Weedar 3300ml 0 1 222
+User-1 Farm-9 2023-02-21 sowing Chamomile 4000g 1 1 223
+User-1 Farm-9 2023-03-02 sowing Pepper 3300g 0 0 224
+User-1 Farm-9 2023-03-24 fertilizer Calcium Nitrate 2600g 1 1 225
+User-1 Farm-9 2023-03-27 fertilizer Linseed Meal 1300g 0 0 226
+User-1 Farm-9 2023-04-20 fertilizer Calcium Ammonium Nitrate 5100g 1 0 227
+User-1 Farm-9 2023-05-04 pesticide Toxon 63 3400ml 1 0 228
+User-1 Farm-9 2023-05-25 harvest Wallflower 1300g 1 0 229
+User-1 Farm-9 2023-06-09 sales Wallflower 5400g 1 0 230
+User-1 Farm-9 2023-06-16 sowing Radish 3300g 1 0 231
+User-1 Farm-9 2023-06-27 pesticide Nemase 2800ml 1 1 232
+User-1 Farm-9 2023-06-29 harvest Chamomile 1400g 1 1 233
+User-1 Farm-9 2023-07-02 sales Chamomile 2400g 1 1 234
+User-1 Farm-9 2023-07-06 fertilizer Urea Ammonium phosphate (28-28-0) 700g 1 0 235
+User-1 Farm-9 2023-07-27 harvest Eggplant 4900g 0 1 236
+User-1 Farm-9 2023-08-14 sales Eggplant 1300g 0 1 237
+User-1 Farm-9 2023-09-06 sowing Celosia 5000g 0 1 238
+User-1 Farm-9 2022-07-12 sowing Eggplant 4800g 0 1 180
+User-1 Farm-9 2022-07-27 sowing Chamomile 5300g 1 0 181
+User-1 Farm-9 2022-07-28 sowing Eggplant 5000g 0 0 182
+User-1 Farm-9 2022-07-29 fertilizer Magnesium Sulphate 4800g 1 0 183
+User-1 Farm-9 2022-07-30 pesticide Oxy 1100ml 1 0 184
+User-1 Farm-9 2022-08-24 sowing Brussels Sprouts 3500g 1 1 185
+User-1 Farm-9 2022-09-12 fertilizer Ferrous Sulphate 2600g 0 1 186
+User-1 Farm-9 2022-09-25 fertilizer Urea 2900g 0 0 187
+User-1 Farm-9 2022-10-20 pesticide Oxy 3000ml 0 1 188
+User-1 Farm-9 2022-11-17 harvest Chamomile 3700g 1 0 189
+User-1 Farm-9 2022-12-04 fertilizer Soybean Meal 5400g 1 1 190
+User-1 Farm-9 2022-12-20 harvest Eggplant 2800g 0 1 191
+User-1 Farm-9 2023-01-10 sales Chamomile 2600g 1 0 192
+User-1 Farm-9 2023-01-13 pesticide Soilbrom 5100ml 1 1 193
+User-1 Farm-9 2023-02-06 sowing Horehound 700g 1 0 194
+User-1 Farm-9 2023-02-16 fertilizer Magnesium Sulphate 4000g 1 0 195
+User-1 Farm-9 2023-02-21 harvest Brussels Sprouts 1300g 1 1 196
+User-1 Farm-9 2023-03-04 sales Brussels Sprouts 3800g 1 1 197
+User-1 Farm-9 2023-03-14 sales Eggplant 3200g 0 1 198
+User-1 Farm-9 2023-04-08 pesticide Brush‐B‐Gone 2800ml 1 0 199
+User-1 Farm-9 2023-05-05 harvest Horehound 4000g 1 0 200
+User-1 Farm-9 2023-06-04 sowing Kale 2000g 0 1 201
+User-1 Farm-9 2023-06-23 fertilizer Magnesium Sulphate 4300g 0 1 202
+User-1 Farm-9 2023-07-06 pesticide Endrin‐Methy 800ml 0 1 203
+User-1 Farm-9 2023-07-26 harvest Kale 4400g 0 1 204
+User-1 Farm-9 2023-08-14 sales Kale 4300g 0 1 205
+User-1 Farm-9 2023-09-06 pesticide Extrazine 4900ml 0 0 206
+User-1 Farm-9 2023-09-29 sowing Kale 600g 0 1 207
+User-1 Farm-9 2023-10-01 sowing Beet 4000g 1 1 208
+User-1 Farm-9 2023-10-06 fertilizer Magnesium Sulphate 4900g 0 1 209
+User-1 Farm-9 2022-07-04 sowing Balm Lemon 3400g 0 0 90
+User-1 Farm-9 2022-07-12 sowing Pepper 3000g 0 1 91
+User-1 Farm-9 2022-08-10 fertilizer Castor Pomace 800g 0 0 92
+User-1 Farm-9 2022-08-14 fertilizer N.P.K. (14-28-14) 1500g 0 1 93
+User-1 Farm-9 2022-08-29 sowing Chamomile 4900g 1 1 94
+User-1 Farm-9 2022-08-31 pesticide Oxy 800ml 0 0 95
+User-1 Farm-9 2022-09-20 sowing Celosia 3100g 1 0 96
+User-1 Farm-9 2022-09-21 harvest Balm Lemon 2600g 0 0 97
+User-1 Farm-9 2022-10-15 fertilizer N.P.K. (14-28-14) 2800g 1 0 98
+User-1 Farm-9 2022-11-04 pesticide Toxon 63 4200ml 0 1 99
+User-1 Farm-9 2022-11-17 sales Balm Lemon 3100g 0 0 100
+User-1 Farm-9 2022-11-26 pesticide Oxy 3900ml 1 0 101
+User-1 Farm-9 2022-12-20 harvest Pepper 4100g 0 1 102
+User-1 Farm-9 2022-12-22 harvest Celosia 2300g 1 0 103
+User-1 Farm-9 2022-12-26 sowing Radish 5000g 0 0 104
+User-1 Farm-9 2023-01-17 fertilizer Calcium Nitrate with Boron 2900g 1 1 105
+User-1 Farm-9 2023-01-22 fertilizer Phosphate Rock 2700g 0 0 106
+User-1 Farm-9 2023-02-01 pesticide Brush‐B‐Gone 1000ml 0 0 107
+User-1 Farm-9 2023-02-28 harvest Radish 700g 0 0 108
+User-1 Farm-9 2023-03-11 sales Celosia 600g 1 0 109
+User-1 Farm-9 2023-03-26 sales Radish 3800g 0 0 110
+User-1 Farm-9 2023-04-08 sowing Brussels Sprouts 2700g 1 0 111
+User-1 Farm-9 2023-05-08 sowing Bellflower 2800g 0 0 112
+User-1 Farm-9 2023-06-03 pesticide Weedar 1800ml 1 1 113
+User-1 Farm-9 2023-06-05 fertilizer Calcium Nitrate 1900g 1 0 114
+User-1 Farm-9 2023-06-25 pesticide Extrazine 4100ml 1 0 115
+User-1 Farm-9 2023-06-27 sales Pepper 4300g 0 1 116
+User-1 Farm-9 2023-07-21 fertilizer Urea 2200g 0 0 117
+User-1 Farm-9 2023-08-03 harvest Chamomile 1700g 1 1 118
+User-1 Farm-9 2023-08-15 sales Chamomile 3700g 1 1 119
+User-1 Farm-9 2022-06-27 sowing Brussels Sprouts 4000g 0 0 150
+User-1 Farm-9 2022-07-24 sowing Cumin 3200g 0 1 151
+User-1 Farm-9 2022-07-29 fertilizer N.P.K. (14-28-14) 5300g 0 1 152
+User-1 Farm-9 2022-08-04 pesticide Soilbrom 5400ml 0 1 153
+User-1 Farm-9 2022-08-23 sowing Pak Choi 2900g 1 0 154
+User-1 Farm-9 2022-09-05 fertilizer Magnesium Sulphate 3300g 1 0 155
+User-1 Farm-9 2022-09-09 harvest Cumin 4800g 0 1 156
+User-1 Farm-9 2022-10-09 fertilizer N.P.K. 15::9:20 4700g 0 0 157
+User-1 Farm-9 2022-10-12 sowing Mint 800g 1 1 158
+User-1 Farm-9 2022-11-05 pesticide Nemase 4000ml 0 0 159
+User-1 Farm-9 2022-11-25 sales Cumin 2100g 0 1 160
+User-1 Farm-9 2022-12-16 fertilizer Castor Pomace 1800g 1 1 161
+User-1 Farm-9 2022-12-19 sowing Pepper 4300g 0 1 162
+User-1 Farm-9 2022-12-29 harvest Brussels Sprouts 1400g 0 0 163
+User-1 Farm-9 2023-01-08 fertilizer Calcium Nitrate with Boron 3700g 0 1 164
+User-1 Farm-9 2023-02-03 sales Brussels Sprouts 2000g 0 0 165
+User-1 Farm-9 2023-02-20 pesticide Extrazine 3700ml 1 0 166
+User-1 Farm-9 2023-03-17 sowing Pepper 4200g 0 0 167
+User-1 Farm-9 2023-04-12 harvest Pak Choi 3300g 1 0 168
+User-1 Farm-9 2023-04-26 pesticide Weedar 1200ml 1 1 169
+User-1 Farm-9 2023-05-18 pesticide Endrin‐Methy 3900ml 0 1 170
+User-1 Farm-9 2023-05-20 harvest Mint 2800g 1 1 171
+User-1 Farm-9 2023-05-28 fertilizer Zincated NPK (10:26:26:0.5) 2200g 0 0 172
+User-1 Farm-9 2023-06-05 pesticide Oxy 1000ml 0 0 173
+User-1 Farm-9 2023-06-10 sales Pak Choi 2100g 1 0 174
+User-1 Farm-9 2023-06-18 harvest Pepper 2300g 0 0 175
+User-1 Farm-9 2023-06-26 sales Mint 700g 1 1 176
+User-1 Farm-9 2023-07-10 sales Pepper 1700g 0 0 177
+User-1 Farm-9 2023-08-05 harvest Pepper 1100g 0 1 178
+User-1 Farm-9 2023-09-04 sowing Bee Balm 4700g 1 1 179
+User-1 Farm-9 2023-08-03 sales Rockcress 2100g 1 1 410
+User-1 Farm-9 2023-08-29 harvest Mint 5000g 0 1 411
+User-1 Farm-9 2023-09-01 sales Mint 4800g 0 1 412
+User-1 Farm-9 2023-09-22 harvest Rosemary 900g 1 0 413
+User-1 Farm-9 2023-10-10 sowing Celosia 1500g 0 0 414
+User-1 Farm-9 2022-06-25 sowing Roquette 2500g 0 0 150
+User-1 Farm-9 2022-07-06 fertilizer Calcitic Lime (75% Neutral) 5200g 0 0 151
+User-1 Farm-9 2022-07-12 sowing Rosemary 4700g 1 1 152
+User-1 Farm-9 2022-09-16 pesticide Soilbrom 2500ml 0 1 154
+User-1 Farm-9 2022-09-30 harvest Cilantro 3400g 0 1 155
+User-1 Farm-9 2022-10-20 pesticide Nemase 5300ml 0 0 156
+User-1 Farm-9 2022-11-04 sales Cilantro 3000g 0 1 157
+User-1 Farm-9 2022-11-11 sowing Radish 2500g 0 1 158
+User-1 Farm-9 2022-12-11 harvest Roquette 2400g 0 0 159
+User-1 Farm-9 2023-01-05 fertilizer N.P.K. 15::9:20 2600g 0 1 160
+User-1 Farm-9 2023-01-07 fertilizer Diammonium Phosphate 4700g 1 1 161
+User-1 Farm-9 2023-02-01 pesticide Oxy 1100ml 0 1 162
+User-1 Farm-9 2023-02-25 sales Roquette 1500g 0 0 163
+User-1 Farm-9 2023-03-20 harvest Radish 3000g 0 1 164
+User-1 Farm-9 2023-04-19 sowing Kale 1600g 0 0 165
+User-1 Farm-9 2023-04-25 fertilizer Lime-Potash Mixtures 5000g 0 0 166
+User-1 Farm-9 2023-05-25 sowing Celosia 4700g 1 0 167
+User-1 Farm-9 2023-06-13 sales Radish 3800g 0 1 168
+User-1 Farm-9 2023-07-02 sowing Celosia 3800g 0 1 169
+User-1 Farm-9 2023-07-28 pesticide Soilbrom 3900ml 1 1 170
+User-1 Farm-9 2023-08-11 harvest Rosemary 3900g 1 1 171
+User-1 Farm-9 2023-08-19 fertilizer Grobel NPK 4-3-3 +1 MgO 700g 1 0 172
+User-1 Farm-9 2023-09-16 sales Rosemary 5200g 1 1 173
+User-1 Farm-9 2023-10-15 pesticide Gamma BHL 5000ml 1 0 174
+User-1 Farm-9 2023-11-07 sowing Chamomile 5100g 1 1 175
+User-1 Farm-9 2023-11-18 fertilizer Zinc Oxide Suspension Concentrate 2100g 1 1 176
+User-1 Farm-9 2023-11-19 pesticide Extrazine 5100ml 0 0 177
+User-1 Farm-9 2023-12-15 harvest Kale 4600g 0 0 178
+User-1 Farm-9 2022-11-16 fertilizer N.P.K. (17-17-17) 4600g 0 1 513
+User-1 Farm-9 2022-12-09 pesticide Weedar 4900ml 0 1 514
+User-1 Farm-9 2022-12-30 sowing Celosia 1800g 1 1 515
+User-1 Farm-9 2023-01-02 pesticide Premerge 2000ml 0 0 516
+User-1 Farm-9 2023-01-05 fertilizer Lime-Potash Mixtures 5400g 1 1 517
+User-1 Farm-9 2023-01-14 pesticide Brush‐B‐Gone 4200ml 1 1 518
+User-1 Farm-9 2023-02-02 harvest Cumin 4100g 1 0 519
+User-1 Farm-9 2023-02-25 harvest Celosia 3800g 1 1 520
+User-1 Farm-9 2023-03-14 harvest Horehound 600g 0 0 521
+User-1 Farm-9 2023-03-20 sales Cumin 3800g 1 0 522
+User-1 Farm-9 2023-04-06 sowing Cilantro 1600g 1 0 523
+User-1 Farm-9 2023-04-18 harvest Celery 4900g 0 1 524
+User-1 Farm-9 2023-05-13 sales Celery 500g 0 1 525
+User-1 Farm-9 2023-05-20 sales Celosia 5200g 1 1 526
+User-1 Farm-9 2023-06-08 sowing Kale 4200g 0 1 527
+User-1 Farm-9 2023-07-03 fertilizer Lime-Potash Mixtures 4000g 1 0 528
+User-1 Farm-9 2023-07-04 sales Horehound 3300g 0 0 529
+User-1 Farm-9 2023-07-22 sowing Kale 5000g 0 0 530
+User-1 Farm-9 2023-07-28 fertilizer Lime-Potash Mixtures 800g 0 1 531
+User-1 Farm-9 2022-07-06 sowing Kale 5300g 1 1 180
+User-1 Farm-9 2022-07-21 sowing Begonia 1800g 0 1 181
+User-1 Farm-9 2022-08-08 sowing Bellflower 1600g 1 0 182
+User-1 Farm-9 2022-08-10 fertilizer Diammonium Phosphate 4400g 0 1 183
+User-1 Farm-9 2022-08-25 fertilizer Castor Pomace 1700g 1 1 184
+User-1 Farm-9 2022-09-03 fertilizer Magnesium Sulphate 3000g 1 0 185
+User-1 Farm-9 2022-09-05 pesticide Nemase 4400ml 1 1 186
+User-1 Farm-9 2022-10-03 pesticide Soilbrom 1100ml 0 1 187
+User-1 Farm-9 2022-10-14 sowing Celery 2000g 0 0 188
+User-1 Farm-9 2022-10-20 harvest Kale 1600g 1 1 189
+User-1 Farm-9 2022-11-09 harvest Begonia 1000g 0 1 190
+User-1 Farm-9 2022-11-27 sales Kale 5000g 1 1 191
+User-1 Farm-9 2022-12-12 pesticide Premerge 600ml 1 0 192
+User-1 Farm-9 2023-01-10 sales Begonia 3700g 0 1 193
+User-1 Farm-9 2023-01-24 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 1700g 0 0 194
+User-1 Farm-9 2023-02-01 sowing Rosemary 1500g 0 1 195
+User-1 Farm-9 2023-03-02 harvest Bellflower 3900g 1 0 196
+User-1 Farm-9 2023-03-25 sowing Radish 4400g 1 1 197
+User-1 Farm-9 2023-04-15 pesticide Extrazine 5100ml 0 0 198
+User-1 Farm-9 2023-05-01 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 600g 0 1 199
+User-1 Farm-9 2023-05-21 pesticide Oxy 4500ml 0 1 200
+User-1 Farm-9 2023-06-04 fertilizer Cocoa Shell Meal 5100g 1 1 201
+User-1 Farm-9 2023-06-24 pesticide Weedar 4200ml 1 1 202
+User-1 Farm-9 2023-07-13 harvest Celery 2400g 0 0 203
+User-1 Farm-9 2023-08-01 harvest Radish 1700g 1 1 204
+User-1 Farm-9 2023-08-29 sales Bellflower 500g 1 0 205
+User-1 Farm-9 2023-09-20 sowing Pak Choi 3700g 1 0 206
+User-1 Farm-9 2023-09-21 harvest Rosemary 1300g 0 1 207
+User-1 Farm-9 2023-10-02 fertilizer Zincated NPK (10:26:26:0.5) 500g 1 0 208
+User-1 Farm-9 2023-10-16 sales Radish 3500g 1 1 209
+User-1 Farm-9 2022-07-16 sowing Bellflower 3800g 0 0 238
+User-1 Farm-9 2022-07-31 sowing Beet 700g 1 0 239
+User-1 Farm-9 2022-08-14 sowing Celery 700g 1 1 240
+User-1 Farm-9 2022-09-04 fertilizer Castor Pomace 4000g 1 1 241
+User-1 Farm-9 2022-09-20 fertilizer Boronated Single Superphosphate 1800g 0 0 242
+User-1 Farm-9 2022-10-06 sowing Sweet Peas 1000g 0 1 243
+User-1 Farm-9 2022-10-13 fertilizer Urea 5300g 1 0 244
+User-1 Farm-9 2022-10-15 pesticide Unipon 2500ml 1 0 245
+User-1 Farm-9 2022-10-25 fertilizer Phosphate Rock 1800g 0 1 246
+User-1 Farm-9 2022-11-22 pesticide Amoxone 2300ml 1 1 247
+User-1 Farm-9 2022-12-15 harvest Beet 5400g 1 0 248
+User-1 Farm-9 2022-12-16 pesticide Phenochlor 1700ml 0 1 249
+User-1 Farm-9 2022-12-29 pesticide Nemase 3000ml 0 0 250
+User-1 Farm-9 2023-01-18 harvest Celery 1900g 1 1 251
+User-1 Farm-9 2023-02-11 sales Beet 2400g 1 0 252
+User-1 Farm-9 2023-03-05 sales Celery 1000g 1 1 253
+User-1 Farm-9 2023-03-21 sowing Celosia 3300g 1 1 254
+User-1 Farm-9 2023-03-27 harvest Sweet Peas 4700g 0 1 255
+User-1 Farm-9 2023-04-13 fertilizer Calcium Nitrate 4600g 1 1 256
+User-1 Farm-9 2023-05-01 harvest Bellflower 4600g 0 0 257
+User-1 Farm-9 2023-05-04 sales Bellflower 700g 0 0 258
+User-1 Farm-9 2023-05-05 sales Sweet Peas 4200g 0 1 259
+User-1 Farm-9 2023-06-01 sowing Celery 5300g 1 0 260
+User-1 Farm-9 2023-06-10 sowing Sweet Peas 5300g 0 0 261
+User-1 Farm-9 2023-07-09 fertilizer Cocoa Shell Meal 3600g 1 0 262
+User-1 Farm-9 2023-07-10 sowing Pak Choi 1500g 0 1 263
+User-1 Farm-9 2023-07-23 fertilizer N.P.K. (14-28-14) 4100g 0 1 264
+User-1 Farm-9 2023-08-15 fertilizer Magnesium Sulphate 3600g 0 0 265
+User-1 Farm-9 2023-08-24 pesticide Oxy 4200ml 1 1 266
+User-1 Farm-9 2023-09-15 harvest Celosia 3300g 1 1 267
+User-1 Farm-9 2023-02-19 pesticide Soilbrom 2300ml 0 1 149
+User-1 Farm-9 2023-03-11 harvest Brussels Sprouts 700g 1 0 158
+User-1 Farm-9 2023-04-02 sales Brussels Sprouts 1900g 1 0 160
+User-1 Farm-9 2023-04-11 sowing Radish 4700g 1 1 166
+User-1 Farm-9 2023-04-15 sowing Kale 2400g 0 0 169
+User-1 Farm-9 2023-04-30 sowing Bee Balm 600g 1 0 174
+User-1 Farm-9 2023-05-01 fertilizer N.P.K. (17-17-17) 4700g 1 1 179
+User-1 Farm-9 2023-05-28 harvest Beet 1100g 0 1 182
+User-1 Farm-9 2023-06-09 sales Beet 2800g 0 1 189
+User-1 Farm-9 2023-06-30 sowing Pepper 900g 0 1 191
+User-1 Farm-9 2023-07-21 fertilizer Calcium Ammonium Nitrate 3900g 1 0 197
+User-1 Farm-9 2023-07-22 fertilizer Zincated NPK (10:26:26:0.5) 5400g 0 0 202
+User-1 Farm-9 2023-08-05 pesticide Extrazine 4500ml 0 0 207
+User-1 Farm-9 2023-08-08 pesticide Phenochlor 4800ml 1 0 212
+User-1 Farm-9 2023-08-28 pesticide Unipon 5400ml 1 1 217
+User-1 Farm-9 2023-09-25 harvest Kale 2800g 0 0 221
+User-1 Farm-9 2023-10-01 harvest Radish 3800g 1 1 227
+User-1 Farm-9 2023-10-02 fertilizer Diammonium Phosphate 5400g 0 1 231
+User-1 Farm-9 2023-10-07 sales Kale 1500g 0 0 235
+User-1 Farm-9 2024-10-12 sales Begonia 2100g 0 0 343
+User-1 Farm-9 2024-10-27 harvest Begonia 3400g 1 0 345
+User-1 Farm-9 2024-11-15 fertilizer Nitrophosphate (24-24-0) 2700g 0 1 346
+User-1 Farm-9 2024-12-10 sowing Mint 700g 0 0 348
+User-1 Farm-9 2025-01-06 fertilizer Sodium Molybdonate 3400g 0 0 349
+User-1 Farm-9 2025-02-04 pesticide Phenochlor 1700ml 0 1 351
+User-1 Farm-9 2025-03-01 fertilizer Calcium Nitrate 2300g 1 1 352
+User-1 Farm-9 2025-03-18 harvest Radish 2900g 0 1 354
+User-1 Farm-9 2025-04-16 sales Begonia 4200g 1 0 356
+User-1 Farm-9 2025-05-11 sales Radish 600g 0 1 357
+User-1 Farm-9 2025-05-28 sowing Bellflower 4200g 1 0 359
+User-1 Farm-9 2025-05-30 fertilizer Magnesium Sulphate 700g 1 0 361
+User-1 Farm-9 2025-06-23 pesticide Unipon 4900ml 1 1 362
+User-1 Farm-9 2025-07-17 pesticide Premerge 4500ml 0 0 364
+User-1 Farm-9 2025-08-04 harvest Eggplant 4100g 1 1 366
+User-1 Farm-9 2025-08-31 sales Eggplant 700g 1 1 367
+User-1 Farm-9 2025-09-27 harvest Mint 4000g 0 0 369
+User-1 Farm-9 2025-10-08 sales Mint 2200g 0 0 371
+User-1 Farm-9 2025-11-07 sowing Pak Choi 1700g 0 1 372
+User-1 Farm-9 2025-11-20 sowing Horehound 3600g 1 1 374
+User-1 Farm-9 2025-12-04 sowing Celosia 1500g 0 0 376
+User-1 Farm-9 2025-12-25 fertilizer Calcium Nitrate with Boron 1300g 0 0 377
+User-1 Farm-9 2026-01-03 pesticide Unipon 1500ml 0 0 379
+User-1 Farm-9 2026-01-31 pesticide Endrin‐Methy 2500ml 1 0 380
+User-1 Farm-9 2026-02-19 fertilizer Grobel NPK 4-3-3 +1 MgO 5200g 1 1 382
+User-1 Farm-9 2026-03-15 fertilizer Sodium Molybdonate 2800g 0 1 384
+User-1 Farm-9 2026-04-13 harvest Celosia 2700g 0 0 385

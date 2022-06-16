@@ -41,22 +41,21 @@ public class DisasterSimulator{
     Timer timer = new Timer();
     int Disaster_time;
     
-    //public DisasterSimulator(AtomicInteger atomicInteger, String[] DisasterData, int count_disaster, String joined, String temp) {
     public DisasterSimulator(AtomicInteger atomicInteger) {
         this.atomicInteger = atomicInteger;
         db = new DBConnector();
     }
     
+    
     public int Disaster(String[] s, String insert_DB, AtomicInteger atomicInteger){
-        int disaster_chance = r.nextInt(1000); //100 - 5% chance for disaster
+        int disaster_chance = r.nextInt(100); //100 - 5% chance for disaster
             if(disaster_chance < 5 && count_disaster == 0){ //timer to avoid 2 disaster happen at the same time...can do but hmmm
                 count_disaster = 0;
                 joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + atomicInteger.getAndIncrement();
                 temp = Thread.currentThread().getName();
-                temp_Farm = s[1]; //error when change farm
+                temp_Farm = s[1]; //error when change farm -not needed
                 System.out.println("DISASTER HAPPEN: "+ Thread.currentThread().getName()+ " " + joined);
                 DisasterData.add(joined);
-                //this.insert_DB = insert_DB;
                 
                 //this one error when want save first disaster
                 //DisasterCommand.add(insert_DB);
@@ -68,81 +67,78 @@ public class DisasterSimulator{
                 if(timer.sleep_time() < 0){ 
                     timer.end_sleep();
                                                 //max  +1  - min  + min
-                    Disaster_time = r.nextInt(10000 + 1 - 500) + 500;
-                    System.out.println("Sleep Time " + timer.sleep_time() + " miliseconds");
-                } if(Thread.currentThread().getName().equals(temp) && timer.sleep_time() < Disaster_time){ //0.5 sec && timer.sleep_time < 3000
-                  //if(s[1] == temp && timer.sleep_time() < Disaster_time){
+                    Disaster_time = r.nextInt(5000 + 1 - 500) + 500;
+                    System.out.println("Disaster time is: " + Disaster_time);
+                } if(Thread.currentThread().getName().equals(temp) && timer.sleep_time() < Disaster_time){ 
                     ++count_disaster;
                         try{
                             Thread.sleep(20);
                         }catch(InterruptedException e){
-                            //System.out.println(e);
                         }
                     timer.end_sleep();
-                    //System.out.println("Sleep Time in checking " + timer.sleep_time() + " miliseconds");
                     joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + atomicInteger.getAndIncrement() ;
                     DisasterData.add(joined);
                     DisasterCommand.add(insert_DB);
                     System.out.println("Disaster still happen in this thread. " +Thread.currentThread().getName() +" " + joined);
                     activityClass.toTxt_Disaster(joined, s[0]); 
                 }else{
-                    if(timer.sleep_time() > 500 && count_disaster != 0){ //error after disaster...
+                    if(timer.sleep_time() > Disaster_time && count_disaster != 0){ //error after disaster...
                         //after the disaster
                         count_disaster = 0;
                         System.out.println("Disaster end");
+                        System.out.println("Sleep: "+timer.sleep_time());
                         for(String data: DisasterData){
-                            System.out.println("RECOVER DATA AFTER DISASTER: " + data);
+                            System.out.println("RECOVER DATA AFTER DISASTER: "+ temp +" "+ data);
                         }
-                        //System.out.println("CHECK cmd: "+DisasterCommand);
                         for(String into_DB: DisasterCommand){
-                            //System.out.println(into_DB);
-                            //db.INSERT(into_DB);
+                            try{
+                                db.INSERT(into_DB);
+                            } catch(Exception e){
+                                 System.out.println("Error insert data");
+                            }
                         }
                         DisasterData.clear();
                         DisasterCommand.clear();
                         return 99;
-                    }else{
-                         if(!Thread.currentThread().getName().equals(temp) && s[1] == temp_Farm && count_disaster > 0){
-                            //if thread passed when disaster still happen
-                            System.out.println("Disaster stil happen but change thread now");
-                            for(String data: DisasterData){
-                                System.out.println("RECOVER DATA AFTER DISASTER: " + data);
-                            }
-                            //System.out.println("CHECK cmd: "+DisasterCommand);
-                            for(String into_DB: DisasterCommand){
-                                //System.out.println(into_DB);
-                                db.INSERT(into_DB);
-                            }
-                            DisasterData.clear();
-                            DisasterCommand.clear();
-                            count_disaster = 0;
-                            return 99;
-                        }else if(s[1] != temp_Farm && count_disaster > 0){
-                        //if(s[1] != temp && count_disaster > 0){
-                            //if thread passed when disaster still happen
-                            System.out.println("Disaster stil happen in farm but change farm now");
-                            for(String data: DisasterData){
-                                System.out.println("RECOVER DATA AFTER DISASTER: " + data);
-                            }
-                            //System.out.println("CHECK cmd: "+DisasterCommand);
-                            for(String into_DB: DisasterCommand){
-                                //System.out.println(into_DB);
-                                db.INSERT(into_DB);
-                            }
-                            DisasterData.clear();
-                            DisasterCommand.clear();
-                            count_disaster = 0;
-                            return 99;
+                    }else{ //for chance thread when disaster still running
+                        if(!Thread.currentThread().getName().equals(temp) && count_disaster > 0){
+                            if(timer.sleep_time() < Disaster_time){
+                                //check disaster done or not - still have disaster but different thread
+                                try{
+                                    Thread.sleep(20);
+                                }catch(InterruptedException e){
+                                } 
+                                timer.end_sleep();
+                                 System.out.println("" +timer.sleep_time() );
+                            }else if(timer.sleep_time() > Disaster_time){
+                                //disaster done
+                                System.out.println("Change thread-2");
+                                for(String data: DisasterData){
+                                    System.out.println("RECOVER DATA AFTER DISASTER: " + data);
+                                }
+                                for(String into_DB: DisasterCommand){
+                                    try{
+                                        db.INSERT(into_DB);
+                                    } catch(Exception e){
+                                         System.out.println("Error insert data");
+                                    }
+                                }
+                                DisasterData.clear();
+                                DisasterCommand.clear();
+                                count_disaster = 0;
+                                return 99;
+                            }  
                         }
-                        //System.out.println("no");
+                        try{
+                                Thread.sleep(20);
+                            }catch(InterruptedException e){
+                            } 
                         return 0;
                     }
                 }
             }
-            //System.out.println("test: "+ count_disaster);
-        //still in disaster
         return 1;
     }
     
-}    
+}  
 
