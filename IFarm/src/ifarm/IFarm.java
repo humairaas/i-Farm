@@ -35,26 +35,19 @@ public class IFarm {
         // check if Activities table is empty
         db.isEmpty("Activities");
         
-        // call class that implements farmer simulator interface to create many farmer at once
-        FarmerSimulator simulator = new FarmerSimulator(db);
-        
         // number of farmer
-        int totalFarmer = 10;
-        
-        // generate farmers based on number of farmer for sequential and concurrent process
-        Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
-        Farmer[] farmerObjCon = simulator.generateFarmers(totalFarmer);
-        
-        // initializing atomic integer for activity id
-        AtomicInteger atomicInteger = new AtomicInteger();
-        
-        // initializing lock explicitly
-        ReentrantLock lock = new ReentrantLock();
-        
-        // initializing class for handling generated data
-        DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
-                
-        //SEQUENTIALLY
+        int totalFarmer = 10; 
+         
+        //System.out.println(sequentially(totalFarmer, db));
+        System.out.println(concurrently(totalFarmer, db));
+       
+        // Start data visualization
+        DataVisualization visualize = new DataVisualization(db);
+        visualize.start();   
+    }
+    
+    //SEQUENTIALLY
+    public static String sequentially(int totalFarmer, DBConnector db){
         
         // initializing timer for sequential process
         Timer timerSeq = new Timer();
@@ -65,12 +58,27 @@ public class IFarm {
             // for every farmer created
             // execute call method in Farmer class
             // results will be used for initializing data entry class
-            // execute run method in data entry class to start inserting data into database and tezt file(log)
+            // execute run method in data entry class to start inserting data into database and text file(log)
             // exception is thrown since runnable is used 
+            
+            // call class that implements farmer simulator interface to create many farmer at once
+            FarmerSimulator simulator = new FarmerSimulator(db);
+            
+            // generate farmers based on number of farmer for sequential process
+            Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
+            
+            // initializing atomic integer for activity id
+            AtomicInteger atomicInteger = new AtomicInteger();
+
+            // initializing lock explicitly
+            ReentrantLock lock = new ReentrantLock();
+
+            // initializing class for handling generated data
+            DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
         
             for (Farmer farmers : farmerObjSeq) {
                 try {
-                    Runnable entry1 = new DataEntry(farmers.call(), handler); 
+                    DataEntry entry1 = new DataEntry(farmers.call(), handler); 
                     entry1.run();
                 } catch (Exception ex) {
                     Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
@@ -79,9 +87,27 @@ public class IFarm {
             
         // stop recording time for sequential process
         timerSeq.end();
-                    
+        String time = "Time Taken (Sequentially): "+timerSeq.elapsed()+"ms";
         
-        //CONCURRENTLY
+        return time;
+    }
+    
+    //CONCURRENTLY
+    public static String concurrently(int totalFarmer, DBConnector db){
+        // call class that implements farmer simulator interface to create many farmer at once
+        FarmerSimulator simulator = new FarmerSimulator(db);
+        
+        // generate farmers based on number of farmer for concurrent process
+        Farmer[] farmerObjCon = simulator.generateFarmers(totalFarmer);
+        
+        // initializing atomic integer for activity id
+        AtomicInteger atomicInteger = new AtomicInteger();
+        
+        // initializing lock explicitly
+        ReentrantLock lock = new ReentrantLock();
+        
+        // initializing class for handling generated data
+        DataEntryHandler handler = new DataEntryHandler(atomicInteger, lock);
         
         //Thread pool for generating activities
         ExecutorService p1 = Executors.newFixedThreadPool(THREAD);
@@ -125,7 +151,6 @@ public class IFarm {
                 }
             }
         }
-       
         p2.shutdown();
         
         try {
@@ -134,10 +159,10 @@ public class IFarm {
             Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
         }
         timerCon.end();
-       
-        // Start data visualization
-        DataVisualization visualize = new DataVisualization(db);
-        visualize.start();   
         
+        String time = "Time Taken (Concurrently): "+timerCon.elapsed()+"ms";
+        return time;
     }
 }
+
+
