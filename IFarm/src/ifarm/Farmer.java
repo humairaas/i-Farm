@@ -47,7 +47,6 @@ public class Farmer implements Callable {
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         
-//        farm = new Farm();
         r = new Random();
         activity = new Activity();
         plant = new String[farm.getRow()][farm.getField()][];
