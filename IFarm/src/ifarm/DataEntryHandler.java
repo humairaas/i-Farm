@@ -15,34 +15,40 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DataEntryHandler  {
     ReentrantLock lock;
     AtomicInteger atomicInteger;
-    Activity activityClass = new Activity();
+    Activity activityClass;
+    DisasterSimulator Disaster;
+    Random r;
+    
     String DB_disaster;
     String insert_DB;
-    Random r = new Random();
-    Timer timer = new Timer();
-    DisasterSimulator Disaster = new DisasterSimulator(atomicInteger);
-
+    
     public DataEntryHandler(AtomicInteger atomicInteger, ReentrantLock lock) {
         this.lock = lock;
         this.atomicInteger = atomicInteger;
+        activityClass = new Activity();
+        Disaster = new DisasterSimulator(atomicInteger);
+        r = new Random();
     }
     
     public void insertToDatabase(List<String[]> activities){
 
         
-        // if dont want disaster happen
-        //lock.lock();
-//        try {
-////            for (String[] s : activities){
-////                String joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + atomicInteger.getAndIncrement() ;
-////                System.out.println("DATA ENTRY: "+Thread.currentThread().getName() + ": " + joined);
-////                //activityClass.toTxt(joined, s[0]);
-////                Date date = Date.valueOf(s[4]);
-////                activityClass.toDB(atomicInteger.get(), date, s[5], s[3], s[7], Integer.parseInt(s[6]), Integer.parseInt(s[8]), Integer.parseInt(s[9]), Integer.parseInt(s[1]), Integer.parseInt(s[0]));
-////            }finally {
-//            lock.unlock();
-//        }
-
+        lock.lock();
+        try {
+            // if dont want disaster happen
+            for (String[] s : activities) {
+                String joined =  "User-" + s[0] + " Farm-" +  s[1] + " " +s[4] + " " + s[5] + " " +  s[3] + " " + s[6] + "" + s[7] + " " + s[8] + " " + s[9] + " " + atomicInteger.getAndIncrement() ;
+                System.out.println("DATA ENTRY: "+Thread.currentThread().getName() + ": " + joined);
+                Date date = Date.valueOf(s[4]);
+                activityClass.toDB(atomicInteger.get(), date, s[5], s[3], s[7], Integer.parseInt(s[6]), Integer.parseInt(s[8]), Integer.parseInt(s[9]), Integer.parseInt(s[1]), Integer.parseInt(s[0]));
+                activityClass.toTxt(joined, s[0]);
+            }
+        } finally {
+            lock.unlock();
+        }
+        
+        
+        /*
         lock.lock();
         try {
             for (String[] s : activities){
@@ -76,5 +82,6 @@ public class DataEntryHandler  {
         } finally {
             lock.unlock();
         }
+        */
     }   
 }

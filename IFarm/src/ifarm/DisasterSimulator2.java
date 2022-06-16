@@ -18,35 +18,25 @@ import java.util.concurrent.locks.ReentrantLock;
 public class DisasterSimulator2{
     private Boolean databaseConn;
     private Boolean internetConn;
-    private Random r;
+    private String currentThread;
+    
     private ReentrantLock lock = new ReentrantLock();
     private Condition condition = lock.newCondition();
-    private String currentThread;
+    
     public DisasterSimulator2() {
         databaseConn = true;
         internetConn = true;
-        r = new Random();
         currentThread = null;
     }
     
     public boolean databaseConnError(){
         return false;
-        
     }
-
-    public Boolean getInternetConn() {
-        return internetConn;
-    }
-
-    public void setInternetConn(Boolean internetConn) {
-        this.internetConn = internetConn;
-    }
-    
     
     public void internetConnError() throws InterruptedException{
         internetConn = false;
         currentThread = Thread.currentThread().getName();
-        System.out.println(currentThread+" : Your connection was interrupted.");
+        System.out.println(currentThread+" : [AutoSave] Your connection was interrupted. ");
         lock.lock();
         try {
             System.out.println(currentThread+" : Waiting for connection...");

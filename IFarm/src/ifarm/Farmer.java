@@ -113,10 +113,6 @@ public class Farmer implements Callable {
                 Thread t1 = new Thread(dhandler);
                 t1.start();
                 dis.internetConnError();
-                if(Thread.currentThread().isInterrupted()){
-                    System.out.println(Thread.currentThread().isInterrupted());
-                    break;
-                }
             }
    
             try {
@@ -130,14 +126,6 @@ public class Farmer implements Callable {
             
         }
         return activity_logs;
-    }
-
-    public String[] getUserFarm() {
-        Random r = new Random();
-        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
-        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
-        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
-        return arr;
     }
     
     public String[] getData(String type, String userID, String farmID) {
@@ -159,7 +147,6 @@ public class Farmer implements Callable {
     }
     
     public String[] getPlantData () {
-        
         if (farm.getArea(randRow, randField) == null){
             plant[randRow][randField] = getData("plant", UserFarmID[0], UserFarmID[1]);
         } 
