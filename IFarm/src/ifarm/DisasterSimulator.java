@@ -47,10 +47,6 @@ public class DisasterSimulator{
         db = new DBConnector();
     }
     
-    
-    
-    
-    
     public int Disaster(String[] s, String insert_DB, AtomicInteger atomicInteger){
         int disaster_chance = r.nextInt(1000); //100 - 5% chance for disaster
             if(disaster_chance < 5 && count_disaster == 0){ //timer to avoid 2 disaster happen at the same time...can do but hmmm
@@ -71,11 +67,11 @@ public class DisasterSimulator{
             }else{
                 if(timer.sleep_time() < 0){ 
                     timer.end_sleep();
-                                                //max  +1  - min  + min
+                    //max  +1  - min  + min
                     Disaster_time = r.nextInt(10000 + 1 - 500) + 500;
                     System.out.println("Sleep Time " + timer.sleep_time() + " miliseconds");
                 } if(Thread.currentThread().getName().equals(temp) && timer.sleep_time() < Disaster_time){ //0.5 sec && timer.sleep_time < 3000
-                  //if(s[1] == temp && timer.sleep_time() < Disaster_time){
+                    //if(s[1] == temp && timer.sleep_time() < Disaster_time){
                     ++count_disaster;
                         try{
                             Thread.sleep(20);

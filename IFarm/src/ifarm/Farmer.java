@@ -22,35 +22,29 @@ public class Farmer implements Callable {
     private DBConnector db;
     private Farm farm;
     private Activity activity;
-    
     private Random r;
     private String action;
-    private String[] quantity;
-    private int randRow;
-    private int randField;
-    private int counter;
-    private String[] data;
+    private String[] data, quantity, UserFarmID;
     private String[][][] plant ;
     private DateTimeFormatter dtf;  
     private LocalDateTime now; 
-    private String[] UserFarmID;
-    
+    private int randRow, randField, counter;
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
-    public Farmer(DBConnector db, String[] UserFarmID) {
+    Farmer(DBConnector db, String[] UserFarmID, Farm farm) {
         this.db = db;
-        farm = new Farm();
-        r = new Random();
-        activity = new Activity();
-        now = LocalDateTime.now(); 
-        dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
-        plant = new String[farm.getRow()][farm.getField()][];
         this.UserFarmID = UserFarmID;
+        this.farm = farm;
+        this.r = new Random();
+        this.activity = new Activity();
+        this.now = LocalDateTime.now(); 
+        this.dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
+        this.plant = new String[this.farm.getRow()][this.farm.getField()][];
     }
 
     @Override
     public List<String[]> call() throws Exception {  
-        for (int i=0; i<100; i++) {
+        for (int i=0; i<10; i++) {
             randRow = r.nextInt(farm.getRow());
             randField = r.nextInt(farm.getField());
             
@@ -58,29 +52,28 @@ public class Farmer implements Callable {
                 action = "sowing";
                 data = getPlantData();
                 quantity = getQuantity("g");
-                farm.setArea(randRow, randField, "0|" + data[2]);
-
+                farm.setArea(randRow, randField, "0");
+                
             } else {
-                String[] temp = farm.getArea(randRow, randField).split("|");
-                String status = temp[0];
-                String plantID = temp[1];
+                String status = farm.getArea(randRow, randField);
+                
                 if (status.equals("0")) {
                     action = "fertilizer";
                     data = getData("fertilizer",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("g");
-                    farm.setArea(randRow, randField, "1|"+ data[2]);
+                    farm.setArea(randRow, randField, "1");
                     
                 } else if (status.equals("1")) {
                     action = "pesticide";
                     data = getData("pesticide",UserFarmID[0],UserFarmID[1]);
                     quantity = getQuantity("ml");
-                    farm.setArea(randRow, randField, "2|"+ data[2]);
+                    farm.setArea(randRow, randField, "2");
                     
                 } else if (status.equals("2")) {
                     action = "harvest";
                     data = getPlantData();
                     quantity = getQuantity("g");
-                    farm.setArea(randRow, randField, "3|"+ data[2]);
+                    farm.setArea(randRow, randField, "3");
                     
                 } else if (status.equals("3")) {
                     action = "sales";
@@ -91,7 +84,7 @@ public class Farmer implements Callable {
             }   
             
             // Randomly generated days to be incremented for each activity
-            int days = 1 + r.nextInt(30);
+            int days = 1 + r.nextInt(7);
             counter += days;
             LocalDateTime date = now.plusDays(counter);
             
@@ -99,8 +92,8 @@ public class Farmer implements Callable {
             try {
                 String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(date) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
                 activity_logs.add(activity_data);
-                //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(date)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
-                //System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
+                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(date)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
+                System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
             } catch (NumberFormatException e) {
                
             }
@@ -135,12 +128,10 @@ public class Farmer implements Callable {
         return arr;
     }
     
-    public String[] getPlantData () {
-        
+    public String[] getPlantData () throws InterruptedException {
         if (farm.getArea(randRow, randField) == null){
             plant[randRow][randField] = getData("plant", UserFarmID[0], UserFarmID[1]);
         } 
-        
         return plant[randRow][randField];
     }
 

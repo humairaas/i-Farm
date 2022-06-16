@@ -5,6 +5,7 @@
  */
 package ifarm;
 
+import java.util.Arrays;
 import java.util.Random;
 /**
  *
@@ -13,8 +14,13 @@ import java.util.Random;
 public class FarmerSimulator implements FarmerSimulatorInterface {
     
     private DBConnector db;
-    private Farmer[] farmer;
     private Random r;
+    private Farm[] farm, generatedFarm;
+    private Farmer[] farmer;
+    private String[] array;
+    private int random;
+    private int farmID;
+    private int numberOfFarms;
 
     public FarmerSimulator(DBConnector db) {
         this.db = db;
@@ -23,14 +29,40 @@ public class FarmerSimulator implements FarmerSimulatorInterface {
     
     @Override
     public Farmer[] generateFarmers(int numberOfFarmers) {
-        this.farmer = new Farmer[numberOfFarmers];
+        
+        // Create array size equal to the number of farmers
+        farmer = new Farmer[numberOfFarmers];
+        
+        // Count the number of row in the users_farms table in the database
         String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
+        
+        // Store the returned Farm object array
+        generatedFarm = generateFarms();
+        
+        // Loop according to the number of farmers need to be generated
         for (int i = 0; i < numberOfFarmers; i++) {
-            int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
-            String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
-            farmer[i] = new Farmer(db, arr);
+            
+            // Generate a random integer to determine which row in the database to retrieve farmer data from
+            random = r.nextInt(Integer.parseInt(size.replace("#", "")));
+            array = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + random).split("#");
+            
+            // Obtain the farm ID to parse it into the newly generated farmer object
+            farmID = Integer.parseInt(array[1]) - 1;
+            farmer[i] = new Farmer(db, array, generatedFarm[farmID]);
+            System.out.println("Thread " + (i+1) + ": " + Arrays.deepToString(array));
         }
+        System.out.println();
         return farmer;
+    }
+    
+    // Method to generate farms object
+    public Farm[] generateFarms() {
+        numberOfFarms = 10;
+        farm = new Farm[numberOfFarms];
+        for (int i = 0; i < numberOfFarms; i++) {
+            farm[i] = new Farm();
+        }
+        return farm;
     }
     
 }

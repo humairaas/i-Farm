@@ -5,7 +5,12 @@
  */
 package ifarm;
 
-import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -13,44 +18,47 @@ import java.util.Random;
  */
 public class Farm {
     
-    private String[][] area;
     private int row;
     private int field;
-//    private int randStatus;
-    private Random r;
+    private int flagGet, flagSet;
+    private String id;
+    private String[][] area;
+    private Lock lock;
+    private Condition condition;
 
     public Farm() {
         row = 2;
         field = 2;
-        r = new Random();
         area = new String[row][field];
-        
-//        for (int i=0; i<this.row; i++) {
-//            for (int j=0; j<this.col; j++) {
-//                randStatus = r.nextInt(4);
-//                fields[i][j] = Integer.toString(randStatus) + "|3";
-//                System.out.println("status created" + randStatus);
-//            }
-//        }
-    }
-
-    public String getArea(int row, int field) {
-        return area[row][field];
+        lock = new ReentrantLock();
     }
     
-    public void setArea(int row, int field, String status) {
-        this.area[row][field] = status;
+    public synchronized String getArea(int row, int field)  {
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(Farm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return area[row][field];
     }
 
+    public void setArea(int row, int field, String status) throws InterruptedException {
+        this.area[row][field] = status;
+    }
+    
+    //Return number of row to the farmer class
     public int getRow() {
         return row;
     }
 
+    //Return number of field to the farmer class
     public int getField() {
         return field;
     }
 
-  
-    
+    @Override
+    public String toString() {
+        return id;
+    }
     
 }
