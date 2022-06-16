@@ -5,6 +5,7 @@
  */
 package ifarm;
 
+import static java.lang.String.format;
 import java.util.Random;
 import java.time.*;
 import java.time.format.*;
@@ -41,12 +42,13 @@ public class Farmer implements Callable {
  
     public Farmer(DBConnector db, String[] UserFarmID, Farm farm) {
         this.db = db;
-        this.farm = farm;
+//        this.farm = farm;
         this.UserFarmID = UserFarmID;
         
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         
+        this.farm = new Farm();
         r = new Random();
         activity = new Activity();
         plant = new String[farm.getRow()][farm.getField()][];
@@ -62,7 +64,7 @@ public class Farmer implements Callable {
             if (farm.getArea(randRow, randField) == null) {
                 action = "sowing";
                 data = getPlantData();
-                quantity = getQuantity("g");
+                quantity = getQuantity("kg");
                 farm.setArea(randRow, randField, "0|" + data[2]);
 
             } else {
@@ -72,25 +74,25 @@ public class Farmer implements Callable {
                 if (status.equals("0")) {
                     action = "fertilizer";
                     data = getData("fertilizer",UserFarmID[0],UserFarmID[1]);
-                    quantity = getQuantity("g");
+                    quantity = getQuantity("kg");
                     farm.setArea(randRow, randField, "1|"+ data[2]);
                     
                 } else if (status.equals("1")) {
                     action = "pesticide";
                     data = getData("pesticide",UserFarmID[0],UserFarmID[1]);
-                    quantity = getQuantity("ml");
+                    quantity = getQuantity("l");
                     farm.setArea(randRow, randField, "2|"+ data[2]);
                     
                 } else if (status.equals("2")) {
                     action = "harvest";
                     data = getPlantData();
-                    quantity = getQuantity("g");
+                    quantity = getQuantity("kg");
                     farm.setArea(randRow, randField, "3|"+ data[2]);
                     
                 } else if (status.equals("3")) {
                     action = "sales";
                     data  = getPlantData();
-                    quantity = getQuantity("g");
+                    quantity = getQuantity("kg");
                     farm.setArea(randRow, randField, null);
                 }
             }   
@@ -140,8 +142,8 @@ public class Farmer implements Callable {
         Random r = new Random();
         String[] arr = new String[2];
         
-        int rand = (5 + r.nextInt(50)) * 100;
-        arr[0] = Integer.toString(rand);
+        float rand = (r.nextFloat(50)) / 10;
+        arr[0] = String.format("%.2f", rand);
         arr[1] = unit;
         return arr;
     }
