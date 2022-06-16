@@ -210,11 +210,11 @@ public class DataVisualization {
                 String type = rs.getString("type");
                 int field = rs.getInt("field");
                 int row = rs.getInt("row");
-                int quantity = rs.getInt("quantity");
+                float quantity = rs.getFloat("quantity");
                 String unit = rs.getString("unit");
                 Date date = rs.getDate("date");
 
-                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + quantity + " "
+                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + String.format("%.2f", quantity) + " "
                         + unit + " " + date.toString());
             }
 
@@ -237,7 +237,7 @@ public class DataVisualization {
                 String type = rs.getString("type");
                 int field = rs.getInt("field");
                 int row = rs.getInt("row");
-                int quantitySum = rs.getInt("quantitySum");
+                float quantitySum = rs.getFloat("quantitySum");
                 String unit = rs.getString("unit");
                 
 //                quantitySum += rs.getInt("quantity");
@@ -249,7 +249,7 @@ public class DataVisualization {
 //                    summarizedMap.put(rs.getString("action"), quantity + rs.getInt("quantity"));
 //                }
 
-                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + quantitySum + " " + unit + " ");
+                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + String.format("%.2f", quantitySum) + " " + unit + " ");
             
             }
                 
