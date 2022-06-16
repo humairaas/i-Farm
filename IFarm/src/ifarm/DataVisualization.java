@@ -1,10 +1,10 @@
 package ifarm;
 
-
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -24,11 +24,12 @@ public class DataVisualization {
     private Scanner scanner;
     private Integer choice = 0;
 
-    public DataVisualization(DBConnector db){
+    public DataVisualization(DBConnector db) {
         this.dbConnector = db;
         this.scanner = new Scanner(System.in);
     }
-     /*
+
+    /*
     public void Activities() {
         try {
             // To check if activities table exists
@@ -49,10 +50,9 @@ public class DataVisualization {
             System.out.println(e.getMessage());
         }
     }
-    */
-
-    public void start(){
-        while(true){
+     */
+    public void start() {
+        while (true) {
             System.out.println("\nTo visualize the activites select a particular number for to view the data (enter -1 to exit)\n");
             System.out.println("Enter 1 for displaying all activity logs for a target farm");
             System.out.println("Enter 2 for displaying all activity logs for a target farmer");
@@ -62,87 +62,77 @@ public class DataVisualization {
 
             System.out.print("Input: ");
 
-            try{
+            try {
                 choice = scanner.nextInt();
-            } catch(InputMismatchException e){
+            } catch (InputMismatchException e) {
                 System.out.println("\nInput error");
                 break;
             }
 
-            if(1 ==  choice){
-                while (true){
+            if (1 == choice) {
+                while (true) {
                     System.out.print("\nEnter Farm ID: ");
                     String farmId = scanner.next();
                     // Get activities based on farm id
-                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities" +
-                            " WHERE farm_id_fk = " + farmId +
-                            " ORDER BY date ASC");
+                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities"
+                            + " WHERE farm_id_fk = " + farmId
+                            + " ORDER BY date ASC");
                     printActivityLog(resultSet);
                     System.out.println("Continue？ y/n");
                     String stillGo = scanner.next();
-                    if("n".equals(stillGo)){
+                    if ("n".equals(stillGo)) {
                         break;
-                    }
-                    else if ("y".equals(stillGo)){
+                    } else if ("y".equals(stillGo)) {
                         continue;
-                    }
-                    else{
+                    } else {
                         System.err.println("Invalid input\n");
                     }
                 }
 
-
-            }
-            else if (2 == choice){
-                while(true){
+            } else if (2 == choice) {
+                while (true) {
                     System.out.print("\nEnter Farmer ID: ");
                     String farmerId = scanner.next();
-                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities" +
-                            " WHERE user_id_fk = " + farmerId +
-                            " ORDER BY date ASC");
+                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities"
+                            + " WHERE user_id_fk = " + farmerId
+                            + " ORDER BY date ASC");
                     printActivityLog(resultSet);
                     System.out.println("Continue？ y/n");
                     String stillGo = scanner.next();
-                    if("n".equals(stillGo)){
+                    if ("n".equals(stillGo)) {
                         break;
-                    }
-                    else if ("y".equals(stillGo)){
+                    } else if ("y".equals(stillGo)) {
                         continue;
-                    }
-                    else{
+                    } else {
                         System.err.println("Invalid input\n");
                     }
                 }
 
-            }
-            else if (3 == choice){
-                while (true){
+            } else if (3 == choice) {
+                while (true) {
                     System.out.print("\nEnter Farm ID: ");
                     String farmId = scanner.next();
                     System.out.print("\nEnter plant / fertilizer / pesticide name: ");
                     String typeName = scanner.next();
-                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities" +
-                            " WHERE farm_id_fk = " + farmId +
-                            " AND LOWER(type) = LOWER('" + typeName + "')" +
-                            " ORDER BY date ASC");
+                    ResultSet resultSet = dbConnector.SELECTrs("SELECT * FROM activities"
+                            + " WHERE farm_id_fk = " + farmId
+                            + " AND LOWER(type) = LOWER('" + typeName + "')"
+                            + " ORDER BY date ASC");
 
                     printActivityLog(resultSet);
                     System.out.println("Continue？ y/n");
                     String stillGo = scanner.next();
-                    if("n".equals(stillGo)){
+                    if ("n".equals(stillGo)) {
                         break;
-                    }
-                    else if ("y".equals(stillGo)){
+                    } else if ("y".equals(stillGo)) {
                         continue;
-                    }
-                    else{
+                    } else {
                         System.err.println("Invalid input\n");
                     }
                 }
 
-            }
-            else if (4 == choice){
-                while (true){
+            } else if (4 == choice) {
+                while (true) {
                     System.out.print("\nEnter Farm ID: ");
                     String farmId = scanner.next();
                     System.out.print("\nEnter plant / fertilizer / pesticide name: ");
@@ -158,20 +148,18 @@ public class DataVisualization {
                     printActivityLog(resultSet);
                     System.out.println("Continue？ y/n");
                     String stillGo = scanner.next();
-                    if("n".equals(stillGo)){
+                    if ("n".equals(stillGo)) {
                         break;
-                    }
-                    else if ("y".equals(stillGo)){
+                    } else if ("y".equals(stillGo)) {
                         continue;
-                    }
-                    else{
+                    } else {
                         System.err.println("Invalid input\n");
                     }
                 }
 
-            }
-            else if(5 == choice){
-                while (true){
+            } 
+            else if (5 == choice) {
+                while (true) {
                     System.out.print("\nEnter Farm ID: ");
                     String farmId = scanner.next();
                     System.out.print("\nEnter plant / fertilizer / pesticide name: ");
@@ -184,28 +172,25 @@ public class DataVisualization {
                     String fieldNumber = scanner.next();
                     System.out.print("\nEnter row number: ");
                     String rowNumber = scanner.next();
-                    System.out.println("Field Number "+Integer.parseInt(fieldNumber));
-                    System.out.println("Row Number "+Integer.parseInt(rowNumber));
+                    System.out.println("Field Number " + Integer.parseInt(fieldNumber));
+                    System.out.println("Row Number " + Integer.parseInt(rowNumber));
 
                     ResultSet resultSet = dbConnector.SELECTrs(String.format(
-                            "SELECT * FROM activities WHERE farm_id_fk = %s AND LOWER(type) = LOWER('%s') AND date >= '%s' AND date <= '%s' AND field = %d AND row = %d ORDER BY date",
+                            "SELECT * , SUM(quantity) quantitySum  FROM activities WHERE farm_id_fk = %s AND LOWER(type) = LOWER('%s') AND date >= '%s' AND date <= '%s' AND field = %d AND row = %d GROUP BY action ORDER BY date ASC",
                             farmId, typeName, fromDate, toDate, Integer.parseInt(fieldNumber), Integer.parseInt(rowNumber)));
                     printSummarizedActivityLog(resultSet);
                     System.out.println("Continue？ y/n");
                     String stillGo = scanner.next();
-                    if("n".equals(stillGo)){
+                    if ("n".equals(stillGo)) {
                         break;
-                    }
-                    else if ("y".equals(stillGo)){
+                    } else if ("y".equals(stillGo)) {
                         continue;
-                    }
-                    else{
+                    } else {
                         System.err.println("Invalid input\n");
                     }
                 }
 
-            }
-            else{
+            } else {
                 System.err.println("Invalid input\n");
                 break;
             }
@@ -214,12 +199,11 @@ public class DataVisualization {
         scanner.close();
     }
 
-
     public void printActivityLog(ResultSet rs) {
         try {
             if ((null == rs) || !rs.isBeforeFirst()) {
                 System.err.println("No records found");
-                return ;
+                return;
             }
             while (rs.next()) {
                 String action = rs.getString("action");
@@ -230,7 +214,7 @@ public class DataVisualization {
                 String unit = rs.getString("unit");
                 Date date = rs.getDate("date");
 
-                System.out.println( action + " " + type + " Field " + field + " Row " + row + " " + quantity + " "
+                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + quantity + " "
                         + unit + " " + date.toString());
             }
 
@@ -241,22 +225,34 @@ public class DataVisualization {
 
     public void printSummarizedActivityLog(ResultSet rs) {
         try {
-            if ((null == rs)||!rs.isBeforeFirst()) {
+            if ((null == rs) || !rs.isBeforeFirst()) {
                 System.err.println("No records found");
-                return ;
+                return;
             }
-            int quantitySum = 0;
-            String action = rs.getString("action");
-            String type = rs.getString("type");
-            int field = rs.getInt("field");
-            int row = rs.getInt("row");
-            String unit = rs.getString("unit");
+            HashMap<String, Integer> summarizedMap = new HashMap();
+            // 定义一个 map，key 为 action ，value 为 quantity
 
             while (rs.next()) {
-                quantitySum += rs.getInt("quantity");
-            }
+                String action = rs.getString("action");
+                String type = rs.getString("type");
+                int field = rs.getInt("field");
+                int row = rs.getInt("row");
+                int quantitySum = rs.getInt("quantitySum");
+                String unit = rs.getString("unit");
+                
+//                quantitySum += rs.getInt("quantity");
+                // 当 key 存在时将 value 相加，如果不存在就直接 put
+//                if (!summarizedMap.containsKey(rs.getString("action"))) {
+//                    summarizedMap.put(rs.getString("action"), rs.getInt("quantity"));
+//                } else {
+//                    Integer quantity = summarizedMap.get(rs.getString("action"));
+//                    summarizedMap.put(rs.getString("action"), quantity + rs.getInt("quantity"));
+//                }
 
-            System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + quantitySum + " " + unit + " ");
+                System.out.println(action + " " + type + " Field " + field + " Row " + row + " " + quantitySum + " " + unit + " ");
+            
+            }
+                
         } catch (SQLException e) {
             System.out.println(e.toString());
         }
