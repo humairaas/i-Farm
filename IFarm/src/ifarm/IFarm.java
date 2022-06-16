@@ -42,7 +42,7 @@ public class IFarm {
         int totalFarmer = 10;
         
         // generate farmers based on number of farmer for sequential and concurrent process
-//        Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
+        Farmer[] farmerObjSeq = simulator.generateFarmers(totalFarmer);
         Farmer[] farmerObjCon = simulator.generateFarmers(totalFarmer);
         
         // initializing atomic integer for activity id
@@ -57,28 +57,28 @@ public class IFarm {
         //SEQUENTIALLY
         
         // initializing timer for sequential process
-//        Timer timerSeq = new Timer();
-//        
-//        // start recording time for sequential process
-//        timerSeq.start(); 
-//            
-//            // for every farmer created
-//            // execute call method in Farmer class
-//            // results will be used for initializing data entry class
-//            // execute run method in data entry class to start inserting data into database and tezt file(log)
-//            // exception is thrown since runnable is used 
-//        
-//            for (Farmer farmers : farmerObjSeq) {
-//                try {
-//                    Runnable entry1 = new DataEntry(farmers.call(), handler); 
-//                    entry1.run();
-//                } catch (Exception ex) {
-//                    Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//            }
-//            
-//        // stop recording time for sequential process
-//        timerSeq.end();
+        Timer timerSeq = new Timer();
+        
+        // start recording time for sequential process
+        timerSeq.start(); 
+            
+            // for every farmer created
+            // execute call method in Farmer class
+            // results will be used for initializing data entry class
+            // execute run method in data entry class to start inserting data into database and tezt file(log)
+            // exception is thrown since runnable is used 
+        
+            for (Farmer farmers : farmerObjSeq) {
+                try {
+                    Runnable entry1 = new DataEntry(farmers.call(), handler); 
+                    entry1.run();
+                } catch (Exception ex) {
+                    Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+        // stop recording time for sequential process
+        timerSeq.end();
                     
         
         //CONCURRENTLY
@@ -107,37 +107,37 @@ public class IFarm {
         p1.shutdown();
 
         // to constantly check when future is done
-//        while(!list.isEmpty()){
-//            for(int i=0 ; i<list.size(); i++){
-//                
-//                Future<List<String[]>> future = list.get(i);
-//                if(future.isDone()){
-//                    try{
-//                        // Feed to Data Entry Handler
-//                        Runnable entry = new DataEntry(future.get(), handler);
-//                        p2.execute(entry);
-//                        list.remove(i);
-//                    }catch(InterruptedException e){
-//                        e.printStackTrace();
-//                    }catch(ExecutionException e){
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//        }
-//       
-//        p2.shutdown();
-//        
-//        try {
-//            p2.awaitTermination(1, TimeUnit.DAYS);
-//        } catch (InterruptedException ex) {
-//            Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        timerCon.end();
-//       
-//        // Start data visualization
-//        DataVisualization visualize = new DataVisualization(db);
-//        visualize.start();   
+        while(!list.isEmpty()){
+            for(int i=0 ; i<list.size(); i++){
+                
+                Future<List<String[]>> future = list.get(i);
+                if(future.isDone()){
+                    try{
+                        // Feed to Data Entry Handler
+                        Runnable entry = new DataEntry(future.get(), handler);
+                        p2.execute(entry);
+                        list.remove(i);
+                    }catch(InterruptedException e){
+                        e.printStackTrace();
+                    }catch(ExecutionException e){
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+       
+        p2.shutdown();
+        
+        try {
+            p2.awaitTermination(1, TimeUnit.DAYS);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(IFarm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        timerCon.end();
+       
+        // Start data visualization
+        DataVisualization visualize = new DataVisualization(db);
+        visualize.start();   
         
     }
 }

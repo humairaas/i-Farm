@@ -8,10 +8,7 @@ package ifarm;
  *
  * @author haneyiskdr
  */
-
-// An abstract class 
 public interface FarmerSimulatorInterface {
     
-    // An abstract and public method
     Farmer[] generateFarmers(int numberOfFarmers);
 }
