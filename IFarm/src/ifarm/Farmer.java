@@ -5,7 +5,6 @@
  */
 package ifarm;
 
-import static java.lang.String.format;
 import java.util.Random;
 import java.time.*;
 import java.time.format.*;
