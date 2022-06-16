@@ -28,7 +28,28 @@ public class DataVisualization {
         this.dbConnector = db;
         this.scanner = new Scanner(System.in);
     }
-
+     /*
+    public void Activities() {
+        try {
+            // To check if activities table exists
+            DatabaseMetaData meta = db.conn.getMetaData();
+            ResultSet resultSet = meta.getTables(null, null, "activity", new String[] { "TABLE" });
+            if (!resultSet.next()) {
+                System.out.println("Activity table does not exist!");
+            } else {                               
+                String changeSQL = "UPDATE `activity` SET `quantity`='[value-6]'/1000 WHERE `unit` = 'g' AND `unit` = 'ml'"+
+                                     "UPDATE `activity` SET `quantity`='[value-6]'/2 WHERE `unit` = 'pack (500g)'"+
+                                     " UPDATE `activity` SET  `unit`= replace(unit,'g','kg')"+
+                                     " UPDATE `activity` SET  `unit`= replace(unit,'ml','g')"+
+                                     " UPDATE `activity` SET  `unit`= replace(unit,'pack (500g)','pack (1000g)')";
+                System.out.println("Change data in activity table...");
+                stmt.executeUpdate(changeSQL);
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+    */
 
     public void start(){
         while(true){
