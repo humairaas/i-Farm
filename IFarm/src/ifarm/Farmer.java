@@ -39,14 +39,15 @@ public class Farmer implements Callable {
     
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
-    public Farmer(DBConnector db, String[] UserFarmID) {
+    public Farmer(DBConnector db, String[] UserFarmID, Farm farm) {
         this.db = db;
+        this.farm = farm;
         this.UserFarmID = UserFarmID;
         
         now = LocalDateTime.now(); 
         dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         
-        farm = new Farm();
+//        farm = new Farm();
         r = new Random();
         activity = new Activity();
         plant = new String[farm.getRow()][farm.getField()][];
@@ -130,14 +131,6 @@ public class Farmer implements Callable {
             
         }
         return activity_logs;
-    }
-
-    public String[] getUserFarm() {
-        Random r = new Random();
-        String size = db.SELECT("SELECT COUNT(*) FROM `users_farms`");
-        int rand = r.nextInt(Integer.parseInt(size.replace("#", "")));
-        String arr[] = db.SELECT("SELECT user_id_fk, farm_id_fk FROM `users_farms` LIMIT 1 OFFSET " + rand).split("#");
-        return arr;
     }
     
     public String[] getData(String type, String userID, String farmID) {
