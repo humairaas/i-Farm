@@ -101,7 +101,7 @@ public class IFarm {
         Farmer[] farmerObjCon = simulator.generateFarmers(totalFarmer);
         
         // initializing atomic integer for activity id
-        AtomicInteger atomicInteger = new AtomicInteger();
+        AtomicInteger atomicInteger = new AtomicInteger(1);
         
         // initializing lock explicitly
         ReentrantLock lock = new ReentrantLock();

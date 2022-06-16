@@ -113,10 +113,6 @@ public class Farmer implements Callable {
                 Thread t1 = new Thread(dhandler);
                 t1.start();
                 dis.internetConnError();
-                if(Thread.currentThread().isInterrupted()){
-                    System.out.println(Thread.currentThread().isInterrupted());
-                    break;
-                }
             }
    
             try {
@@ -151,7 +147,6 @@ public class Farmer implements Callable {
     }
     
     public String[] getPlantData () {
-        
         if (farm.getArea(randRow, randField) == null){
             plant[randRow][randField] = getData("plant", UserFarmID[0], UserFarmID[1]);
         } 

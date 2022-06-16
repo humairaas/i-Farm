@@ -1,0 +1,810 @@
+User-7 Farm-8 2022-06-02 sowing Cabbage 1705g 1 0
+User-2 Farm-5 2022-06-02 sowing Thyme 4848g 0 1
+User-8 Farm-10 2022-06-02 sowing Broccoli 1278g 1 0
+User-8 Farm-10 2022-06-02 sowing Oregano 2521g 1 1
+User-2 Farm-5 2022-06-02 sowing Alyssum 5302g 1 1
+User-7 Farm-8 2022-06-02 sowing Cauliflower 2323g 1 1
+User-2 Farm-5 2022-06-02 fertilizer Dolomitic Lime 3422g 1 1
+User-8 Farm-10 2022-06-02 fertilizer Urea Ammonium Nitrate 1093g 1 1
+User-7 Farm-8 2022-06-02 fertilizer Dolomitic Lime 4871g 1 0
+User-8 Farm-10 2022-06-02 sowing Cardinal Climber 3942g 0 1
+User-2 Farm-5 2022-06-02 sowing Thyme 4563g 1 0
+User-7 Farm-8 2022-06-02 sowing Soybean 3602g 0 1
+User-8 Farm-10 2022-06-02 pesticide Weedar 2031ml 1 1
+User-2 Farm-5 2022-06-02 sowing Thyme 4972g 0 0
+User-7 Farm-8 2022-06-02 fertilizer Copper Sulphate 3517g 0 1
+User-8 Farm-10 2022-06-02 fertilizer Nitrophosphate (23-23-0) 3618g 0 1
+User-2 Farm-5 2022-06-02 fertilizer Urea 5384g 1 0
+User-7 Farm-8 2022-06-02 sowing Chervil 2774g 0 0
+User-8 Farm-10 2022-06-02 fertilizer Nitrophosphate (24-24-0) 2599g 1 0
+User-2 Farm-5 2022-06-02 pesticide Perchlorocyclopentadiene 1937ml 1 1
+User-8 Farm-10 2022-06-02 harvest Parsley 3873g 1 1
+User-7 Farm-8 2022-06-02 pesticide Farmco Anizine 2393ml 1 0
+User-8 Farm-10 2022-06-02 pesticide Premerge 4921ml 0 1
+User-2 Farm-5 2022-06-02 fertilizer Cocoa Tankage 1427g 0 1
+User-7 Farm-8 2022-06-02 fertilizer Zinc Oxide Suspension Concentrate 1186g 1 1
+User-8 Farm-10 2022-06-02 harvest Caraway 5067g 0 1
+User-2 Farm-5 2022-06-02 harvest Squash 4803g 1 1
+User-7 Farm-8 2022-06-02 fertilizer Mono Ammonium Phosphate (11-52-0) 2536g 0 0
+User-2 Farm-5 2022-06-02 pesticide Gamaphex 3823ml 1 0
+User-7 Farm-8 2022-06-02 harvest Chamomile 2916g 1 0
+User-5 Farm-4 2022-06-02 sowing Endive 5374g 1 1
+User-3 Farm-5 2022-06-02 sowing Bellflower 4020g 1 1
+User-8 Farm-5 2022-06-02 sowing Leek 1118g 1 0
+User-3 Farm-5 2022-06-02 sowing Endive 1605g 0 0
+User-5 Farm-4 2022-06-02 sowing Soybean 779g 1 0
+User-8 Farm-5 2022-06-02 sowing Wallflower 2891g 0 0
+User-3 Farm-5 2022-06-02 fertilizer Ammonium Chloride 5091g 1 1
+User-8 Farm-5 2022-06-02 sowing Sorrel 5215g 0 1
+User-5 Farm-4 2022-06-02 sowing Turnip 3515g 0 0
+User-3 Farm-5 2022-06-02 sowing Gloriosa Daisy 3967g 1 0
+User-5 Farm-4 2022-06-02 fertilizer Phosphate Rock 1720g 0 0
+User-8 Farm-5 2022-06-02 fertilizer Mono Ammonium Phosphate (11-52-0) 5457g 0 0
+User-5 Farm-4 2022-06-02 sowing Primrose 2699g 0 1
+User-8 Farm-5 2022-06-02 pesticide Perchlorocyclopentadiene 2731ml 0 0
+User-3 Farm-5 2022-06-02 fertilizer MixO’Plus 2937g 0 0
+User-5 Farm-4 2022-06-02 pesticide Novigam 4113ml 0 0
+User-8 Farm-5 2022-06-02 fertilizer Mono Ammonium Phosphate (11-52-0) 521g 0 1
+User-3 Farm-5 2022-06-02 sowing Caraway 3523g 0 1
+User-5 Farm-4 2022-06-02 fertilizer N.P.K. 15::9:20 4237g 1 0
+User-8 Farm-5 2022-06-02 pesticide Lawn‐Keep 2407ml 0 1
+User-3 Farm-5 2022-06-02 fertilizer Urea Super Granulated 2365g 1 0
+User-3 Farm-5 2022-06-02 fertilizer Activit 4-3-2 3626g 0 1
+User-5 Farm-4 2022-06-02 harvest Butterfly Flower 4261g 0 0
+User-8 Farm-5 2022-06-02 fertilizer N.P.K. (15:15:15:9 S) 3270g 1 0
+User-3 Farm-5 2022-06-02 pesticide Fumazone 3838ml 0 1
+User-5 Farm-4 2022-06-02 fertilizer Mono Ammonium Phosphate (12-61-0) 3534g 1 1
+User-3 Farm-5 2022-06-02 pesticide Gamaphex 3446ml 0 0
+User-8 Farm-5 2022-06-02 pesticide Remtal SC 4532ml 1 0
+User-5 Farm-4 2022-06-02 pesticide Novigam 4962ml 1 1
+User-8 Farm-5 2022-06-02 harvest Beet 1212g 0 0
+User-8 Farm-5 2022-06-08 sowing Snapdragon 2155g 1 1
+User-5 Farm-6 2022-06-08 sowing Beans 3817g 0 0
+User-1 Farm-9 2022-06-08 sowing Bellflower 4789g 1 0
+User-1 Farm-9 2022-06-08 sowing Begonia 2186g 1 1
+User-8 Farm-5 2022-06-08 fertilizer BG Soil 2182g 1 1
+User-5 Farm-6 2022-06-08 fertilizer Nitro Phosphate (20-20-0) 4132g 0 0
+User-5 Farm-6 2022-06-08 sowing St. John's Wort 3357g 0 1
+User-1 Farm-9 2022-06-08 sowing Beet 1512g 0 1
+User-8 Farm-5 2022-06-08 pesticide Aatrex 1662ml 1 1
+User-1 Farm-9 2022-06-08 fertilizer Linseed Meal 5426g 0 1
+User-5 Farm-6 2022-06-08 sowing Mesclun 2837g 1 1
+User-8 Farm-5 2022-06-08 sowing Bee Balm 3429g 1 0
+User-5 Farm-6 2022-06-08 fertilizer Potassium Chloride 4489g 0 1
+User-1 Farm-9 2022-06-08 sowing Eggplant 1703g 0 0
+User-8 Farm-5 2022-06-08 sowing Wallflower 787g 0 1
+User-5 Farm-6 2022-06-08 pesticide Eviplast 1691ml 0 1
+User-1 Farm-9 2022-06-08 pesticide Nemase 4745ml 0 1
+User-8 Farm-5 2022-06-08 fertilizer Chelated Zinc as Zn-EDTA 682g 0 1
+User-5 Farm-6 2022-06-08 harvest Chinese Cabbage 4947g 0 1
+User-1 Farm-9 2022-06-08 harvest Rosemary 4661g 0 1
+User-5 Farm-6 2022-06-08 sales Squash 945g 0 1
+User-8 Farm-5 2022-06-08 harvest St. John's Wort 5121g 1 1
+User-1 Farm-9 2022-06-08 fertilizer Calcium Nitrate with Boron 2707g 1 1
+User-8 Farm-5 2022-06-08 pesticide Remtal SC 5224ml 0 1
+User-5 Farm-6 2022-06-08 sowing Lavender 3382g 0 1
+User-1 Farm-9 2022-06-08 pesticide Extrazine 751ml 1 1
+User-5 Farm-6 2022-06-08 pesticide Perchlorocyclopentadiene 2869ml 0 0
+User-1 Farm-9 2022-06-08 sales Bee Balm 1249g 0 1
+User-8 Farm-5 2022-06-08 sowing Sorrel 565g 0 0
+User-8 Farm-5 2022-06-08 fertilizer Ammonium Chloride 3278g 0 0
+User-9 Farm-10 2022-06-08 sowing Parsley 710g 0 0
+User-4 Farm-4 2022-06-08 sowing Butterfly Flower 2971g 0 0
+User-5 Farm-4 2022-06-08 sowing Soybean 5231g 1 0
+User-4 Farm-4 2022-06-08 fertilizer Ammonium Phosphate (14-28-0) 3425g 0 0
+User-9 Farm-10 2022-06-08 sowing Horehound 4197g 1 0
+User-5 Farm-4 2022-06-08 fertilizer Nitrophosphate (24-24-0) 2096g 1 0
+User-4 Farm-4 2022-06-08 pesticide Actril DS 1028ml 0 0
+User-9 Farm-10 2022-06-08 fertilizer Liquid Amm Polyphosphate 2814g 1 0
+User-5 Farm-4 2022-06-08 sowing Anise 864g 0 1
+User-4 Farm-4 2022-06-08 harvest Leek 4337g 0 0
+User-9 Farm-10 2022-06-08 sowing Parsnip 1123g 1 1
+User-5 Farm-4 2022-06-08 pesticide Dowicide 7 5321ml 1 0
+User-9 Farm-10 2022-06-08 fertilizer Precipitated Phosphate 2077g 0 0
+User-4 Farm-4 2022-06-08 sales Snapdragon 1564g 0 0
+User-5 Farm-4 2022-06-08 sowing Beet 4987g 1 1
+User-9 Farm-10 2022-06-08 sowing Broccoli 4648g 0 1
+User-5 Farm-4 2022-06-08 harvest Marjoram 3398g 1 0
+User-4 Farm-4 2022-06-08 sowing Cabbage 1929g 1 0
+User-5 Farm-4 2022-06-08 fertilizer Ammonium Phosphate Sulphate (18-9-0) 1757g 1 1
+User-9 Farm-10 2022-06-08 fertilizer Ammonium Phosphate Sulphate (18-9-0) 5271g 1 1
+User-4 Farm-4 2022-06-08 sowing Corn 4483g 0 0
+User-9 Farm-10 2022-06-08 pesticide DOA 2894ml 1 1
+User-5 Farm-4 2022-06-08 sowing Anise 1183g 0 0
+User-4 Farm-4 2022-06-08 sowing Pumpkin 4655g 0 1
+User-5 Farm-4 2022-06-08 fertilizer Diammonium Phosphate 1677g 0 1
+User-9 Farm-10 2022-06-08 fertilizer Precipitated Phosphate 550g 0 1
+User-4 Farm-4 2022-06-08 sowing Rockcress 3464g 1 1
+User-5 Farm-4 2022-06-08 sales Snapdragon 4326g 1 0
+User-9 Farm-10 2022-06-08 pesticide Novigam 4718ml 0 1
+User-4 Farm-4 2022-06-08 fertilizer Diammonium Phosphate 1375g 0 1
+User-9 Farm-8 2022-06-08 sowing Pak Choi 2814g 1 1
+User-7 Farm-8 2022-06-08 sowing Salsify 4631g 1 1
+User-9 Farm-10 2022-06-08 sowing Pepper 554g 1 0
+User-9 Farm-10 2022-06-08 sowing Onion 1463g 0 0
+User-9 Farm-8 2022-06-08 sowing Celosia 1762g 0 0
+User-7 Farm-8 2022-06-08 sowing Cauliflower 2371g 0 1
+User-9 Farm-8 2022-06-08 sowing Soybean 5296g 0 1
+User-9 Farm-10 2022-06-08 sowing Chervil 4862g 0 1
+User-7 Farm-8 2022-06-08 sowing Turnip 1677g 1 0
+User-9 Farm-8 2022-06-08 fertilizer Superphosphoric Acid (70% P2O 5  ) (Liquid) 1591g 0 1
+User-9 Farm-10 2022-06-08 fertilizer Bone meal, Raw 4234g 0 1
+User-7 Farm-8 2022-06-08 fertilizer Phosphate Rock 4154g 1 0
+User-9 Farm-8 2022-06-08 fertilizer Urea 1814g 1 1
+User-7 Farm-8 2022-06-08 pesticide Perchlorocyclopentadiene 760ml 1 0
+User-9 Farm-10 2022-06-08 fertilizer Urea Ammonium Nitrate 2496g 0 0
+User-9 Farm-8 2022-06-08 sowing Begonia 4670g 1 0
+User-9 Farm-10 2022-06-08 pesticide Kurosal 2071ml 0 0
+User-9 Farm-8 2022-06-08 pesticide Actril DS 1024ml 0 1
+User-7 Farm-8 2022-06-08 harvest Caraway 1384g 1 0
+User-9 Farm-8 2022-06-08 fertilizer Copper Sulphate 1496g 1 0
+User-9 Farm-10 2022-06-08 sowing Oregano 2710g 1 1
+User-7 Farm-8 2022-06-08 sowing Celosia 5304g 0 0
+User-9 Farm-8 2022-06-08 fertilizer Superphosphoric Acid (70% P2O 5  ) (Liquid) 5395g 0 0
+User-9 Farm-10 2022-06-08 fertilizer Potassium Schoenite 3745g 1 1
+User-7 Farm-8 2022-06-08 fertilizer Phosphate Rock 670g 0 0
+User-9 Farm-8 2022-06-08 pesticide Basfapon 4944ml 0 0
+User-7 Farm-8 2022-06-08 fertilizer Magnesium Sulphate 2261g 0 1
+User-9 Farm-10 2022-06-08 fertilizer Liquid Amm Polyphosphate 3436g 1 0
+User-7 Farm-8 2022-06-08 fertilizer Ammonium Phosphate (14-28-0) 1746g 1 1
+User-9 Farm-10 2022-06-08 pesticide Weedar 963ml 0 1
+User-10 Farm-3 2022-06-08 sowing Swiss Chard 912g 0 1
+User-8 Farm-10 2022-06-08 sowing Cosmos 2424g 1 1
+User-5 Farm-4 2022-06-08 sowing Broccoli 669g 1 1
+User-8 Farm-10 2022-06-08 fertilizer Greenferti 4-3-3-1 1384g 1 1
+User-10 Farm-3 2022-06-08 sowing Watermelon 4910g 1 0
+User-5 Farm-4 2022-06-08 sowing Soybean 2915g 0 1
+User-10 Farm-3 2022-06-08 fertilizer Precipitated Phosphate 2248g 0 1
+User-8 Farm-10 2022-06-08 sowing Cosmos 4804g 0 0
+User-5 Farm-4 2022-06-08 sowing Horehound 4028g 1 0
+User-5 Farm-4 2022-06-08 fertilizer Ammonium Molybdate 1405g 1 1
+User-10 Farm-3 2022-06-08 pesticide DMA‐4 2382ml 0 1
+User-8 Farm-10 2022-06-08 sowing Bellflower 3120g 1 0
+User-5 Farm-4 2022-06-08 sowing Rockcress 4361g 0 0
+User-10 Farm-3 2022-06-08 fertilizer Calcitic Lime (75% Neutral) 4883g 1 0
+User-8 Farm-10 2022-06-08 fertilizer Greenferti 4-3-3-1 1229g 1 0
+User-5 Farm-4 2022-06-08 pesticide Gamma BHL 2455ml 1 1
+User-10 Farm-3 2022-06-08 sowing Swiss Chard 3701g 0 0
+User-8 Farm-10 2022-06-08 pesticide Forchlor 1463ml 1 1
+User-5 Farm-4 2022-06-08 harvest Leek 890g 1 1
+User-10 Farm-3 2022-06-08 pesticide DMA‐4 606ml 1 0
+User-8 Farm-10 2022-06-08 sowing Rockcress 2661g 0 1
+User-5 Farm-4 2022-06-08 fertilizer Boronated DAP (18:46:0:0.3) 521g 0 0
+User-10 Farm-3 2022-06-08 sowing Pumpkin 3957g 1 1
+User-8 Farm-10 2022-06-08 fertilizer Ammonium Chloride 4113g 0 1
+User-10 Farm-3 2022-06-08 harvest Moonflower 5457g 1 0
+User-5 Farm-4 2022-06-08 fertilizer Boric Acid 2808g 0 1
+User-10 Farm-3 2022-06-08 harvest Moonflower 4475g 0 1
+User-8 Farm-10 2022-06-08 pesticide Dinitro Weed Killer 1097ml 1 0
+User-5 Farm-4 2022-06-08 pesticide Anticarie 3568ml 0 0
+User-8 Farm-10 2022-06-08 fertilizer Potassium Schoenite 2377g 0 0
+User-5 Farm-9 2022-06-12 sowing Kale 4333g 1 1
+User-6 Farm-5 2022-06-12 sowing Bellflower 5375g 0 0
+User-8 Farm-5 2022-06-12 sowing Thyme 2660g 0 1
+User-5 Farm-9 2022-06-12 sowing Chamomile 4631g 0 0
+User-6 Farm-5 2022-06-12 sowing Tarragon 5256g 1 0
+User-8 Farm-5 2022-06-12 fertilizer Zinc Sulphate Mono Hydrate Granular 1134g 0 1
+User-6 Farm-5 2022-06-12 fertilizer Nitrophosphate (24-24-0) 4343g 0 0
+User-5 Farm-9 2022-06-12 fertilizer Calcium Oxide 1128g 1 1
+User-8 Farm-5 2022-06-12 sowing Leek 652g 0 0
+User-5 Farm-9 2022-06-12 sowing Rockcress 4661g 0 1
+User-6 Farm-5 2022-06-12 fertilizer Ammonium Chloride 2913g 1 0
+User-8 Farm-5 2022-06-12 fertilizer Urea Super Granulated 2485g 0 0
+User-8 Farm-5 2022-06-12 sowing Bellflower 1782g 1 1
+User-6 Farm-5 2022-06-12 pesticide Radapon 2989ml 0 0
+User-5 Farm-9 2022-06-12 pesticide Endrin‐Methy 4151ml 1 1
+User-6 Farm-5 2022-06-12 sowing Catnip 4453g 0 1
+User-8 Farm-5 2022-06-12 fertilizer Boronated DAP (18:46:0:0.3) 4262g 1 1
+User-5 Farm-9 2022-06-12 harvest Rosemary 582g 1 1
+User-8 Farm-5 2022-06-12 sowing St. John's Wort 5273g 1 0
+User-6 Farm-5 2022-06-12 fertilizer BG Soil 1577g 0 1
+User-8 Farm-5 2022-06-12 pesticide Phenochlor 4367ml 1 1
+User-6 Farm-5 2022-06-12 pesticide Perchlorocyclopentadiene 4310ml 0 1
+User-5 Farm-9 2022-06-12 sales Mint 1988g 1 1
+User-6 Farm-5 2022-06-12 sowing Bellflower 1121g 1 1
+User-8 Farm-5 2022-06-12 fertilizer Chelated Iron as Fe-EDTA 2873g 1 0
+User-5 Farm-9 2022-06-12 sowing Cilantro 3420g 1 1
+User-6 Farm-5 2022-06-12 pesticide Pathclear 3658ml 1 0
+User-8 Farm-5 2022-06-12 pesticide Pathclear 4408ml 0 0
+User-5 Farm-9 2022-06-12 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 2150g 0 1
+User-5 Farm-9 2022-06-12 sowing Beet 3563g 1 0
+User-10 Farm-3 2022-06-12 sowing Basil 3083g 0 1
+User-10 Farm-3 2022-06-12 sowing Horehound 514g 0 1
+User-7 Farm-9 2022-06-12 sowing Horehound 3978g 1 1
+User-10 Farm-3 2022-06-12 sowing Clary 1250g 0 0
+User-10 Farm-3 2022-06-12 sowing Spinach 628g 1 0
+User-7 Farm-9 2022-06-12 sowing Kale 3782g 1 0
+User-10 Farm-3 2022-06-12 fertilizer Nitric Phosphate 4606g 0 1
+User-10 Farm-3 2022-06-12 sowing Sunflower 2209g 1 1
+User-7 Farm-9 2022-06-12 sowing Eggplant 2105g 0 1
+User-10 Farm-3 2022-06-12 sowing Roquette 1644g 1 0
+User-7 Farm-9 2022-06-12 fertilizer Calcium Ammonium Nitrate 4381g 1 0
+User-10 Farm-3 2022-06-12 fertilizer Bone meal, Raw 1989g 1 1
+User-10 Farm-3 2022-06-12 pesticide Aaa Flowable 1821ml 0 1
+User-10 Farm-3 2022-06-12 fertilizer Cocoa Tankage 1094g 1 0
+User-7 Farm-9 2022-06-12 sowing Bee Balm 4199g 0 0
+User-10 Farm-3 2022-06-12 harvest Wallflower 4381g 0 1
+User-7 Farm-9 2022-06-12 fertilizer Zincated NPK (10:26:26:0.5) 4938g 0 0
+User-10 Farm-3 2022-06-12 pesticide Kanechlor 1721ml 1 1
+User-10 Farm-3 2022-06-12 sales Sunflower 3216g 0 1
+User-7 Farm-9 2022-06-12 fertilizer Diammonium Phosphate 5287g 0 1
+User-10 Farm-3 2022-06-12 pesticide DMA‐4 1471ml 1 0
+User-10 Farm-3 2022-06-12 fertilizer Zincated Urea 2479g 0 0
+User-10 Farm-3 2022-06-12 harvest Watermelon 2831g 1 1
+User-7 Farm-9 2022-06-12 fertilizer Magnesium Sulphate 2538g 1 1
+User-10 Farm-3 2022-06-12 fertilizer Cocoa Tankage 1288g 1 0
+User-7 Farm-9 2022-06-12 pesticide Unipon 2205ml 0 0
+User-10 Farm-3 2022-06-12 pesticide DOA 3220ml 1 0
+User-10 Farm-3 2022-06-12 harvest Swiss Chard 4084g 1 0
+User-7 Farm-9 2022-06-12 harvest Kale 2376g 0 0
+User-10 Farm-3 2022-06-12 sales Squash 2747g 1 0
+User-6 Farm-1 2022-06-12 sowing Endive 1390g 1 1
+User-5 Farm-6 2022-06-12 sowing St. John's Wort 5189g 0 0
+User-8 Farm-7 2022-06-12 sowing Chervil 2383g 0 1
+User-6 Farm-1 2022-06-12 sowing Burnet 2167g 0 0
+User-5 Farm-6 2022-06-12 fertilizer Potassium Chloride 2276g 0 0
+User-8 Farm-7 2022-06-12 sowing Alyssum 4481g 0 0
+User-6 Farm-1 2022-06-12 sowing Peas 794g 0 1
+User-5 Farm-6 2022-06-12 sowing Dill 2049g 0 1
+User-8 Farm-7 2022-06-12 sowing Cardinal Climber 2783g 1 1
+User-5 Farm-6 2022-06-12 fertilizer Superphosphoric Acid (70% P2O 5  ) (Liquid) 1792g 0 1
+User-6 Farm-1 2022-06-12 sowing Sweet Peas 4584g 1 0
+User-6 Farm-1 2022-06-12 fertilizer Boric Acid 4009g 0 0
+User-5 Farm-6 2022-06-12 pesticide Kurosal 3110ml 0 0
+User-8 Farm-7 2022-06-12 sowing Chervil 698g 1 0
+User-6 Farm-1 2022-06-12 pesticide Amoxone 1737ml 0 0
+User-8 Farm-7 2022-06-12 fertilizer Magnesium Sulphate 2679g 0 0
+User-5 Farm-6 2022-06-12 harvest Beans 1429g 0 0
+User-6 Farm-1 2022-06-12 fertilizer Calcium Nitrate with Boron 2997g 1 1
+User-5 Farm-6 2022-06-12 pesticide Perchlorocyclopentadiene 2497ml 0 1
+User-8 Farm-7 2022-06-12 fertilizer Cocoa Shell Meal 2629g 1 1
+User-6 Farm-1 2022-06-12 fertilizer Manure Salts 1565g 0 1
+User-5 Farm-6 2022-06-12 harvest Okra 3841g 0 1
+User-8 Farm-7 2022-06-12 pesticide Remtal SC 1850ml 1 1
+User-6 Farm-1 2022-06-12 fertilizer Urea Ammonium Nitrate 5210g 1 0
+User-5 Farm-6 2022-06-12 sowing Bellflower 5294g 1 0
+User-8 Farm-7 2022-06-12 pesticide Weedar 5274ml 0 0
+User-6 Farm-1 2022-06-12 pesticide Aaa Flowable 3089ml 0 1
+User-5 Farm-6 2022-06-12 sowing Cardinal Climber 1333g 1 1
+User-8 Farm-7 2022-06-12 harvest Lettuce 2765g 1 1
+User-8 Farm-7 2022-06-12 harvest Chervil 2297g 0 0
+User-7 Farm-8 2022-06-12 sowing Caraway 3814g 0 1
+User-3 Farm-5 2022-06-12 sowing Bee Balm 4999g 0 1
+User-9 Farm-8 2022-06-12 sowing Cauliflower 2742g 1 0
+User-9 Farm-8 2022-06-12 sowing Chamomile 546g 1 1
+User-7 Farm-8 2022-06-12 fertilizer Linseed Meal 1935g 0 1
+User-3 Farm-5 2022-06-12 sowing Endive 1078g 1 1
+User-7 Farm-8 2022-06-12 pesticide Borolin 4726ml 0 1
+User-9 Farm-8 2022-06-12 fertilizer Dolomitic Lime (75% Neutral) 5470g 1 1
+User-3 Farm-5 2022-06-12 sowing Squash 2085g 1 0
+User-7 Farm-8 2022-06-12 harvest Turnip 4825g 0 1
+User-9 Farm-8 2022-06-12 fertilizer Superphosphoric Acid (70% P2O 5  ) (Liquid) 4823g 1 0
+User-3 Farm-5 2022-06-12 fertilizer MixO’Plus 1544g 1 0
+User-7 Farm-8 2022-06-12 sowing Caraway 3764g 1 1
+User-9 Farm-8 2022-06-12 pesticide Novigam 4237ml 1 0
+User-3 Farm-5 2022-06-12 fertilizer Borax 906g 0 1
+User-9 Farm-8 2022-06-12 harvest Turnip 1677g 1 0
+User-7 Farm-8 2022-06-12 sowing Soybean 4648g 0 0
+User-3 Farm-5 2022-06-12 pesticide Radapon 3475ml 1 0
+User-9 Farm-8 2022-06-12 sowing Mustard 3769g 0 0
+User-7 Farm-8 2022-06-12 fertilizer Dolomitic Lime 1857g 0 0
+User-3 Farm-5 2022-06-12 sowing Corn 4568g 0 0
+User-9 Farm-8 2022-06-12 fertilizer Magnesium Sulphate 3465g 0 0
+User-7 Farm-8 2022-06-12 pesticide Chemsect 1972ml 0 0
+User-3 Farm-5 2022-06-12 harvest Tarragon 3806g 1 0
+User-9 Farm-8 2022-06-12 sales Leek 4994g 1 0
+User-7 Farm-8 2022-06-12 harvest Celosia 666g 0 0
+User-9 Farm-8 2022-06-12 pesticide Basfapon 1534ml 1 1
+User-3 Farm-5 2022-06-12 pesticide Perchlorocyclopentadiene 4159ml 0 1
+User-7 Farm-8 2022-06-12 sales Oregano 1079g 0 0
+User-3 Farm-5 2022-06-12 fertilizer Potassium Sulfate 4007g 0 0
+User-5 Farm-6 2022-06-12 sowing Brussels Sprouts 5412g 0 0
+User-5 Farm-4 2022-06-12 sowing Onion 719g 1 0
+User-1 Farm-9 2022-06-12 sowing Bellflower 4467g 1 1
+User-5 Farm-4 2022-06-12 sowing Butterfly Flower 4547g 1 1
+User-5 Farm-6 2022-06-12 fertilizer GROBEL NPK 4-3-3+1MgO 4870g 0 0
+User-5 Farm-4 2022-06-12 fertilizer Mono Ammonium Phosphate (12-61-0) 2058g 1 1
+User-1 Farm-9 2022-06-12 fertilizer N.P.K. (14-28-14) 2564g 1 1
+User-5 Farm-4 2022-06-12 sowing Thyme 4954g 0 0
+User-5 Farm-6 2022-06-12 pesticide Gamatin 1616ml 0 0
+User-1 Farm-9 2022-06-12 sowing Wallflower 4400g 0 1
+User-5 Farm-4 2022-06-12 pesticide Extrazine 2715ml 1 1
+User-5 Farm-6 2022-06-12 sowing Mesclun 5047g 1 1
+User-1 Farm-9 2022-06-12 pesticide Oxy 2071ml 1 1
+User-5 Farm-4 2022-06-12 harvest Broccoli 4886g 1 1
+User-5 Farm-6 2022-06-12 sowing Pepper 582g 1 0
+User-1 Farm-9 2022-06-12 harvest Pak Choi 5351g 1 1
+User-5 Farm-4 2022-06-12 fertilizer Nitrophosphate (23-23-0) 4562g 0 0
+User-5 Farm-6 2022-06-12 fertilizer BG Soil 3742g 1 0
+User-1 Farm-9 2022-06-12 sowing Pepper 2316g 0 0
+User-5 Farm-4 2022-06-12 fertilizer Ammonium Phosphate Sulphate (16-20-0) 1926g 1 0
+User-5 Farm-6 2022-06-12 pesticide Fenoprop 515ml 1 0
+User-1 Farm-9 2022-06-12 fertilizer Urea 3416g 0 1
+User-5 Farm-4 2022-06-12 sales Broccoli 1644g 1 1
+User-5 Farm-6 2022-06-12 fertilizer Ammonium Phosphate Sulphate (16-20-0) 2918g 1 1
+User-1 Farm-9 2022-06-12 sales Roquette 4707g 1 1
+User-5 Farm-4 2022-06-12 sowing Corn 4239g 0 1
+User-5 Farm-6 2022-06-12 harvest Tarragon 3597g 1 0
+User-1 Farm-9 2022-06-12 fertilizer Zinc Oxide Suspension Concentrate 1709g 0 0
+User-5 Farm-6 2022-06-12 harvest Parsnip 831g 0 0
+User-1 Farm-9 2022-06-12 sowing Kale 3262g 1 0
+User-4 Farm-4 2022-06-12 sowing Roquette 4336g 1 1
+User-8 Farm-10 2022-06-12 sowing Squash 1179g 1 1
+User-8 Farm-10 2022-06-12 sowing Pepper 2479g 0 1
+User-8 Farm-10 2022-06-12 sowing Beet 1871g 0 0
+User-4 Farm-4 2022-06-12 sowing Marjoram 4602g 1 0
+User-8 Farm-10 2022-06-12 sowing Salsify 3708g 1 1
+User-8 Farm-10 2022-06-12 fertilizer Zincated NPK (12:32:16:0.5) 808g 0 0
+User-4 Farm-4 2022-06-12 fertilizer Di-sodium Tetraborate Pentahydrate 934g 1 1
+User-8 Farm-10 2022-06-12 pesticide Nemase 4943ml 0 0
+User-8 Farm-10 2022-06-12 fertilizer Precipitated Phosphate 2525g 1 1
+User-4 Farm-4 2022-06-12 sowing Leek 3161g 0 0
+User-8 Farm-10 2022-06-12 pesticide Esteron 3209ml 1 1
+User-8 Farm-10 2022-06-12 harvest Broccoli 4843g 0 0
+User-4 Farm-4 2022-06-12 fertilizer Boronated NPK (12:32:16:0.3) 2868g 1 0
+User-8 Farm-10 2022-06-12 harvest Rockcress 2085g 1 1
+User-8 Farm-10 2022-06-12 sales Caraway 4979g 0 0
+User-8 Farm-10 2022-06-12 fertilizer Urea Ammonium Nitrate 1594g 0 1
+User-4 Farm-4 2022-06-12 sowing Broccoli 3119g 0 1
+User-8 Farm-10 2022-06-12 fertilizer Precipitated Phosphate 3892g 1 1
+User-8 Farm-10 2022-06-12 sowing Onion 3230g 1 0
+User-4 Farm-4 2022-06-12 fertilizer Nitrophosphate with Potash (15-15-15) 3603g 0 1
+User-8 Farm-10 2022-06-12 sowing Sage 949g 1 0
+User-8 Farm-10 2022-06-12 pesticide Aatrex 4098ml 0 1
+User-4 Farm-4 2022-06-12 fertilizer Urea Ammonium Nitrate 5374g 0 0
+User-8 Farm-10 2022-06-12 fertilizer Zincated NPK (12:32:16:0.5) 3080g 1 0
+User-8 Farm-10 2022-06-12 sowing Cumin 1186g 0 0
+User-4 Farm-4 2022-06-12 pesticide Actril DS 4227ml 1 1
+User-8 Farm-10 2022-06-12 fertilizer Greenferti 4-3-3-1 4453g 1 0
+User-8 Farm-10 2022-06-12 pesticide Lawn‐Keep 775ml 1 0
+User-4 Farm-4 2022-06-12 pesticide Anticarie 4439ml 0 1
+User-9 Farm-8 2022-06-12 sowing Turnip 3538g 0 1
+User-4 Farm-4 2022-06-12 sowing Marjoram 2675g 1 1
+User-9 Farm-8 2022-06-12 sowing Begonia 777g 1 0
+User-9 Farm-8 2022-06-12 sowing Chamomile 1199g 0 0
+User-9 Farm-8 2022-06-12 sowing Leek 4470g 0 0
+User-4 Farm-4 2022-06-12 fertilizer Phosphate Rock 5141g 1 1
+User-9 Farm-8 2022-06-12 sowing Oregano 3678g 1 1
+User-9 Farm-8 2022-06-12 fertilizer Dolomitic Lime (75% Neutral) 5142g 1 0
+User-4 Farm-4 2022-06-12 sowing Catmint 1469g 0 0
+User-9 Farm-8 2022-06-12 sowing Cabbage 5313g 1 1
+User-9 Farm-8 2022-06-12 fertilizer Ammonium Phosphate (14-28-0) 2174g 0 1
+User-4 Farm-4 2022-06-12 fertilizer Potassium Nitrate (13-0-45) 3499g 0 0
+User-9 Farm-8 2022-06-12 fertilizer Borax 4557g 0 0
+User-9 Farm-8 2022-06-12 sowing Salsify 2875g 0 1
+User-4 Farm-4 2022-06-12 sowing Roquette 3720g 0 1
+User-9 Farm-8 2022-06-12 fertilizer Phosphate Rock 3607g 1 1
+User-9 Farm-8 2022-06-12 sowing Soybean 5322g 1 0
+User-4 Farm-4 2022-06-12 pesticide Perchlorocyclopentadiene 3943ml 1 1
+User-9 Farm-8 2022-06-12 fertilizer Dolomitic Lime 4955g 0 0
+User-9 Farm-8 2022-06-12 fertilizer Phosphate Rock 2853g 1 0
+User-4 Farm-4 2022-06-12 harvest Butterfly Flower 4354g 1 1
+User-9 Farm-8 2022-06-12 fertilizer Calcitic Lime (75% Neutral) 3810g 0 1
+User-9 Farm-8 2022-06-12 pesticide Esteron 788ml 0 1
+User-4 Farm-4 2022-06-12 pesticide DOA 2464ml 0 0
+User-9 Farm-8 2022-06-12 pesticide Aquakleen 4682ml 0 1
+User-9 Farm-8 2022-06-12 fertilizer Copper Sulphate 4916g 1 1
+User-4 Farm-4 2022-06-12 sowing Corn 3744g 1 0
+User-9 Farm-8 2022-06-12 pesticide Grazon 4945ml 1 1
+User-9 Farm-8 2022-06-12 pesticide Amoxone 4405ml 1 0
+User-4 Farm-4 2022-06-12 fertilizer Nitrophosphate (23-23-0) 1133g 0 1
+User-6 Farm-8 2022-06-12 sowing Broccoli 2182g 0 0
+User-8 Farm-10 2022-06-12 sowing Onion 3974g 1 0
+User-5 Farm-6 2022-06-12 sowing Bellflower 5461g 1 0
+User-6 Farm-8 2022-06-12 sowing Oregano 3422g 1 0
+User-5 Farm-6 2022-06-12 sowing Tarragon 3893g 0 1
+User-8 Farm-10 2022-06-12 sowing Bee Balm 3414g 1 1
+User-5 Farm-6 2022-06-12 sowing Brussels Sprouts 1920g 0 0
+User-6 Farm-8 2022-06-12 fertilizer Lime-Potash Mixtures 4399g 1 0
+User-8 Farm-10 2022-06-12 sowing Pepper 1345g 0 1
+User-6 Farm-8 2022-06-12 sowing Begonia 3275g 0 1
+User-5 Farm-6 2022-06-12 fertilizer Calcium Chelate 3170g 1 0
+User-8 Farm-10 2022-06-12 fertilizer Ammonium Phosphate Sulphate (18-9-0) 4694g 1 1
+User-5 Farm-6 2022-06-12 pesticide Basfapon 4539ml 1 0
+User-6 Farm-8 2022-06-12 fertilizer Calcitic Lime (75% Neutral) 652g 0 0
+User-8 Farm-10 2022-06-12 sowing Savory 4828g 0 0
+User-5 Farm-6 2022-06-12 fertilizer Compost 1814g 0 0
+User-6 Farm-8 2022-06-12 pesticide Bromofume 2381ml 0 0
+User-8 Farm-10 2022-06-12 fertilizer Mono Ammonium Phosphate (12-61-0) 2082g 0 0
+User-6 Farm-8 2022-06-12 fertilizer Copper Sulphate 5201g 0 1
+User-8 Farm-10 2022-06-12 fertilizer Precipitated Phosphate 1946g 0 1
+User-5 Farm-6 2022-06-12 fertilizer Mono Ammonium Phosphate (11-52-0) 547g 0 1
+User-6 Farm-8 2022-06-12 sowing Cabbage 3413g 1 1
+User-8 Farm-10 2022-06-12 pesticide Grazon 1825ml 0 0
+User-5 Farm-6 2022-06-12 pesticide Fenoprop 4012ml 0 1
+User-6 Farm-8 2022-06-12 pesticide Graphlox 888ml 1 0
+User-8 Farm-10 2022-06-12 pesticide Access 751ml 1 1
+User-5 Farm-6 2022-06-12 harvest St. John's Wort 3745g 1 0
+User-6 Farm-8 2022-06-12 pesticide Agronexit 1400ml 0 1
+User-5 Farm-6 2022-06-12 pesticide Dinitro Weed Killer 3476ml 0 0
+User-8 Farm-10 2022-06-12 pesticide Penta 2069ml 0 1
+User-5 Farm-4 2022-06-12 sowing Soybean 2166g 0 1
+User-8 Farm-10 2022-06-12 sowing Salsify 3622g 0 0
+User-10 Farm-3 2022-06-12 sowing Stevia 2589g 0 0
+User-8 Farm-10 2022-06-12 sowing Peas 959g 0 1
+User-5 Farm-4 2022-06-12 fertilizer Potassium Schoenite 2539g 0 1
+User-10 Farm-3 2022-06-12 sowing Spinach 3805g 1 0
+User-8 Farm-10 2022-06-12 fertilizer Potassium Sulfate 3965g 0 0
+User-5 Farm-4 2022-06-12 pesticide Extrazine 3796ml 0 1
+User-5 Farm-4 2022-06-12 sowing Catmint 2916g 1 0
+User-10 Farm-3 2022-06-12 fertilizer Lime-Potash Mixtures 3711g 1 0
+User-8 Farm-10 2022-06-12 sowing Parsnip 2908g 1 1
+User-10 Farm-3 2022-06-12 pesticide Unipon 5379ml 1 0
+User-5 Farm-4 2022-06-12 harvest Pumpkin 4285g 0 1
+User-8 Farm-10 2022-06-12 fertilizer Mono Ammonium Phosphate (12-61-0) 2415g 0 1
+User-10 Farm-3 2022-06-12 sowing Roquette 2722g 1 1
+User-5 Farm-4 2022-06-12 sowing Snapdragon 3720g 0 0
+User-10 Farm-3 2022-06-12 sowing Swiss Chard 3686g 0 1
+User-8 Farm-10 2022-06-12 pesticide Lawn‐Keep 1020ml 0 1
+User-10 Farm-3 2022-06-12 fertilizer Rockphosphate 594g 0 0
+User-5 Farm-4 2022-06-12 fertilizer Potassium Nitrate (13-0-45) 769g 1 0
+User-8 Farm-10 2022-06-12 sowing Rockcress 3510g 1 0
+User-10 Farm-3 2022-06-12 fertilizer Calcium Chelate 5040g 0 1
+User-5 Farm-4 2022-06-12 sales Marjoram 4387g 0 1
+User-8 Farm-10 2022-06-12 fertilizer Ammonium Chloride 3955g 1 1
+User-10 Farm-3 2022-06-12 harvest Alyssum 3506g 1 0
+User-5 Farm-4 2022-06-12 sowing Cardinal Climber 5089g 1 1
+User-8 Farm-10 2022-06-12 pesticide Penta Plus 4 2215ml 1 1
+User-10 Farm-3 2022-06-12 pesticide Polychloro camphene 1862ml 0 1
+User-8 Farm-10 2022-06-12 harvest Savory 1419g 0 1
+User-5 Farm-4 2022-06-12 fertilizer Nitrophosphate (24-24-0) 864g 0 0
+User-1 Farm-9 2022-06-12 sowing Kale 5457g 0 0
+User-7 Farm-7 2022-06-12 sowing Cabbage 689g 0 0
+User-6 Farm-8 2022-06-12 sowing Mustard 2315g 1 0
+User-1 Farm-9 2022-06-12 fertilizer N.P.K. (14-28-14) 3921g 0 0
+User-7 Farm-7 2022-06-12 sowing Cardinal Climber 1582g 1 1
+User-6 Farm-8 2022-06-12 sowing Pak Choi 3592g 1 1
+User-7 Farm-7 2022-06-12 sowing Chinese Cabbage 4755g 1 0
+User-1 Farm-9 2022-06-12 pesticide Extrazine 1662ml 0 0
+User-6 Farm-8 2022-06-12 fertilizer Di-sodium Octaborate Tetrahydrate 2123g 1 1
+User-7 Farm-7 2022-06-12 fertilizer Magnesium Sulphate 2372g 1 0
+User-1 Farm-9 2022-06-12 harvest Rockcress 5288g 0 0
+User-6 Farm-8 2022-06-12 sowing Pak Choi 866g 0 0
+User-7 Farm-7 2022-06-12 pesticide Zeaphos 4005ml 1 0
+User-1 Farm-9 2022-06-12 sowing Mint 3822g 1 0
+User-7 Farm-7 2022-06-12 harvest Cabbage 3949g 1 0
+User-1 Farm-9 2022-06-12 sales Kale 862g 0 0
+User-6 Farm-8 2022-06-12 pesticide Dalapon‐Na 1959ml 1 1
+User-1 Farm-9 2022-06-12 sowing Wallflower 2056g 0 1
+User-7 Farm-7 2022-06-12 fertilizer Nitrophosphate (24-24-0) 3589g 0 0
+User-6 Farm-8 2022-06-12 fertilizer Nitric Phosphate 1776g 1 0
+User-1 Farm-9 2022-06-12 sowing Celosia 2772g 1 1
+User-7 Farm-7 2022-06-12 fertilizer Nitric Phosphate 1504g 1 1
+User-6 Farm-8 2022-06-12 pesticide Actril DS 773ml 1 0
+User-1 Farm-9 2022-06-12 fertilizer Potassium Chloride 5396g 1 1
+User-7 Farm-7 2022-06-12 sales Cabbage 1284g 1 0
+User-1 Farm-9 2022-06-12 pesticide Oxy 3990ml 1 1
+User-6 Farm-8 2022-06-12 harvest Caraway 5480g 1 0
+User-7 Farm-7 2022-06-12 pesticide Zeaphos 5224ml 0 0
+User-6 Farm-8 2022-06-12 harvest Celosia 3076g 1 1
+User-6 Farm-8 2022-06-12 fertilizer Copper Sulphate 4535g 0 0
+User-6 Farm-1 2022-06-12 sowing Begonia 5228g 1 1
+User-6 Farm-5 2022-06-12 sowing Squash 4776g 1 0
+User-6 Farm-1 2022-06-12 sowing Oregano 2435g 0 1
+User-6 Farm-1 2022-06-12 sowing Peas 1920g 0 1
+User-6 Farm-5 2022-06-12 sowing Endive 2810g 0 1
+User-6 Farm-1 2022-06-12 fertilizer Mono Ammonium Phosphate (12-61-0) 517g 0 1
+User-6 Farm-5 2022-06-12 fertilizer Boronated DAP (18:46:0:0.3) 2229g 1 0
+User-6 Farm-1 2022-06-12 fertilizer Ammonium Poly Phosphate (10-34-0) Liquid 671g 1 1
+User-6 Farm-1 2022-06-12 sowing Rutabaga 4786g 0 0
+User-6 Farm-5 2022-06-12 sowing Lavender 2051g 0 0
+User-6 Farm-1 2022-06-12 pesticide Bay 70143 1018ml 0 1
+User-6 Farm-1 2022-06-12 sowing Radish 3150g 1 0
+User-6 Farm-1 2022-06-12 sowing Radish 4017g 1 1
+User-6 Farm-5 2022-06-12 sowing Squash 3412g 1 1
+User-6 Farm-1 2022-06-12 fertilizer Di-sodium Octaborate Tetrahydrate 5324g 0 1
+User-6 Farm-1 2022-06-12 sowing Bee Balm 4837g 1 0
+User-6 Farm-5 2022-06-12 pesticide Phenochlor 5041ml 1 0
+User-6 Farm-1 2022-06-12 fertilizer Calcium Ammonium Nitrate 3468g 1 0
+User-6 Farm-1 2022-06-12 harvest Roquette 5179g 0 1
+User-6 Farm-5 2022-06-12 fertilizer Anhydrous Ammonia 1493g 0 1
+User-6 Farm-1 2022-06-12 sowing Rutabaga 1484g 0 0
+User-6 Farm-1 2022-06-12 fertilizer Fertiplus 4-2-10 523g 1 1
+User-6 Farm-5 2022-06-12 fertilizer Urea 4437g 0 0
+User-6 Farm-1 2022-06-12 pesticide Unipon 922ml 0 1
+User-6 Farm-5 2022-06-12 pesticide Radapon 959ml 0 0
+User-6 Farm-1 2022-06-12 pesticide Penta Preservative Ready‐to‐Use 4919ml 1 1
+User-6 Farm-1 2022-06-12 harvest Watermelon 2077g 0 1
+User-6 Farm-1 2022-06-12 fertilizer Ammonium Phosphate Sulphate (16-20-0) 1046g 0 0
+User-6 Farm-1 2022-06-12 harvest Watermelon 2217g 1 1
+User-6 Farm-5 2022-06-12 harvest Endive 1131g 1 0
+User-6 Farm-8 2022-06-12 sowing Begonia 2471g 0 0
+User-10 Farm-3 2022-06-12 sowing Burnet 4342g 1 1
+User-4 Farm-4 2022-06-12 sowing Soybean 2550g 1 1
+User-10 Farm-3 2022-06-12 sowing Tomato 4632g 0 0
+User-4 Farm-4 2022-06-12 sowing Begonia 1069g 0 0
+User-6 Farm-8 2022-06-12 sowing Broccoli 2340g 1 1
+User-10 Farm-3 2022-06-12 fertilizer Nitro Phosphate (20-20-0) 3741g 0 0
+User-4 Farm-4 2022-06-12 sowing Thyme 1831g 1 0
+User-6 Farm-8 2022-06-12 sowing Turnip 3119g 0 1
+User-4 Farm-4 2022-06-12 fertilizer Nitrophosphate (23-23-0) 2837g 1 0
+User-6 Farm-8 2022-06-12 fertilizer Ammonium Chloride 508g 0 0
+User-10 Farm-3 2022-06-12 pesticide Lin‐O‐Sol 2910ml 0 0
+User-4 Farm-4 2022-06-12 sowing Onion 4157g 0 1
+User-6 Farm-8 2022-06-12 pesticide Dowfume 4953ml 0 0
+User-10 Farm-3 2022-06-12 sowing Onion 1056g 0 1
+User-6 Farm-8 2022-06-12 fertilizer SSP:0.5Zn 1997g 1 1
+User-4 Farm-4 2022-06-12 fertilizer Calcium Hydroxide 2649g 0 1
+User-10 Farm-3 2022-06-12 harvest Celosia 3924g 0 0
+User-4 Farm-4 2022-06-12 fertilizer Activit 4-3-2 611g 0 0
+User-6 Farm-8 2022-06-12 harvest Soybean 4959g 0 0
+User-10 Farm-3 2022-06-12 sales Squash 3670g 0 0
+User-6 Farm-8 2022-06-12 fertilizer Diammonium Phosphate 3321g 0 1
+User-4 Farm-4 2022-06-12 pesticide Dowicide 7 3676ml 1 0
+User-10 Farm-3 2022-06-12 fertilizer Standard Dolomite 2127g 1 1
+User-4 Farm-4 2022-06-12 pesticide DOA 1507ml 0 0
+User-6 Farm-8 2022-06-12 pesticide Novigam 3047ml 1 1
+User-10 Farm-3 2022-06-12 pesticide Aatrex 3456ml 1 1
+User-6 Farm-8 2022-06-12 pesticide Graphlox 2021ml 0 1
+User-4 Farm-4 2022-06-12 fertilizer Lime-Potash Mixtures 3615g 1 1
+User-10 Farm-3 2022-06-12 sowing Onion 5186g 1 0
+User-2 Farm-5 2022-06-12 sowing Caraway 4642g 0 1
+User-8 Farm-10 2022-06-12 sowing Bee Balm 4881g 1 1
+User-8 Farm-5 2022-06-12 sowing Bellflower 4002g 1 0
+User-2 Farm-5 2022-06-12 sowing Snapdragon 2940g 0 0
+User-8 Farm-5 2022-06-12 sowing Okra 5176g 0 0
+User-8 Farm-10 2022-06-12 sowing Onion 2032g 0 0
+User-8 Farm-5 2022-06-12 fertilizer Mono Ammonium Phosphate (11-52-0) 1273g 1 0
+User-2 Farm-5 2022-06-12 sowing Gloriosa Daisy 5235g 1 1
+User-8 Farm-10 2022-06-12 fertilizer Urea Ammonium Nitrate 3557g 0 0
+User-8 Farm-5 2022-06-12 pesticide Remtal SC 4979ml 1 0
+User-2 Farm-5 2022-06-12 fertilizer Ammonium Chloride 3113g 0 1
+User-8 Farm-10 2022-06-12 sowing Oregano 1942g 1 0
+User-8 Farm-5 2022-06-12 fertilizer Nitrophosphate (24-24-0) 5299g 0 0
+User-8 Farm-10 2022-06-12 sowing Rockcress 5359g 0 1
+User-2 Farm-5 2022-06-12 pesticide Lawn‐Keep 3546ml 0 1
+User-8 Farm-5 2022-06-12 pesticide Pathclear 560ml 0 0
+User-2 Farm-5 2022-06-12 sowing Alyssum 4868g 1 0
+User-8 Farm-10 2022-06-12 fertilizer Potassium Schoenite 1070g 0 1
+User-2 Farm-5 2022-06-12 harvest Thyme 5252g 0 1
+User-8 Farm-5 2022-06-12 harvest Sweet Peas 1844g 1 0
+User-8 Farm-10 2022-06-12 fertilizer Liquid Amm Polyphosphate 1070g 1 1
+User-2 Farm-5 2022-06-12 sales Pak Choi 4326g 0 1
+User-8 Farm-5 2022-06-12 harvest Snapdragon 3780g 0 0
+User-8 Farm-10 2022-06-12 pesticide Aaa Flowable 3219ml 1 1
+User-2 Farm-5 2022-06-12 fertilizer Anhydrous Ammonia 1328g 1 0
+User-8 Farm-5 2022-06-12 sales Parsley 3484g 1 0
+User-8 Farm-10 2022-06-12 pesticide Polychloro camphene 1464ml 0 0
+User-2 Farm-5 2022-06-12 fertilizer Triple Super Phosphate 5075g 1 1
+User-8 Farm-5 2022-06-12 sowing Parsley 1653g 1 1
+User-8 Farm-10 2022-06-12 fertilizer Nitrophosphate (23-23-0) 2403g 1 0
+User-4 Farm-4 2022-06-12 sowing Brussels Sprouts 1945g 0 1
+User-8 Farm-5 2022-06-12 sowing St. John's Wort 4227g 1 0
+User-7 Farm-8 2022-06-12 sowing Pak Choi 1911g 1 1
+User-7 Farm-8 2022-06-12 sowing Turnip 5432g 0 0
+User-8 Farm-5 2022-06-12 sowing Sorrel 3986g 0 0
+User-4 Farm-4 2022-06-12 sowing Horehound 4753g 1 0
+User-4 Farm-4 2022-06-12 sowing Borage 1716g 0 0
+User-7 Farm-8 2022-06-12 fertilizer Phosphate Rock 1219g 0 0
+User-8 Farm-5 2022-06-12 fertilizer Mono Ammonium Phosphate (11-52-0) 5484g 0 0
+User-4 Farm-4 2022-06-12 fertilizer Diammonium Phosphate (16-44-0) 2784g 1 0
+User-7 Farm-8 2022-06-12 fertilizer Calcium Oxide 3129g 1 1
+User-8 Farm-5 2022-06-12 sowing Corn 2580g 1 1
+User-7 Farm-8 2022-06-12 pesticide Novigam 5318ml 1 1
+User-4 Farm-4 2022-06-12 pesticide Forchlor 5482ml 1 0
+User-8 Farm-5 2022-06-12 pesticide Radapon 4223ml 0 0
+User-4 Farm-4 2022-06-12 sowing Hyssop 3201g 1 1
+User-7 Farm-8 2022-06-12 pesticide Macondray 2845ml 0 0
+User-8 Farm-5 2022-06-12 fertilizer Calcium Hydroxide 794g 1 0
+User-7 Farm-8 2022-06-12 harvest Celosia 2817g 1 1
+User-4 Farm-4 2022-06-12 fertilizer Nitro Phosphate (20-20-0) 2940g 0 0
+User-8 Farm-5 2022-06-12 sowing Thyme 5228g 0 1
+User-4 Farm-4 2022-06-12 fertilizer Diammonium Phosphate 836g 0 1
+User-7 Farm-8 2022-06-12 sales Cabbage 4026g 1 1
+User-8 Farm-5 2022-06-12 pesticide Perchlorocyclopentadiene 4157ml 1 0
+User-4 Farm-4 2022-06-12 harvest Candytuft 1974g 1 0
+User-7 Farm-8 2022-06-12 sowing Celosia 3497g 0 1
+User-8 Farm-5 2022-06-12 fertilizer Potassium Sulphate 4318g 1 1
+User-7 Farm-8 2022-06-12 fertilizer Diammonium Phosphate (16-44-0) 5360g 0 1
+User-4 Farm-4 2022-06-12 sales Catmint 3683g 1 0
+User-8 Farm-5 2022-06-12 pesticide Remtal SC 1897ml 1 1
+User-6 Farm-8 2022-06-12 sowing Mustard 1497g 0 1
+User-1 Farm-9 2022-06-12 sowing Wallflower 3601g 0 0
+User-6 Farm-8 2022-06-12 sowing Cabbage 3461g 1 1
+User-1 Farm-9 2022-06-12 sowing Roquette 3038g 1 1
+User-6 Farm-8 2022-06-12 sowing Broccoli 4482g 1 0
+User-6 Farm-8 2022-06-12 sowing Cabbage 5050g 0 1
+User-1 Farm-9 2022-06-12 sowing Cumin 2386g 1 0
+User-6 Farm-8 2022-06-12 fertilizer Potassium Magnesium Sulphate 5236g 1 0
+User-6 Farm-8 2022-06-12 sowing Pak Choi 3672g 1 0
+User-6 Farm-8 2022-06-12 sowing Mustard 3363g 1 1
+User-1 Farm-9 2022-06-12 fertilizer Diammonium Phosphate 5084g 1 0
+User-6 Farm-8 2022-06-12 fertilizer Superphosphoric Acid (70% P2O 5  ) (Liquid) 5036g 1 1
+User-6 Farm-8 2022-06-12 pesticide Perchlorocyclopentadiene 5146ml 1 0
+User-1 Farm-9 2022-06-12 sowing Beet 1309g 0 1
+User-6 Farm-8 2022-06-12 fertilizer Grobel NPK 4-3-3 +1 MgO 4200g 0 1
+User-6 Farm-8 2022-06-12 pesticide Agrox 3‐Way 5129ml 1 1
+User-6 Farm-8 2022-06-12 harvest Begonia 664g 1 0
+User-1 Farm-9 2022-06-12 pesticide Dowfume 2385ml 1 0
+User-6 Farm-8 2022-06-12 sales Begonia 5204g 1 0
+User-6 Farm-8 2022-06-12 fertilizer Ammonium Phosphate (14-28-0) 3872g 1 0
+User-1 Farm-9 2022-06-12 fertilizer Calcium Nitrate 4128g 0 0
+User-6 Farm-8 2022-06-12 sowing Chamomile 2504g 0 0
+User-6 Farm-8 2022-06-12 fertilizer Neem Coated Urea 5091g 0 1
+User-1 Farm-9 2022-06-12 pesticide Unipon 4661ml 0 0
+User-6 Farm-8 2022-06-12 fertilizer Dolomitic Lime (75% Neutral) 759g 0 0
+User-6 Farm-8 2022-06-12 sowing Pak Choi 5297g 0 0
+User-1 Farm-9 2022-06-12 harvest Pak Choi 2117g 1 0
+User-1 Farm-9 2022-06-12 fertilizer N.P.K. 15::9:20 943g 0 1
+User-6 Farm-8 2022-06-12 pesticide Dalapon‐Na 2261ml 1 0
+User-6 Farm-8 2022-06-12 harvest Oregano 1000g 1 1
+User-2 Farm-5 2022-06-14 sowing Alyssum 4274g 1 0
+User-5 Farm-9 2022-06-14 sowing Celery 1243g 1 0
+User-10 Farm-9 2022-06-14 sowing Bellflower 2551g 1 1
+User-10 Farm-9 2022-06-14 sowing Bellflower 4750g 1 0
+User-5 Farm-9 2022-06-14 sowing Bellflower 5383g 0 0
+User-2 Farm-5 2022-06-14 sowing Alyssum 1765g 0 0
+User-10 Farm-9 2022-06-14 fertilizer Nitrophosphate (24-24-0) 3897g 1 1
+User-5 Farm-9 2022-06-14 sowing Radish 4681g 0 1
+User-10 Farm-9 2022-06-14 sowing Eggplant 3267g 0 0
+User-2 Farm-5 2022-06-14 fertilizer Nitrophosphate (24-24-0) 1228g 1 0
+User-5 Farm-9 2022-06-14 fertilizer Lime-Potash Mixtures 4063g 1 0
+User-2 Farm-5 2022-06-14 fertilizer Cocoa Tankage 5396g 0 0
+User-10 Farm-9 2022-06-14 sowing Horehound 4094g 0 1
+User-2 Farm-5 2022-06-14 sowing Okra 842g 1 1
+User-5 Farm-9 2022-06-14 pesticide Phenacide 1917ml 1 0
+User-10 Farm-9 2022-06-14 fertilizer Di-sodium Tetraborate Pentahydrate 956g 0 0
+User-5 Farm-9 2022-06-14 sowing Wallflower 2931g 1 1
+User-2 Farm-5 2022-06-14 sowing Gloriosa Daisy 5302g 0 1
+User-10 Farm-9 2022-06-14 fertilizer Urea 1211g 0 1
+User-5 Farm-9 2022-06-14 fertilizer N.P.K. (17-17-17) 2888g 1 1
+User-2 Farm-5 2022-06-14 pesticide Lawn‐Keep 3596ml 0 0
+User-10 Farm-9 2022-06-14 pesticide Nemase 4309ml 0 0
+User-2 Farm-5 2022-06-14 pesticide Aatrex 4575ml 1 0
+User-5 Farm-9 2022-06-14 harvest Pepper 3814g 1 0
+User-10 Farm-9 2022-06-14 fertilizer Nitrophosphate (24-24-0) 3516g 1 0
+User-2 Farm-5 2022-06-14 harvest Caraway 5154g 0 0
+User-5 Farm-9 2022-06-14 sales Roquette 4222g 1 0
+User-10 Farm-9 2022-06-14 pesticide Premerge 3096ml 0 1
+User-2 Farm-5 2022-06-14 harvest Alyssum 4748g 1 0
+User-5 Farm-9 2022-06-14 sowing Chamomile 1707g 1 0
+User-10 Farm-9 2022-06-14 sowing Cilantro 4134g 0 1
+User-9 Farm-10 2022-06-14 sowing Cumin 4610g 0 0
+User-8 Farm-7 2022-06-14 sowing Pepper 3740g 1 0
+User-8 Farm-7 2022-06-14 sowing Alyssum 3291g 0 0
+User-9 Farm-10 2022-06-14 fertilizer Nitrophosphate (23-23-0) 3179g 0 0
+User-10 Farm-9 2022-06-14 sowing Pak Choi 1404g 1 0
+User-9 Farm-10 2022-06-14 sowing Horehound 2722g 1 1
+User-8 Farm-7 2022-06-14 fertilizer Anhydrous Ammonia 2817g 1 0
+User-10 Farm-9 2022-06-14 sowing Sweet Peas 2525g 0 0
+User-9 Farm-10 2022-06-14 sowing Coneflower 573g 0 1
+User-8 Farm-7 2022-06-14 sowing Chervil 898g 1 1
+User-10 Farm-9 2022-06-14 fertilizer Phosphate Rock 1532g 1 0
+User-9 Farm-10 2022-06-14 sowing Endive 4225g 1 0
+User-8 Farm-7 2022-06-14 fertilizer Magnesium Sulphate 3725g 1 1
+User-10 Farm-9 2022-06-14 fertilizer Calcitic Lime (75% Neutral) 2502g 0 1
+User-9 Farm-10 2022-06-14 fertilizer Urea Ammonium Nitrate 3379g 1 0
+User-8 Farm-7 2022-06-14 pesticide Phenacide 3739ml 1 0
+User-9 Farm-10 2022-06-14 pesticide Chemsect 889ml 0 0
+User-10 Farm-9 2022-06-14 pesticide Endrin‐Methy 4638ml 0 1
+User-8 Farm-7 2022-06-14 pesticide Weedar 649ml 1 1
+User-9 Farm-10 2022-06-14 harvest Peas 3007g 0 0
+User-10 Farm-9 2022-06-14 harvest Beet 4895g 0 1
+User-8 Farm-7 2022-06-14 harvest Alyssum 3647g 1 1
+User-10 Farm-9 2022-06-14 sales Mint 602g 0 1
+User-9 Farm-10 2022-06-14 pesticide Grazon 1769ml 1 0
+User-8 Farm-7 2022-06-14 sowing Thyme 2313g 0 1
+User-9 Farm-10 2022-06-14 harvest Squash 2423g 1 0
+User-8 Farm-7 2022-06-14 fertilizer Anhydrous Ammonia 2987g 0 1
+User-10 Farm-9 2022-06-14 pesticide Phenochlor 4874ml 1 0
+User-10 Farm-9 2022-06-14 harvest Horehound 3352g 1 0
+User-6 Farm-5 2022-06-14 sowing Endive 4832g 0 1
+User-10 Farm-9 2022-06-14 sowing Brussels Sprouts 3297g 0 0
+User-8 Farm-5 2022-06-14 sowing Sweet Peas 1937g 0 0
+User-8 Farm-5 2022-06-14 sowing Wallflower 4663g 1 1
+User-6 Farm-5 2022-06-14 sowing Thyme 3158g 0 0
+User-10 Farm-9 2022-06-14 fertilizer Cocoa Shell Meal 5200g 0 0
+User-6 Farm-5 2022-06-14 fertilizer Triple Super Phosphate 575g 0 1
+User-10 Farm-9 2022-06-14 pesticide Dowfume 1461ml 0 0
+User-8 Farm-5 2022-06-14 sowing St. John's Wort 2023g 1 0
+User-10 Farm-9 2022-06-14 sowing Bee Balm 2953g 1 0
+User-8 Farm-5 2022-06-14 sowing Tarragon 3715g 0 1
+User-6 Farm-5 2022-06-14 sowing Tarragon 526g 1 1
+User-10 Farm-9 2022-06-14 fertilizer Zincated NPK (10:26:26:0.5) 871g 1 0
+User-8 Farm-5 2022-06-14 fertilizer Borax 1657g 1 1
+User-6 Farm-5 2022-06-14 fertilizer BG Soil 3155g 0 0
+User-8 Farm-5 2022-06-14 pesticide Pathclear 4919ml 1 1
+User-6 Farm-5 2022-06-14 sowing Caraway 802g 1 0
+User-10 Farm-9 2022-06-14 harvest Balm Lemon 3614g 0 0
+User-8 Farm-5 2022-06-14 harvest Sweet Peas 885g 1 1
+User-6 Farm-5 2022-06-14 fertilizer Ammonium Sulphate 1747g 1 1
+User-10 Farm-9 2022-06-14 sowing Horehound 3039g 1 1
+User-6 Farm-5 2022-06-14 pesticide Remtal SC 3595ml 1 1
+User-8 Farm-5 2022-06-14 fertilizer Dolomitic Lime 4431g 1 0
+User-10 Farm-9 2022-06-14 sowing Rockcress 1613g 0 1
+User-6 Farm-5 2022-06-14 pesticide Remtal SC 524ml 0 0
+User-8 Farm-5 2022-06-14 sales Endive 1480g 1 1
+User-10 Farm-9 2022-06-14 sales Eggplant 2031g 0 0
+User-6 Farm-5 2022-06-14 harvest Pak Choi 4934g 1 1
+User-8 Farm-5 2022-06-14 sowing St. John's Wort 1369g 1 1
+User-10 Farm-9 2022-06-14 fertilizer Calcium Nitrate 4303g 0 1
+User-1 Farm-9 2022-06-14 sowing Sweet Peas 3652g 1 1
+User-6 Farm-1 2022-06-14 sowing Leek 3027g 0 1
+User-8 Farm-10 2022-06-14 sowing Bee Balm 1393g 1 0
+User-6 Farm-1 2022-06-14 sowing Beet 624g 0 0
+User-1 Farm-9 2022-06-14 sowing Brussels Sprouts 1866g 0 0
+User-6 Farm-1 2022-06-14 fertilizer Standard Dolomite 1548g 0 0
+User-8 Farm-10 2022-06-14 fertilizer Standard Dolomite 4086g 1 0
+User-1 Farm-9 2022-06-14 sowing Beet 2260g 0 1
+User-6 Farm-1 2022-06-14 pesticide Anticarie 3993ml 0 0
+User-8 Farm-10 2022-06-14 pesticide Lawn‐Keep 3022ml 1 0
+User-1 Farm-9 2022-06-14 fertilizer Grobel NPK 4-3-3 +1 MgO 1138g 0 1
+User-6 Farm-1 2022-06-14 harvest Rutabaga 4315g 0 0
+User-8 Farm-10 2022-06-14 sowing Cumin 1205g 0 1
+User-1 Farm-9 2022-06-14 fertilizer Calcitic Lime (75% Neutral) 2568g 0 0
+User-6 Farm-1 2022-06-14 sowing Squash 3894g 1 1
+User-8 Farm-10 2022-06-14 sowing Parsnip 4036g 1 1
+User-1 Farm-9 2022-06-14 fertilizer Zinc Oxide Suspension Concentrate 2288g 1 1
+User-6 Farm-1 2022-06-14 sales Roquette 2815g 0 0
+User-8 Farm-10 2022-06-14 harvest Pepper 1059g 1 0
+User-6 Farm-1 2022-06-14 sowing Burnet 4030g 1 0
+User-1 Farm-9 2022-06-14 pesticide Nemase 4163ml 1 1
+User-8 Farm-10 2022-06-14 fertilizer Ammonium Molybdate 1056g 0 1
+User-1 Farm-9 2022-06-14 sowing Celosia 4001g 1 0
+User-6 Farm-1 2022-06-14 fertilizer Precipitated Phosphate 2376g 1 1
+User-8 Farm-10 2022-06-14 pesticide BBC 12 3143ml 0 1
+User-1 Farm-9 2022-06-14 pesticide Dowfume 2664ml 0 0
+User-8 Farm-10 2022-06-14 sales Cosmos 1424g 1 0
+User-6 Farm-1 2022-06-14 sowing Sweet Peas 885g 0 0
+User-1 Farm-9 2022-06-14 pesticide Unipon 4804ml 0 1
+User-8 Farm-10 2022-06-14 fertilizer Ammonium Molybdate 5190g 1 1
+User-3 Farm-5 2022-06-14 sowing Wallflower 3912g 1 1
+User-9 Farm-8 2022-06-14 sowing Chervil 4296g 1 0
+User-8 Farm-10 2022-06-14 sowing Pepper 4248g 0 1
+User-9 Farm-8 2022-06-14 sowing Pak Choi 1925g 0 0
+User-3 Farm-5 2022-06-14 fertilizer Triple Super Phosphate 3535g 1 1
+User-8 Farm-10 2022-06-14 sowing Lettuce 5368g 0 0
+User-9 Farm-8 2022-06-14 fertilizer Ammonium Metaphosphate 4807g 1 0
+User-3 Farm-5 2022-06-14 sowing Corn 1727g 0 1
+User-8 Farm-10 2022-06-14 sowing Oregano 4606g 1 0
+User-3 Farm-5 2022-06-14 fertilizer Urea Super Granulated 4006g 0 1
+User-9 Farm-8 2022-06-14 fertilizer Urea Super Granulated 1431g 0 0
+User-8 Farm-10 2022-06-14 sowing Parsnip 4244g 1 1
+User-3 Farm-5 2022-06-14 sowing Okra 3861g 0 0
+User-9 Farm-8 2022-06-14 pesticide Basinex P and N 3091ml 0 0
+User-8 Farm-10 2022-06-14 fertilizer Potassium Sulfate 2567g 1 1
+User-3 Farm-5 2022-06-14 pesticide Lawn‐Keep 4169ml 0 1
+User-9 Farm-8 2022-06-14 sowing Broccoli 513g 1 1
+User-8 Farm-10 2022-06-14 fertilizer Potassium Schoenite 3758g 1 0
+User-9 Farm-8 2022-06-14 sowing Chamomile 4125g 0 1
+User-3 Farm-5 2022-06-14 harvest Beet 1750g 0 1
+User-9 Farm-8 2022-06-14 fertilizer Dolomitic Lime 641g 0 1
+User-8 Farm-10 2022-06-14 pesticide Esteron 1363ml 1 0
+User-3 Farm-5 2022-06-14 sowing Beet 3441g 1 0
+User-9 Farm-8 2022-06-14 fertilizer Diammonium Phosphate (16-44-0) 541g 1 1
+User-8 Farm-10 2022-06-14 harvest Pepper 2457g 1 0
+User-3 Farm-5 2022-06-14 fertilizer Zinc Oxide Suspension Concentrate 2269g 1 0
+User-9 Farm-8 2022-06-14 pesticide Agronexit 5407ml 0 1
+User-8 Farm-10 2022-06-14 fertilizer Greenferti 4-3-3-1 3567g 0 0
+User-3 Farm-5 2022-06-14 pesticide Gamaphex 1813ml 1 1
+User-8 Farm-10 2022-06-14 fertilizer Liquid Amm Polyphosphate 3748g 0 1
+User-3 Farm-5 2022-06-14 sowing Endive 3888g 1 0
+User-6 Farm-5 2022-06-14 sowing Pak Choi 4460g 0 0
+User-4 Farm-4 2022-06-14 sowing Snapdragon 805g 1 0
+User-3 Farm-5 2022-06-14 sowing Tarragon 4754g 0 1
+User-4 Farm-4 2022-06-14 fertilizer N.P.K. 15::9:20 4996g 1 0
+User-6 Farm-5 2022-06-14 fertilizer Ammonium Sulphate 5485g 0 0
+User-4 Farm-4 2022-06-14 pesticide Termide 2636ml 1 0
+User-6 Farm-5 2022-06-14 sowing Caraway 3608g 1 1
+User-3 Farm-5 2022-06-14 fertilizer Activit 4-3-2 5127g 0 1
+User-4 Farm-4 2022-06-14 sowing Cabbage 1404g 0 1
+User-6 Farm-5 2022-06-14 sowing Bellflower 1744g 1 0
+User-3 Farm-5 2022-06-14 sowing Gloriosa Daisy 1625g 1 1
+User-4 Farm-4 2022-06-14 sowing Candytuft 5470g 0 0
+User-6 Farm-5 2022-06-14 fertilizer Potassium Sulfate 1929g 1 1
+User-3 Farm-5 2022-06-14 pesticide Fumazone 2913ml 0 1
+User-6 Farm-5 2022-06-14 fertilizer Chelated Iron as Fe-EDTA 3447g 1 0
+User-4 Farm-4 2022-06-14 harvest Begonia 1344g 1 0
+User-3 Farm-5 2022-06-14 fertilizer Urea Ammonium Nitrate 4967g 1 0
+User-6 Farm-5 2022-06-14 pesticide Pathclear 4485ml 0 0
+User-3 Farm-5 2022-06-14 pesticide Perchlorocyclopentadiene 637ml 1 0
+User-4 Farm-4 2022-06-14 sowing Rockcress 3838g 1 1
+User-4 Farm-4 2022-06-14 fertilizer Diammonium Phosphate 3428g 0 0
+User-3 Farm-5 2022-06-14 fertilizer MixO’Plus 3268g 1 1
+User-6 Farm-5 2022-06-14 harvest Squash 960g 0 0
+User-4 Farm-4 2022-06-14 sales Beet 3543g 1 0
+User-3 Farm-5 2022-06-14 harvest Bellflower 4512g 1 0
+User-6 Farm-5 2022-06-14 pesticide Gamaphex 2756ml 1 1
+User-4 Farm-4 2022-06-14 fertilizer Activit 4-3-2 2514g 0 1
+User-3 Farm-5 2022-06-14 sales Sweet Peas 3578g 1 0
+User-6 Farm-5 2022-06-14 sowing Leek 2033g 0 1
