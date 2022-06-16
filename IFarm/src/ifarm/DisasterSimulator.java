@@ -47,10 +47,6 @@ public class DisasterSimulator{
         db = new DBConnector();
     }
     
-    
-    
-    
-    
     public int Disaster(String[] s, String insert_DB, AtomicInteger atomicInteger){
         int disaster_chance = r.nextInt(1000); //100 - 5% chance for disaster
             if(disaster_chance < 5 && count_disaster == 0){ //timer to avoid 2 disaster happen at the same time...can do but hmmm

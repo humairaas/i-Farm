@@ -22,6 +22,10 @@ public class Farmer implements Callable {
     private DBConnector db;
     private Farm farm;
     private Activity activity;
+    private DisasterSimulator2 dis;
+    
+    private DateTimeFormatter dtf;  
+    private LocalDateTime now; 
     
     private Random r;
     private String action;
@@ -30,22 +34,23 @@ public class Farmer implements Callable {
     private int randField;
     private int counter;
     private String[] data;
-    private String[][][] plant ;
-    private DateTimeFormatter dtf;  
-    private LocalDateTime now; 
     private String[] UserFarmID;
+    private String[][][] plant ;
     
     private List<String[]> activity_logs = new ArrayList<String[]>();
  
     public Farmer(DBConnector db, String[] UserFarmID) {
         this.db = db;
+        this.UserFarmID = UserFarmID;
+        
+        now = LocalDateTime.now(); 
+        dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
+        
         farm = new Farm();
         r = new Random();
         activity = new Activity();
-        now = LocalDateTime.now(); 
-        dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
         plant = new String[farm.getRow()][farm.getField()][];
-        this.UserFarmID = UserFarmID;
+        dis = new DisasterSimulator2();
     }
 
     @Override
@@ -95,12 +100,30 @@ public class Farmer implements Callable {
             counter += days;
             LocalDateTime date = now.plusDays(counter);
             
-            // try to resume if fail
+            // if disaster happen
+            // call the disaster
+            // thread will wait
+            // thread wait for notify call
+            // notify call, continue the loop
+            
+            int dchance = r.nextInt(100);
+            //System.out.println("chance:" +dchance);
+            if(dchance < 2){
+                Runnable dhandler = new DisasterHandler(dis);
+                Thread t1 = new Thread(dhandler);
+                t1.start();
+                dis.internetConnError();
+                if(Thread.currentThread().isInterrupted()){
+                    System.out.println(Thread.currentThread().isInterrupted());
+                    break;
+                }
+            }
+   
             try {
                 String[] activity_data = {data[0] , data[1] , data[2] , data[3] , dtf.format(date) , action  , quantity[0] , quantity[1] , Integer.toString(randRow) ,  Integer.toString(randField) };
                 activity_logs.add(activity_data);
-                //String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(date)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
-                //System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
+                String finalLog = "User-"+data[0]+" Farm-"+data[1]+" "+dtf.format(date)+" "+action+" "+data[3]+" "+quantity[0]+quantity[1]+" "+randRow+" "+randField;
+                System.out.println("FARMER CLASS: "+Thread.currentThread().getName() + ": " + finalLog);
             } catch (NumberFormatException e) {
                
             }

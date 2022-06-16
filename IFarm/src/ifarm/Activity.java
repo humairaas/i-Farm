@@ -35,7 +35,7 @@ public class Activity {
         try {
             //Change this according to your own directory path
             //FileWriter myWriter = new FileWriter("C:\\Users\\USER\\Desktop\\NetBeans\\WIF3003\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
-            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\new\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
+            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Farmer-"+user+".txt", true);
             myWriter.write(text + "\n");
             myWriter.close();
         } catch (IOException e) {
@@ -46,7 +46,7 @@ public class Activity {
     public void toTxt_Disaster(String text, String user){
         try {
             //Change this according to your own directory path
-            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\new\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Disaster-"+user+".txt", true);
+            FileWriter myWriter = new FileWriter("C:\\Users\\User\\Documents\\NetBeansProjects\\i-Farm\\IFarm\\src\\ifarm\\txtFiles\\Disaster-"+user+".txt", true);
             myWriter.write(text + "\n");
             myWriter.close();
         } catch (IOException e) {
